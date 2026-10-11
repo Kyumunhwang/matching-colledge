@@ -1,0 +1,3787 @@
+[
+  {
+    "id": "8821",
+    "name": "David Kim",
+    "korean_name": "김태윤",
+    "school": "Seoul Foreign School (SFS)",
+    "grade": 12,
+    "cohort": "IBDP Cohort Alpha",
+    "counselor_name": "Mr. David Nah",
+    "dossier_status": "Verified 2025.10.14",
+    "citizenship_status": "International (No Green Card)",
+    "academic_profile": {
+      "curriculum_type": "IB DP",
+      "ib_predicted_score": 41,
+      "unweighted_gpa": 3.92,
+      "weighted_gpa": 4.38,
+      "school_context": "IB DP Full Diploma offered; 6 HL/SL subjects taken",
+      "grade_trend": "9th(3.75) -> 10th(3.88) -> 11th(4.00)",
+      "standardized_tests": {
+        "SAT": 1520,
+        "SAT_RW": 740,
+        "SAT_Math": 780,
+        "AP_scores": {
+          "Calculus BC": 5,
+          "Physics C: Mechanics": 5,
+          "Computer Science A": 5
+        }
+      },
+      "years_in_english_school": 4,
+      "english_waiver_eligible": true,
+      "intended_major": "Computer Science & Robotics"
+    },
+    "financial_profile": {
+      "household_income_usd": 85000,
+      "household_assets_usd": 180000,
+      "max_annual_budget_usd": 25000,
+      "financial_aid_required": true,
+      "estimated_sai_usd": 18500
+    },
+    "extracurricular_profile": [
+      {
+        "activity_name": "VEX Robotics Team Captain & Founder",
+        "duration_years": 4,
+        "hours_per_week": 12,
+        "role": "Team Captain / Lead Engineer",
+        "spike_classification": "Spike Focus",
+        "impact": "Led team to National Tournament championship; programmed autonomous trajectory optimization code; mentored 30 underclassmen."
+      },
+      {
+        "activity_name": "Open-Source Accessibility Tool for Screen Readers",
+        "duration_years": 3,
+        "hours_per_week": 6,
+        "role": "Core Maintainer",
+        "spike_classification": "Spike Focus",
+        "impact": "Engineered accessible Web Speech API wrapper with 1,400+ stars on GitHub and over 2,000 monthly active users across 12 schools."
+      },
+      {
+        "activity_name": "Community STEM Tutoring Initiative",
+        "duration_years": 2,
+        "hours_per_week": 4,
+        "role": "Lead Student Tutor",
+        "spike_classification": "Community Impact",
+        "impact": "Conducted 80+ hours of weekend Scratch & Python mentoring for underprivileged middle school youth."
+      }
+    ],
+    "preferences": {
+      "institution_type": "National University preferred, open to Liberal Arts",
+      "geographic_location": "East Coast or West Coast",
+      "campus_setting": "Suburban or Urban"
+    },
+    "simulation": {
+      "evaluated_at": "2026-10-11T14:51:59.793395+00:00",
+      "is_published": false,
+      "firewall_status": "DRAFT_MUTED",
+      "counselor_override_note": "David boasts a distinctive Robotics Spike and an elite IB 41 prediction. Because he is an international student requesting need-based financial aid, we have placed Harvard and Amherst under Reach (Need-Blind ensures zero admissions aid penalty), while noting that Stanford carries severe Need-Aware quota constraints. UIUC & Purdue offer rock-solid academic stability if the family budget allows out-of-state tuition.",
+      "student_analysis": {
+        "academic_tier": "Tier 1 (Elite / Upper 1%)",
+        "ec_profile_type": "Spike Focus (Specialized Leadership)",
+        "financial_strategy": "Need-Blind Priority for Int'l Aid",
+        "estimated_sai_usd": 22500,
+        "questbridge_eligible": false,
+        "toefl_waiver": true
+      },
+      "matched_universities": [
+        {
+          "ipeds_id": "166124",
+          "university_name": "College of the Holy Cross",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 17.6,
+          "financial_analysis": {
+            "estimated_coa": 80334,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 45334,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -20334
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $45,334).",
+            "cultural_fit": "Located in Worcester, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "108232",
+          "university_name": "Academy of Art University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 48036,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 13036,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 11964
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $13,036).",
+            "cultural_fit": "Located in San Francisco, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110060",
+          "university_name": "Bethesda University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 13575,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Anaheim, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110316",
+          "university_name": "California Institute of Integral Studies",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 82000,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47000,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,000).",
+            "cultural_fit": "Located in San Francisco, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110404",
+          "university_name": "California Institute of Technology",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 2.6,
+          "financial_analysis": {
+            "estimated_coa": 86886,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 51886,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -26886
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $51,886).",
+            "cultural_fit": "Located in Pasadena, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110778",
+          "university_name": "Sofia University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 82000,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47000,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,000).",
+            "cultural_fit": "Located in Palo Alto, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "111045",
+          "university_name": "Haven University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 82000,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47000,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,000).",
+            "cultural_fit": "Located in Garden Grove, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "112570",
+          "university_name": "California College of ASU",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 31890,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Los Angeles, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "115083",
+          "university_name": "Golden Gate University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 82000,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47000,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,000).",
+            "cultural_fit": "Located in San Francisco, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "115773",
+          "university_name": "Humphreys University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 20918,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Stockton, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "189228",
+          "university_name": "Berkeley College-New York",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 45041,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 10041,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 14959
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $10,041).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "189282",
+          "university_name": "Mount Sinai Phillips School of Nursing",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 82000,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47000,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,000).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "189413",
+          "university_name": "Boricua College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 24213,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "189565",
+          "university_name": "Bryant & Stratton College-Syracuse North",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 25249,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Liverpool, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "192110",
+          "university_name": "The Juilliard School",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 9.2,
+          "financial_analysis": {
+            "estimated_coa": 83892,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 48892,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -23892
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $48,892).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "192165",
+          "university_name": "Kehilath Yakov Rabbinical Seminary",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 17850,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Ossining, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165167",
+          "university_name": "Cambridge College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 34072,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166717",
+          "university_name": "William James College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 82000,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47000,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,000).",
+            "cultural_fit": "Located in Newton, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166869",
+          "university_name": "MGH Institute of Health Professions",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 82000,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47000,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,000).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166911",
+          "university_name": "Montserrat College of Art",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 58616,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 23616,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 1384
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $23,616).",
+            "cultural_fit": "Located in Beverly, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "167093",
+          "university_name": "New England College of Optometry",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 15.0,
+          "financial_analysis": {
+            "estimated_coa": 82000,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47000,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,000).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164580",
+          "university_name": "Babson College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 93,
+          "acceptance_rate": 17.1,
+          "financial_analysis": {
+            "estimated_coa": 80192,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 45192,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -20192
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $45,192).",
+            "cultural_fit": "Located in Wellesley, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110662",
+          "university_name": "University of California, Los Angeles (UCLA)",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 92,
+          "acceptance_rate": 8.8,
+          "financial_analysis": {
+            "estimated_coa": 81900,
+            "expected_financial_aid_grant": 0,
+            "net_price_for_student": 81900,
+            "policy_type": "No Need-Based Aid for Int'l",
+            "budget_surplus_deficit": -56900
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "No institutional need-based aid for international students; out-of-state COA of $81,900 applies.",
+            "cultural_fit": "High application volume, dynamic LA campus life, world-class athletic & academic programs."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "193900",
+          "university_name": "New York University (NYU)",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 91,
+          "acceptance_rate": 12.0,
+          "financial_analysis": {
+            "estimated_coa": 90100,
+            "expected_financial_aid_grant": 67600,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $22,500).",
+            "cultural_fit": "Global network university embedded in Manhattan, Stern business and Tisch arts."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "161004",
+          "university_name": "Bowdoin College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 89,
+          "acceptance_rate": 7.7,
+          "financial_analysis": {
+            "estimated_coa": 85900,
+            "expected_financial_aid_grant": 63400,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Blind",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution provides Need-Blind admissions for international students with 100% need met.",
+            "cultural_fit": "Common Good ethos, coastal ecology, collaborative non-competitive atmosphere."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164988",
+          "university_name": "Boston University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 89,
+          "acceptance_rate": 11.1,
+          "financial_analysis": {
+            "estimated_coa": 86285,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 51285,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -26285
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $51,285).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164465",
+          "university_name": "Amherst College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 88,
+          "acceptance_rate": 7.3,
+          "financial_analysis": {
+            "estimated_coa": 88500,
+            "expected_financial_aid_grant": 66000,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Blind",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution provides Need-Blind admissions for international students with 100% need met.",
+            "cultural_fit": "Open curriculum, intimate seminar discussions, exceptionally generous aid."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "168148",
+          "university_name": "Williams College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 88,
+          "acceptance_rate": 8.5,
+          "financial_analysis": {
+            "estimated_coa": 86200,
+            "expected_financial_aid_grant": 63700,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $22,500).",
+            "cultural_fit": "Oxford-style tutorial system with 2-student classes, pristine Berkshires location."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "167358",
+          "university_name": "Northeastern University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 87,
+          "acceptance_rate": 5.2,
+          "financial_analysis": {
+            "estimated_coa": 84641,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 49641,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -24641
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $49,641).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "182670",
+          "university_name": "Dartmouth College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 86,
+          "acceptance_rate": 6.2,
+          "financial_analysis": {
+            "estimated_coa": 87300,
+            "expected_financial_aid_grant": 64800,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Blind",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution provides Need-Blind admissions for international students with 100% need met.",
+            "cultural_fit": "Flexible D-Plan calendar, outdoorsy culture, deeply engaged faculty network."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "216287",
+          "university_name": "Swarthmore College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 86,
+          "acceptance_rate": 6.9,
+          "financial_analysis": {
+            "estimated_coa": 85700,
+            "expected_financial_aid_grant": 63200,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $22,500).",
+            "cultural_fit": "Intense academic inquiry, Honors oral exams by external scholars, Quaker values."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "217156",
+          "university_name": "Brown University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 85,
+          "acceptance_rate": 5.1,
+          "financial_analysis": {
+            "estimated_coa": 88900,
+            "expected_financial_aid_grant": 66400,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Blind",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution provides Need-Blind admissions for international students with 100% need met.",
+            "cultural_fit": "Open Curriculum allowing customized academic inquiry and self-driven intellect."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190099",
+          "university_name": "Colgate University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 85,
+          "acceptance_rate": 13.9,
+          "financial_analysis": {
+            "estimated_coa": 87070,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 52070,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -27070
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $52,070).",
+            "cultural_fit": "Located in Hamilton, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191515",
+          "university_name": "Hamilton College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 85,
+          "acceptance_rate": 13.6,
+          "financial_analysis": {
+            "estimated_coa": 84230,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 49230,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -24230
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $49,230).",
+            "cultural_fit": "Located in Clinton, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164924",
+          "university_name": "Boston College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 85,
+          "acceptance_rate": 16.4,
+          "financial_analysis": {
+            "estimated_coa": 89493,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 54493,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -29493
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $54,493).",
+            "cultural_fit": "Located in Chestnut Hill, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190150",
+          "university_name": "Columbia University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 83,
+          "acceptance_rate": 3.9,
+          "financial_analysis": {
+            "estimated_coa": 91200,
+            "expected_financial_aid_grant": 68700,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $22,500).",
+            "cultural_fit": "Renowned Core Curriculum in vibrant NYC, high-density global internships."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "215062",
+          "university_name": "University of Pennsylvania (UPenn)",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 83,
+          "acceptance_rate": 5.8,
+          "financial_analysis": {
+            "estimated_coa": 89800,
+            "expected_financial_aid_grant": 67300,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $22,500).",
+            "cultural_fit": "Practical pre-professional rigor, Wharton business acumen, interschool dual degrees."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "189097",
+          "university_name": "Barnard College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 83,
+          "acceptance_rate": 8.8,
+          "financial_analysis": {
+            "estimated_coa": 89538,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 54538,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -29538
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $54,538).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "186131",
+          "university_name": "Princeton University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 82,
+          "acceptance_rate": 4.5,
+          "financial_analysis": {
+            "estimated_coa": 86700,
+            "expected_financial_aid_grant": 64200,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Blind",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution provides Need-Blind admissions for international students with 100% need met.",
+            "cultural_fit": "Undergraduate-first focus, senior thesis requirement, zero-loan packages."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "130794",
+          "university_name": "Yale University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 82,
+          "acceptance_rate": 4.6,
+          "financial_analysis": {
+            "estimated_coa": 87700,
+            "expected_financial_aid_grant": 65200,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Blind",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution provides Need-Blind admissions for international students with 100% need met.",
+            "cultural_fit": "Tight residential college communities, multidisciplinary humanities & science."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "243744",
+          "university_name": "Stanford University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 82,
+          "acceptance_rate": 3.7,
+          "financial_analysis": {
+            "estimated_coa": 90500,
+            "expected_financial_aid_grant": 68000,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $22,500).",
+            "cultural_fit": "Silicon Valley entrepreneurial spirit, cutting-edge tech and venture incubation."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "112260",
+          "university_name": "Claremont McKenna College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 82,
+          "acceptance_rate": 9.6,
+          "financial_analysis": {
+            "estimated_coa": 86500,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 51500,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -26500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $51,500).",
+            "cultural_fit": "Located in Claremont, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190415",
+          "university_name": "Cornell University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 81,
+          "acceptance_rate": 8.8,
+          "financial_analysis": {
+            "estimated_coa": 88140,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 53140,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -28140
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $53,140).",
+            "cultural_fit": "Located in Ithaca, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166027",
+          "university_name": "Harvard University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 80,
+          "acceptance_rate": 3.4,
+          "financial_analysis": {
+            "estimated_coa": 89400,
+            "expected_financial_aid_grant": 66900,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Blind",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution provides Need-Blind admissions for international students with 100% need met.",
+            "cultural_fit": "Global leadership powerhouse with comprehensive research funding."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166683",
+          "university_name": "Massachusetts Institute of Technology (MIT)",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 79,
+          "acceptance_rate": 4.5,
+          "financial_analysis": {
+            "estimated_coa": 89900,
+            "expected_financial_aid_grant": 67400,
+            "net_price_for_student": 22500,
+            "policy_type": "Need-Blind",
+            "budget_surplus_deficit": 2500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution provides Need-Blind admissions for international students with 100% need met.",
+            "cultural_fit": "Quantitative intensity, radical innovation, and hands-on STEM collaboration."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "115409",
+          "university_name": "Harvey Mudd College",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 79,
+          "acceptance_rate": 12.7,
+          "financial_analysis": {
+            "estimated_coa": 90165,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 55165,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -30165
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $55,165).",
+            "cultural_fit": "Located in Claremont, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190372",
+          "university_name": "The Cooper Union for the Advancement of Science and Art",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 20.7,
+          "financial_analysis": {
+            "estimated_coa": 64190,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 29190,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -4190
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $29,190).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "170976",
+          "university_name": "University of Michigan, Ann Arbor",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 95,
+          "acceptance_rate": 17.8,
+          "financial_analysis": {
+            "estimated_coa": 76900,
+            "expected_financial_aid_grant": 0,
+            "net_price_for_student": 76900,
+            "policy_type": "No Need-Based Aid for Int'l",
+            "budget_surplus_deficit": -51900
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "No institutional need-based aid for international students; out-of-state COA of $76,900 applies.",
+            "cultural_fit": "Unrivaled school spirit, top engineering & Ross business, immense alumni network."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110422",
+          "university_name": "California Polytechnic State University-San Luis Obispo",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 31.3,
+          "financial_analysis": {
+            "estimated_coa": 32265,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in San Luis Obispo, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110653",
+          "university_name": "University of California-Irvine",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 28.6,
+          "financial_analysis": {
+            "estimated_coa": 38632,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 3632,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 21368
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $3,632).",
+            "cultural_fit": "Located in Irvine, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110680",
+          "university_name": "University of California-San Diego",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 26.7,
+          "financial_analysis": {
+            "estimated_coa": 38701,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 3701,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 21299
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $3,701).",
+            "cultural_fit": "Located in La Jolla, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110705",
+          "university_name": "University of California-Santa Barbara",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 33.0,
+          "financial_analysis": {
+            "estimated_coa": 41573,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 6573,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 18427
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $6,573).",
+            "cultural_fit": "Located in Santa Barbara, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "111081",
+          "university_name": "California Institute of the Arts",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 32.3,
+          "financial_analysis": {
+            "estimated_coa": 77560,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 42560,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -17560
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $42,560).",
+            "cultural_fit": "Located in Valencia, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "112084",
+          "university_name": "San Diego Christian College",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 30.8,
+          "financial_analysis": {
+            "estimated_coa": 31745,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Santee, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110635",
+          "university_name": "University of California, Berkeley",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 91,
+          "acceptance_rate": 11.6,
+          "financial_analysis": {
+            "estimated_coa": 82500,
+            "expected_financial_aid_grant": 0,
+            "net_price_for_student": 82500,
+            "policy_type": "No Need-Based Aid for Int'l",
+            "budget_surplus_deficit": -57500
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "No institutional need-based aid for international students; out-of-state COA of $82,500 applies.",
+            "cultural_fit": "Premier public research university, vibrant social activism, renowned STEM labs."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "211440",
+          "university_name": "Carnegie Mellon University (CMU)",
+          "matching_category": "Match",
+          "counselor_override_category": "Match",
+          "is_approved": true,
+          "matching_score": 83,
+          "acceptance_rate": 11.2,
+          "financial_analysis": {
+            "estimated_coa": 85100,
+            "expected_financial_aid_grant": 0,
+            "net_price_for_student": 85100,
+            "policy_type": "No Institutional Aid for Int'l",
+            "budget_surplus_deficit": -60100
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "No institutional need-based aid for international students; out-of-state COA of $85,100 applies.",
+            "cultural_fit": "World leader in Computer Science, Artificial Intelligence, and Robotics."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "145637",
+          "university_name": "University of Illinois Urbana-Champaign (UIUC)",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 44.8,
+          "financial_analysis": {
+            "estimated_coa": 64800,
+            "expected_financial_aid_grant": 0,
+            "net_price_for_student": 64800,
+            "policy_type": "No Need-Based Aid for Int'l",
+            "budget_surplus_deficit": -39800
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "No institutional need-based aid for international students; out-of-state COA of $64,800 applies.",
+            "cultural_fit": "Powerhouse Grainger College of Engineering, strong CS curriculum and research centers."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "243780",
+          "university_name": "Purdue University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 50.3,
+          "financial_analysis": {
+            "estimated_coa": 45900,
+            "expected_financial_aid_grant": 0,
+            "net_price_for_student": 45900,
+            "policy_type": "No Need-Based Aid for Int'l",
+            "budget_surplus_deficit": -20900
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "No institutional need-based aid for international students; out-of-state COA of $45,900 applies.",
+            "cultural_fit": "Frozen tuition pledge, premier aerospace and mechanical engineering, practical value."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "109785",
+          "university_name": "Azusa Pacific University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 88.4,
+          "financial_analysis": {
+            "estimated_coa": 56313,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 21313,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 3687
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $21,313).",
+            "cultural_fit": "Located in Azusa, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110097",
+          "university_name": "Biola University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 74.4,
+          "financial_analysis": {
+            "estimated_coa": 62757,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 27757,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -2757
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $27,757).",
+            "cultural_fit": "Located in La Mirada, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110413",
+          "university_name": "California Lutheran University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 75.7,
+          "financial_analysis": {
+            "estimated_coa": 68426,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 33426,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -8426
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $33,426).",
+            "cultural_fit": "Located in Thousand Oaks, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "111948",
+          "university_name": "Chapman University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 65.4,
+          "financial_analysis": {
+            "estimated_coa": 83146,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 48146,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -23146
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $48,146).",
+            "cultural_fit": "Located in Orange, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "113698",
+          "university_name": "Dominican University of California",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 83.5,
+          "financial_analysis": {
+            "estimated_coa": 71751,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 36751,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -11751
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $36,751).",
+            "cultural_fit": "Located in San Rafael, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "188429",
+          "university_name": "Adelphi University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 65.9,
+          "financial_analysis": {
+            "estimated_coa": 63189,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 28189,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -3189
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $28,189).",
+            "cultural_fit": "Located in Garden City, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "188526",
+          "university_name": "Albany College of Pharmacy and Health Sciences",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 52.7,
+          "financial_analysis": {
+            "estimated_coa": 54899,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 19899,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 5101
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $19,899).",
+            "cultural_fit": "Located in Albany, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "188641",
+          "university_name": "Alfred University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 73.8,
+          "financial_analysis": {
+            "estimated_coa": 57445,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 22445,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 2555
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $22,445).",
+            "cultural_fit": "Located in Alfred, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "189088",
+          "university_name": "Bard College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 52.1,
+          "financial_analysis": {
+            "estimated_coa": 84553,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 49553,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -24553
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $49,553).",
+            "cultural_fit": "Located in Annandale-On-Hudson, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190044",
+          "university_name": "Clarkson University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 77.4,
+          "financial_analysis": {
+            "estimated_coa": 79022,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 44022,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -19022
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $44,022).",
+            "cultural_fit": "Located in Potsdam, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190512",
+          "university_name": "CUNY Bernard M Baruch College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 47.5,
+          "financial_analysis": {
+            "estimated_coa": 14170,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190549",
+          "university_name": "CUNY Brooklyn College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 58.4,
+          "financial_analysis": {
+            "estimated_coa": 14151,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Brooklyn, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190558",
+          "university_name": "College of Staten Island CUNY",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 92.3,
+          "financial_analysis": {
+            "estimated_coa": 14795,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Staten Island, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190567",
+          "university_name": "CUNY City College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 60.0,
+          "financial_analysis": {
+            "estimated_coa": 14403,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190594",
+          "university_name": "CUNY Hunter College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 53.8,
+          "financial_analysis": {
+            "estimated_coa": 13905,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190600",
+          "university_name": "CUNY John Jay College of Criminal Justice",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 57.1,
+          "financial_analysis": {
+            "estimated_coa": 14212,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190637",
+          "university_name": "CUNY Lehman College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 56.6,
+          "financial_analysis": {
+            "estimated_coa": 14121,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Bronx, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190646",
+          "university_name": "CUNY Medgar Evers College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 86.1,
+          "financial_analysis": {
+            "estimated_coa": 14771,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Brooklyn, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190655",
+          "university_name": "CUNY New York City College of Technology",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 80.3,
+          "financial_analysis": {
+            "estimated_coa": 14110,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Brooklyn, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190664",
+          "university_name": "CUNY Queens College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 64.3,
+          "financial_analysis": {
+            "estimated_coa": 14367,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Queens, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190691",
+          "university_name": "CUNY York College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 64.1,
+          "financial_analysis": {
+            "estimated_coa": 14330,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Jamaica, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190716",
+          "university_name": "D'Youville  University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 81.4,
+          "financial_analysis": {
+            "estimated_coa": 48539,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 13539,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 11461
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $13,539).",
+            "cultural_fit": "Located in Buffalo, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190983",
+          "university_name": "Elmira College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 77.0,
+          "financial_analysis": {
+            "estimated_coa": 52449,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 17449,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 7551
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $17,449).",
+            "cultural_fit": "Located in Elmira, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191241",
+          "university_name": "Fordham University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 59.3,
+          "financial_analysis": {
+            "estimated_coa": 82762,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47762,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22762
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,762).",
+            "cultural_fit": "Located in Bronx, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191533",
+          "university_name": "Hartwick College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 69.6,
+          "financial_analysis": {
+            "estimated_coa": 68614,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 33614,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -8614
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $33,614).",
+            "cultural_fit": "Located in Oneonta, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191630",
+          "university_name": "Hobart William Smith Colleges",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 64.0,
+          "financial_analysis": {
+            "estimated_coa": 82602,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47602,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22602
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,602).",
+            "cultural_fit": "Located in Geneva, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191649",
+          "university_name": "Hofstra University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 68.1,
+          "financial_analysis": {
+            "estimated_coa": 70624,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 35624,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -10624
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $35,624).",
+            "cultural_fit": "Located in Hempstead, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191676",
+          "university_name": "Houghton University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 88.7,
+          "financial_analysis": {
+            "estimated_coa": 31143,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Houghton, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191931",
+          "university_name": "Iona University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 86.9,
+          "financial_analysis": {
+            "estimated_coa": 60247,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 25247,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -247
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $25,247).",
+            "cultural_fit": "Located in New Rochelle, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191968",
+          "university_name": "Ithaca College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 69.0,
+          "financial_analysis": {
+            "estimated_coa": 68699,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 33699,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -8699
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $33,699).",
+            "cultural_fit": "Located in Ithaca, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "192271",
+          "university_name": "LIM College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 95.9,
+          "financial_analysis": {
+            "estimated_coa": 53064,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 18064,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 6936
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $18,064).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "192323",
+          "university_name": "Le Moyne College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 83.0,
+          "financial_analysis": {
+            "estimated_coa": 53183,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 18183,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 6817
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $18,183).",
+            "cultural_fit": "Located in Syracuse, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164632",
+          "university_name": "Bay Path University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 85.2,
+          "financial_analysis": {
+            "estimated_coa": 47308,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 12308,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 12692
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $12,308).",
+            "cultural_fit": "Located in Longmeadow, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164739",
+          "university_name": "Bentley University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 45.1,
+          "financial_analysis": {
+            "estimated_coa": 79548,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 44548,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -19548
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $44,548).",
+            "cultural_fit": "Located in Waltham, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165024",
+          "university_name": "Bridgewater State University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 87.8,
+          "financial_analysis": {
+            "estimated_coa": 26160,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Bridgewater, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165334",
+          "university_name": "Clark University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 39.5,
+          "financial_analysis": {
+            "estimated_coa": 68432,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 33432,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -8432
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $33,432).",
+            "cultural_fit": "Located in Worcester, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165529",
+          "university_name": "Curry College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 87.6,
+          "financial_analysis": {
+            "estimated_coa": 64020,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 29020,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -4020
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $29,020).",
+            "cultural_fit": "Located in Milton, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165662",
+          "university_name": "Emerson College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 51.3,
+          "financial_analysis": {
+            "estimated_coa": 80399,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 45399,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -20399
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $45,399).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165671",
+          "university_name": "Emmanuel College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 75.6,
+          "financial_analysis": {
+            "estimated_coa": 65252,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 30252,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -5252
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $30,252).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165699",
+          "university_name": "Endicott College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 71.2,
+          "financial_analysis": {
+            "estimated_coa": 59328,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 24328,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 672
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $24,328).",
+            "cultural_fit": "Located in Beverly, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165820",
+          "university_name": "Fitchburg State University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 86.9,
+          "financial_analysis": {
+            "estimated_coa": 25555,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Fitchburg, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165866",
+          "university_name": "Framingham State University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 83.6,
+          "financial_analysis": {
+            "estimated_coa": 27413,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Framingham, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165936",
+          "university_name": "Gordon College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 69.2,
+          "financial_analysis": {
+            "estimated_coa": 42446,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 7446,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 17554
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $7,446).",
+            "cultural_fit": "Located in Wenham, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166391",
+          "university_name": "Lasell University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 81.2,
+          "financial_analysis": {
+            "estimated_coa": 42434,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 7434,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 17566
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $7,434).",
+            "cultural_fit": "Located in Newton, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166513",
+          "university_name": "University of Massachusetts-Lowell",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 83.0,
+          "financial_analysis": {
+            "estimated_coa": 30786,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Lowell, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166629",
+          "university_name": "University of Massachusetts-Amherst",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 59.7,
+          "financial_analysis": {
+            "estimated_coa": 34549,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Amherst, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166638",
+          "university_name": "University of Massachusetts-Boston",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 83.8,
+          "financial_analysis": {
+            "estimated_coa": 30544,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166656",
+          "university_name": "Massachusetts College of Pharmacy and Health Sciences",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 85.2,
+          "financial_analysis": {
+            "estimated_coa": 65022,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 30022,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -5022
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $30,022).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "167260",
+          "university_name": "Nichols College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 98,
+          "acceptance_rate": 80.8,
+          "financial_analysis": {
+            "estimated_coa": 58310,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 23310,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 1690
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $23,310).",
+            "cultural_fit": "Located in Dudley, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "109651",
+          "university_name": "Art Center College of Design",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 74.5,
+          "financial_analysis": {
+            "estimated_coa": 75649,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 40649,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -15649
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $40,649).",
+            "cultural_fit": "Located in Pasadena, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110361",
+          "university_name": "California Baptist University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 84.9,
+          "financial_analysis": {
+            "estimated_coa": 54038,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 19038,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 5962
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $19,038).",
+            "cultural_fit": "Located in Riverside, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110370",
+          "university_name": "California College of the Arts",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 91.1,
+          "financial_analysis": {
+            "estimated_coa": 79776,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 44776,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -19776
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $44,776).",
+            "cultural_fit": "Located in San Francisco, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110486",
+          "university_name": "California State University-Bakersfield",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 93.8,
+          "financial_analysis": {
+            "estimated_coa": 19522,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Bakersfield, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110495",
+          "university_name": "California State University-Stanislaus",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 98.1,
+          "financial_analysis": {
+            "estimated_coa": 19739,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Turlock, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110510",
+          "university_name": "California State University-San Bernardino",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 93.7,
+          "financial_analysis": {
+            "estimated_coa": 17427,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in San Bernardino, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110529",
+          "university_name": "California State Polytechnic University-Pomona",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 75.2,
+          "financial_analysis": {
+            "estimated_coa": 23955,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Pomona, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110538",
+          "university_name": "California State University-Chico",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 92.7,
+          "financial_analysis": {
+            "estimated_coa": 26283,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Chico, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110547",
+          "university_name": "California State University-Dominguez Hills",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 93.3,
+          "financial_analysis": {
+            "estimated_coa": 23191,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Carson, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110556",
+          "university_name": "California State University-Fresno",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 95.3,
+          "financial_analysis": {
+            "estimated_coa": 20095,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Fresno, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110565",
+          "university_name": "California State University-Fullerton",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 90.5,
+          "financial_analysis": {
+            "estimated_coa": 18269,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Fullerton, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110574",
+          "university_name": "California State University-East Bay",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 97.4,
+          "financial_analysis": {
+            "estimated_coa": 22850,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Hayward, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110583",
+          "university_name": "California State University-Long Beach",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 46.3,
+          "financial_analysis": {
+            "estimated_coa": 22679,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Long Beach, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110592",
+          "university_name": "California State University-Los Angeles",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 91.2,
+          "financial_analysis": {
+            "estimated_coa": 18403,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Los Angeles, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110608",
+          "university_name": "California State University-Northridge",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 93.5,
+          "financial_analysis": {
+            "estimated_coa": 20485,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Northridge, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110617",
+          "university_name": "California State University-Sacramento",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 94.0,
+          "financial_analysis": {
+            "estimated_coa": 22945,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Sacramento, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110644",
+          "university_name": "University of California-Davis",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 41.8,
+          "financial_analysis": {
+            "estimated_coa": 41238,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 6238,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 18762
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $6,238).",
+            "cultural_fit": "Located in Davis, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110671",
+          "university_name": "University of California-Riverside",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 76.4,
+          "financial_analysis": {
+            "estimated_coa": 38942,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 3942,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 21058
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $3,942).",
+            "cultural_fit": "Located in Riverside, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "110714",
+          "university_name": "University of California-Santa Cruz",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 65.8,
+          "financial_analysis": {
+            "estimated_coa": 41179,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 6179,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 18821
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $6,179).",
+            "cultural_fit": "Located in Santa Cruz, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "111188",
+          "university_name": "Cal Poly Maritime Academy",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 95.0,
+          "financial_analysis": {
+            "estimated_coa": 29853,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Vallejo, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "111966",
+          "university_name": "Charles R Drew University of Medicine and Science",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 38.7,
+          "financial_analysis": {
+            "estimated_coa": 39834,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 4834,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 20166
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $4,834).",
+            "cultural_fit": "Located in Los Angeles, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "112075",
+          "university_name": "Concordia University-Irvine",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 66.0,
+          "financial_analysis": {
+            "estimated_coa": 58682,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 23682,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 1318
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $23,682).",
+            "cultural_fit": "Located in Irvine, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "112394",
+          "university_name": "University of Silicon Valley",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 51.2,
+          "financial_analysis": {
+            "estimated_coa": 35722,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 722,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 24278
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $722).",
+            "cultural_fit": "Located in San Jose, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "113582",
+          "university_name": "Design Institute of San Diego",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 100.0,
+          "financial_analysis": {
+            "estimated_coa": 55911,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 20911,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 4089
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $20,911).",
+            "cultural_fit": "Located in San Diego, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "114813",
+          "university_name": "Fresno Pacific University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 64.1,
+          "financial_analysis": {
+            "estimated_coa": 44249,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 9249,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 15751
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $9,249).",
+            "cultural_fit": "Located in Fresno, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "115755",
+          "university_name": "California State Polytechnic University-Humboldt",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 98.2,
+          "financial_analysis": {
+            "estimated_coa": 25170,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Arcata, CA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "189705",
+          "university_name": "Canisius University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 72.4,
+          "financial_analysis": {
+            "estimated_coa": 44322,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 9322,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 15678
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $9,322).",
+            "cultural_fit": "Located in Buffalo, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "189857",
+          "university_name": "Central Yeshiva Tomchei Tmimim Lubavitz",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 87.4,
+          "financial_analysis": {
+            "estimated_coa": 29697,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Brooklyn, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190114",
+          "university_name": "Metropolitan College of New York",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 90.0,
+          "financial_analysis": {
+            "estimated_coa": 34203,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190576",
+          "university_name": "CUNY Graduate School and University Center",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 68.5,
+          "financial_analysis": {
+            "estimated_coa": 82000,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 47000,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -22000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $47,000).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190725",
+          "university_name": "Daemen University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 68.3,
+          "financial_analysis": {
+            "estimated_coa": 45192,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 10192,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 14808
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $10,192).",
+            "cultural_fit": "Located in Amherst, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190752",
+          "university_name": "Yeshiva of Far Rockaway Derech Ayson Rabbinical Seminary",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 92.0,
+          "financial_analysis": {
+            "estimated_coa": 21150,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Far Rockaway, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "190761",
+          "university_name": "Dominican University New York",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 63.3,
+          "financial_analysis": {
+            "estimated_coa": 47802,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 12802,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 12198
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $12,802).",
+            "cultural_fit": "Located in Orangeburg, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191205",
+          "university_name": "Five Towns College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 53.8,
+          "financial_analysis": {
+            "estimated_coa": 42458,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 7458,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 17542
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $7,458).",
+            "cultural_fit": "Located in Dix Hills, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "191621",
+          "university_name": "Hilbert College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 97.2,
+          "financial_analysis": {
+            "estimated_coa": 42114,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 7114,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 17886
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $7,114).",
+            "cultural_fit": "Located in Hamburg, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "192192",
+          "university_name": "Keuka College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 68.1,
+          "financial_analysis": {
+            "estimated_coa": 54760,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 19760,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 5240
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $19,760).",
+            "cultural_fit": "Located in Keuka Park, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164368",
+          "university_name": "Hult International Business School",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 60.5,
+          "financial_analysis": {
+            "estimated_coa": 79075,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 44075,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -19075
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $44,075).",
+            "cultural_fit": "Located in Cambridge, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164447",
+          "university_name": "American International College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 99.6,
+          "financial_analysis": {
+            "estimated_coa": 59270,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 24270,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 730
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $24,270).",
+            "cultural_fit": "Located in Springfield, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164492",
+          "university_name": "Anna Maria College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 50.3,
+          "financial_analysis": {
+            "estimated_coa": 61888,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 26888,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -1888
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $26,888).",
+            "cultural_fit": "Located in Paxton, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164562",
+          "university_name": "Assumption University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 83.0,
+          "financial_analysis": {
+            "estimated_coa": 65551,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 30551,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -5551
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $30,551).",
+            "cultural_fit": "Located in Worcester, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164614",
+          "university_name": "Boston Baptist College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 90.9,
+          "financial_analysis": {
+            "estimated_coa": 23370,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "164748",
+          "university_name": "Berklee College of Music",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 43.5,
+          "financial_analysis": {
+            "estimated_coa": 72700,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 37700,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -12700
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $37,700).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165574",
+          "university_name": "Dean College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 73.7,
+          "financial_analysis": {
+            "estimated_coa": 64889,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 29889,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -4889
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $29,889).",
+            "cultural_fit": "Located in Franklin, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165802",
+          "university_name": "Fisher College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 70.7,
+          "financial_analysis": {
+            "estimated_coa": 53921,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 18921,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 6079
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $18,921).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166018",
+          "university_name": "Hampshire College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 75.3,
+          "financial_analysis": {
+            "estimated_coa": 74195,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 39195,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -14195
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $39,195).",
+            "cultural_fit": "Located in Amherst, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166054",
+          "university_name": "Hellenic College-Holy Cross Greek Orthodox School of Theology",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 79.6,
+          "financial_analysis": {
+            "estimated_coa": 41282,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 6282,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 18718
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $6,282).",
+            "cultural_fit": "Located in Brookline, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166452",
+          "university_name": "Lesley University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 96.9,
+          "financial_analysis": {
+            "estimated_coa": 51538,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 16538,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 8462
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $16,538).",
+            "cultural_fit": "Located in Cambridge, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166674",
+          "university_name": "Massachusetts College of Art and Design",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 76.3,
+          "financial_analysis": {
+            "estimated_coa": 34239,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166692",
+          "university_name": "Massachusetts Maritime Academy",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 94.7,
+          "financial_analysis": {
+            "estimated_coa": 31367,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in Buzzards Bay, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166850",
+          "university_name": "Merrimack College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 70.0,
+          "financial_analysis": {
+            "estimated_coa": 70038,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 35038,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -10038
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $35,038).",
+            "cultural_fit": "Located in North Andover, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "167057",
+          "university_name": "The New England Conservatory of Music",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 41.1,
+          "financial_analysis": {
+            "estimated_coa": 81277,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 46277,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -21277
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $46,277).",
+            "cultural_fit": "Located in Boston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "167288",
+          "university_name": "Massachusetts College of Liberal Arts",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 89.7,
+          "financial_analysis": {
+            "estimated_coa": 26026,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 25000
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $0).",
+            "cultural_fit": "Located in North Adams, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "167394",
+          "university_name": "College of Our Lady of the Elms",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 85.3,
+          "financial_analysis": {
+            "estimated_coa": 54027,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 19027,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": 5973
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $19,027).",
+            "cultural_fit": "Located in Chicopee, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "167598",
+          "university_name": "Regis College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 94,
+          "acceptance_rate": 69.8,
+          "financial_analysis": {
+            "estimated_coa": 65546,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 30546,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -5546
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $30,546).",
+            "cultural_fit": "Located in Weston, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "165015",
+          "university_name": "Brandeis University",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 92,
+          "acceptance_rate": 40.5,
+          "financial_analysis": {
+            "estimated_coa": 86448,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 51448,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -26448
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $51,448).",
+            "cultural_fit": "Located in Waltham, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "166939",
+          "university_name": "Mount Holyoke College",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 92,
+          "acceptance_rate": 36.0,
+          "financial_analysis": {
+            "estimated_coa": 84926,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 49926,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -24926
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $49,926).",
+            "cultural_fit": "Located in South Hadley, MA."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        },
+        {
+          "ipeds_id": "192040",
+          "university_name": "Jewish Theological Seminary of America",
+          "matching_category": "Safety",
+          "counselor_override_category": "Safety",
+          "is_approved": true,
+          "matching_score": 86,
+          "acceptance_rate": 48.6,
+          "financial_analysis": {
+            "estimated_coa": 85945,
+            "expected_financial_aid_grant": 35000,
+            "net_price_for_student": 50945,
+            "policy_type": "Need-Aware",
+            "budget_surplus_deficit": -25945
+          },
+          "matching_reason": {
+            "academic_fit": "IB DP profile and SAT 1520 align with institution's academic threshold.",
+            "financial_fit": "Institution offers aid but reviews international applicants under a Need-Aware policy (estimated net price: $50,945).",
+            "cultural_fit": "Located in New York, NY."
+          },
+          "counselor_comment": "Evaluated under 5D holistic admissions framework."
+        }
+      ]
+    }
+  },
+  {
+    "id": "8822",
+    "name": "Chloe Park",
+    "korean_name": "박채원",
+    "school": "Chadwick International",
+    "grade": 12,
+    "cohort": "IBDP Cohort Alpha",
+    "counselor_name": "Mr. David Nah",
+    "dossier_status": "Verified 2025.10.12",
+    "citizenship_status": "US Citizen (Green Card / Passport)",
+    "academic_profile": {
+      "curriculum_type": "IB DP",
+      "ib_predicted_score": 43,
+      "unweighted_gpa": 3.96,
+      "weighted_gpa": 4.45,
+      "school_context": "IB DP Full Diploma offered",
+      "grade_trend": "9th(3.90) -> 10th(3.95) -> 11th(4.00)",
+      "standardized_tests": {
+        "SAT": 1540,
+        "SAT_RW": 760,
+        "SAT_Math": 780,
+        "AP_scores": {
+          "Biology": 5,
+          "Chemistry": 5
+        }
+      },
+      "years_in_english_school": 6,
+      "english_waiver_eligible": true,
+      "intended_major": "Biomedical Engineering & Pre-Med"
+    },
+    "financial_profile": {
+      "household_income_usd": 62000,
+      "household_assets_usd": 40000,
+      "max_annual_budget_usd": 12000,
+      "financial_aid_required": true,
+      "estimated_sai_usd": 0
+    },
+    "extracurricular_profile": [
+      {
+        "activity_name": "Hospital Bio-sensor Research Intern",
+        "duration_years": 3,
+        "hours_per_week": 8,
+        "role": "Co-author",
+        "spike_classification": "Spike Focus",
+        "impact": "Co-authored peer-reviewed paper on glucose monitoring nano-sensors in adolescents."
+      }
+    ],
+    "preferences": {
+      "institution_type": "National University",
+      "geographic_location": "East Coast",
+      "campus_setting": "Urban"
+    },
+    "simulation": {
+      "evaluated_at": "2025-10-12T11:00:00Z",
+      "is_published": true,
+      "firewall_status": "PUBLISHED_TO_CLIENT",
+      "counselor_override_note": "Chloe is a US Citizen with household income below $65,000, making her fully eligible for QuestBridge National College Match and maximum Federal Pell Grant + institutional zero-loan packages.",
+      "student_analysis": {
+        "academic_tier": "Tier 1 (Elite / IB 43)",
+        "ec_profile_type": "Spike (Biomedical Research)",
+        "financial_strategy": "QuestBridge & Need-Blind 100% Aid",
+        "estimated_sai_usd": 0,
+        "questbridge_eligible": true,
+        "toefl_waiver": true
+      },
+      "matched_universities": [
+        {
+          "ipeds_id": "186131",
+          "university_name": "Princeton University",
+          "matching_category": "Reach",
+          "counselor_override_category": "Reach",
+          "is_approved": true,
+          "matching_score": 96,
+          "acceptance_rate": 4.5,
+          "financial_analysis": {
+            "estimated_coa": 86700,
+            "expected_financial_aid_grant": 86700,
+            "net_price_for_student": 0,
+            "policy_type": "Need-Blind (Full Ride QuestBridge Eligible)",
+            "budget_surplus_deficit": 12000
+          },
+          "matching_reason": {
+            "academic_fit": "IB 43/45 score and SAT 1540 puts student in top tier of admitted Class of 2029.",
+            "financial_fit": "Full need met with zero student loans; family contribution $0 under Princeton financial aid program.",
+            "cultural_fit": "Undergraduate research opportunities in MolBio and biophysics."
+          },
+          "counselor_comment": "Primary candidate for QuestBridge Match."
+        }
+      ]
+    }
+  }
+]

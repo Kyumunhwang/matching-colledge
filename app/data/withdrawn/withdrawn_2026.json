@@ -1,0 +1,63 @@
+[
+  {
+    "id": "8823",
+    "name": "Kevin Park",
+    "korean_name": "박준혁",
+    "school": "Seoul Foreign School (SFS)",
+    "grade": 12,
+    "cohort": "IBDP Cohort Alpha",
+    "counselor_name": "Mr. David Nah",
+    "dossier_status": "Registered 2026.10.12",
+    "citizenship_status": "US Citizen (Domestic)",
+    "academic_profile": {
+      "curriculum_type": "IB DP",
+      "ib_predicted_score": 40,
+      "unweighted_gpa": 3.9,
+      "weighted_gpa": 4.29,
+      "school_context": "IB DP Diploma Track",
+      "grade_trend": "Consistently Strong",
+      "standardized_tests": {
+        "SAT": 1500,
+        "SAT_RW": 720,
+        "SAT_Math": 780
+      },
+      "years_in_english_school": 4,
+      "english_waiver_eligible": true,
+      "intended_major": "Computer Science"
+    },
+    "financial_profile": {
+      "household_income_usd": 100000.0,
+      "household_assets_usd": 200000.0,
+      "max_annual_budget_usd": 25000,
+      "financial_aid_required": true,
+      "estimated_sai_usd": 20000.0
+    },
+    "extracurricular_profile": [
+      {
+        "activity_name": "Academic Project & Club Leadership",
+        "duration_years": 3,
+        "hours_per_week": 8,
+        "role": "President / Founder",
+        "spike_classification": "Spike Focus",
+        "impact": "Led team research and community initiatives."
+      }
+    ],
+    "preferences": {
+      "institution_type": "National University",
+      "geographic_location": "East Coast or West Coast",
+      "campus_setting": "Suburban or Urban"
+    },
+    "simulation": {
+      "evaluated_at": "2026-10-12T00:24:51.963240",
+      "is_published": false,
+      "firewall_status": "DRAFT_MUTED",
+      "counselor_override_note": "Awaiting initial counselor assessment by Mr. David Nah.",
+      "student_analysis": {},
+      "matched_universities": []
+    },
+    "status": "WITHDRAWN",
+    "withdrawn_year": 2026,
+    "withdrawn_reason": "Relocated overseas",
+    "withdrawn_at": "2026-10-12T00:24:51.991429"
+  }
+]

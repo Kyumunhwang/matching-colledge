@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-container":"#fefcff","on-primary":"#ffffff","on-error-container":"#93000a","surface-container":"#e5eeff","error":"#ba1a1a","tertiary":"#000000","badge-match-bg":"#DBEAFE","on-surface":"#0b1c30","badge-safety-bg":"#D1FAE5","surface":"#f8f9ff","on-surface-variant":"#45464d","cost-alert-red":"#DC2626","surface-container-lowest":"#ffffff","surface-bright":"#f8f9ff","inverse-primary":"#bec6e0","sapphire-subtle":"#EFF6FF","slate-surface":"#F8FAFC","background":"#f8f9ff","on-tertiary-fixed-variant":"#005137","on-background":"#0b1c30","tertiary-fixed":"#85f8c4","on-secondary-fixed-variant":"#003ea8","primary-fixed":"#dae2fd","primary":"#000000","slate-card":"#FFFFFF","badge-reach-text":"#B91C1C","secondary":"#0051d5","error-container":"#ffdad6","aid-grant-green":"#059669","caution-amber-surface":"#FFFBEB","inverse-surface":"#213145","navy-deep":"#0F172A","on-primary-fixed":"#131b2e","on-primary-container":"#7c839b","sapphire-hover":"#1D4ED8","on-secondary-fixed":"#00174b","badge-reach-bg":"#FEE2E2","inverse-on-surface":"#eaf1ff","on-tertiary":"#ffffff","secondary-fixed-dim":"#b4c5ff","on-tertiary-container":"#069669","badge-safety-text":"#047857","on-primary-fixed-variant":"#3f465c","slate-border-strong":"#CBD5E1","on-secondary":"#ffffff","on-error":"#ffffff","primary-fixed-dim":"#bec6e0","navy-subtle":"#1E293B","primary-container":"#131b2e","badge-need-aware-bg":"#FEF3C7","secondary-fixed":"#dbe1ff","badge-match-text":"#1D4ED8","aid-grant-surface":"#ECFDF5","surface-dim":"#cbdbf5","slate-border":"#E2E8F0","secondary-container":"#316bf3","tertiary-fixed-dim":"#68dba9","outline-variant":"#c6c6cd","surface-tint":"#565e74","tertiary-container":"#002114","outline":"#76777d","on-tertiary-fixed":"#002114","surface-variant":"#d3e4fe","caution-amber":"#F59E0B","cost-alert-surface":"#FEF2F2","badge-need-blind-text":"#0F766E","badge-need-aware-text":"#B45309","surface-container-high":"#dce9ff","surface-container-low":"#eff4ff","badge-need-blind-bg":"#CCFBF1","surface-container-highest":"#d3e4fe"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","gutter-sm":"1rem","space-md":"1rem","space-xs":"0.25rem","margin":"2rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-mobile":"1rem"},fontFamily:{"headline-lg":["Manrope"],"body-md":["Inter"],"badge-status":["Inter"],"label-code-tabular":["JetBrains Mono"],"headline-md":["Manrope"],"display-hero":["Manrope"],"body-lg":["Inter"],"metric-large":["Manrope"],"display-hero-mobile":["Manrope"],"headline-lg-mobile":["Manrope"],"body-sm":["Inter"],"headline-sm":["Manrope"]},fontSize:{"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"badge-status":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"label-code-tabular":["13px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"metric-large":["32px",{lineHeight:"36px",letterSpacing:"-0.03em",fontWeight:"700"}],"display-hero-mobile":["30px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["22px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"600"}]}}}};</script></head><body class="bg-slate-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-slate-card border-b border-slate-border px-gutter flex items-center justify-between shadow-[0_1px_3px_rgba(15,23,42,0.05)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="5D-Match Engine Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WGxCA6PcwIHFkH_mVwkyNde9jl_YTvKhFZCTrbZzdk0O2lUmfvD37OVoY19e9UwheAdtzQ2r9lZg83WRlEuNWfN6aAJKXNTfdEMljrL02eO8qQjHTFG67lAcZQ_v7Q3x9zv09mWow_j2aHi_osX-jfcl1GIksMQfAPQfXWMVJPRiCanTi6CfgTNsC6b7GmPaiMzDFoM3Fc4ctDswUXpWYvRdIWIHGL0vEJHZu8SALnNV7aVGRsiiCIWQ"/><span class="font-headline-sm text-headline-sm text-navy-deep tracking-tight font-bold">5D-Match Engine</span></div><div class="h-5 w-px bg-slate-border"></div><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-surface-container-low text-navy-deep border border-slate-border font-label-code-tabular text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>AY 2025-2026</span><nav class="hidden md:flex items-center gap-space-lg h-16 ml-space-sm" data-active-classes="text-secondary border-b-2 border-secondary font-semibold"><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="student-parent-portal" href="#">Student &amp; Parent Portal</a><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="college-master-db" href="#">College Master DB</a><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="counselor-admin-hub" href="#">Counselor Admin Hub</a></nav></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-cost-alert-red ring-2 ring-slate-card"></span></button><div class="h-6 w-px bg-slate-border"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-border-strong" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1EYfH08Ys9wk5xDcSpOtmPUTe9Texten2h9QsrZ-WowEA7B-vbRkZsvifP7ocE5CnYSe40YcC0dhOG3svWrGD-lz2HWnQxVJvnuirwKnd-Z2NhzU9LusWKjygTYdMZfoTDlrOL171rG_qT1MZ5Uw82V5fhI8NIBr4E3PiLqewWrxVw259bBimJKy1vNdAa3XL7ilZjOaOXZjpCRlD0bPsKTXCQd5a7Yr976sR30QXduKUEuy2aQR"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-aid-grant-green ring-2 ring-slate-card"></span></div><div class="hidden sm:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-navy-deep leading-tight">Family Roster Access</span><span class="font-label-code-tabular text-[11px] text-on-surface-variant leading-none">Verified Recipient</span></div></div></div></header><main class="w-full pt-16 flex-1 bg-slate-surface px-gutter py-space-lg max-w-[1440px] mx-auto"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Top Navigation & Action Banner -->
+<div class="flex flex-col gap-space-sm bg-slate-card p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Breadcrumb & Context Tags -->
+<div class="flex flex-wrap items-center gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<span class="hover:text-navy-deep cursor-pointer font-medium">College Master DB</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-navy-deep font-semibold">신규 대학 및 입시/재정보조 정책 자료 입력 (Master Entry)</span>
+<span class="h-3 w-px bg-slate-border-strong mx-1"></span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container text-navy-deep font-label-code-tabular text-body-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>IPEDS NCES 2024-2025 Standard
+        </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container text-navy-deep font-label-code-tabular text-body-sm font-semibold">
+          Active Schema v4.8-Strict
+        </span>
+</div>
+<!-- Live Validation Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-aid-grant-surface text-aid-grant-green font-label-code-tabular text-body-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+        실시간 스키마 유효성 검사: 100% 통과 (Schema Validated)
+      </div>
+</div>
+<!-- Title and Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-xs">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-navy-deep tracking-tight">미국 대학 입시·재정 정책 마스터 자료 입력기</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Gemini 3.8 admissions matching engine 주입을 위한 심층 기관 데이터 및 국제학생 정책 큐레이션</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-surface text-navy-deep hover:bg-surface-variant transition-colors font-headline-sm text-headline-sm" id="btnAutoFetch" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">cloud_download</span>
+<span>IPEDS 코드 자동 불러오기 (API)</span>
+</button>
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-surface text-navy-deep hover:bg-surface-variant transition-colors font-headline-sm text-headline-sm" id="btnSaveDraft" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+<span>임시 저장 (Draft)</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-navy-deep text-on-primary hover:bg-navy-subtle transition-colors shadow-sm font-headline-sm text-headline-sm" id="btnPublishEngine" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">auto_awesome</span>
+<span>Gemini 컨텍스트 검증 및 DB 최종 등록</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Asymmetric 2-Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Deep Form Sections (70% - 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION 1: Institutional Identity -->
+<section class="bg-slate-card rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center justify-center w-7 h-7 rounded-lg bg-secondary text-on-primary font-label-code-tabular text-body-sm font-bold">01</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-navy-deep">대학 기본 프로필 &amp; 기관 식별자</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Institutional Identity &amp; National IPEDS Verification</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-code-tabular text-body-sm text-secondary font-semibold">NCES Certified Record</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- IPEDS UnitID -->
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep flex items-center justify-between">
+              IPEDS UnitID / OPE ID
+              <span class="text-aid-grant-green font-label-code-tabular text-body-sm inline-flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verified: Dartmouth College
+              </span>
+</label>
+<div class="relative">
+<input class="w-full px-3.5 py-2.5 bg-slate-surface rounded-lg font-label-code-tabular text-body-md text-navy-deep focus:bg-slate-card focus:outline-none focus:ring-2 focus:ring-secondary/50" id="inputIpeds" type="text" value="182670"/>
+<button class="absolute right-2 top-2 p-1 text-on-surface-variant hover:text-navy-deep" title="다시 검증" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+</div>
+</div>
+<!-- Official English Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">공식 대학 영문명 (Institution Legal Name)</label>
+<input class="w-full px-3.5 py-2.5 bg-slate-surface rounded-lg font-body-md text-body-md text-navy-deep focus:bg-slate-card focus:outline-none focus:ring-2 focus:ring-secondary/50" id="inputUniNameEn" type="text" value="Dartmouth College"/>
+</div>
+<!-- Official Korean Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">공식 한글 명칭 (Korean Translation Standard)</label>
+<input class="w-full px-3.5 py-2.5 bg-slate-surface rounded-lg font-body-md text-body-md text-navy-deep focus:bg-slate-card focus:outline-none focus:ring-2 focus:ring-secondary/50" id="inputUniNameKo" type="text" value="다트머스 대학교 (아이비리그)"/>
+</div>
+<!-- Carnegie Classification -->
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">기관 분류 (Carnegie Classification)</label>
+<select class="w-full px-3.5 py-2.5 bg-slate-surface rounded-lg font-body-md text-body-md text-navy-deep focus:bg-slate-card focus:outline-none focus:ring-2 focus:ring-secondary/50" id="selectCarnegie">
+<option selected="">Private Research University (R1 - Very High Activity)</option>
+<option>Top Liberal Arts College (LAC)</option>
+<option>Public Flagship Research University</option>
+<option>Private Specialized STEM Institution</option>
+</select>
+</div>
+<!-- Campus Setting & Location -->
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">캠퍼스 입지 &amp; 소재지 (Setting &amp; Region)</label>
+<input class="w-full px-3.5 py-2.5 bg-slate-surface rounded-lg font-body-md text-body-md text-navy-deep focus:bg-slate-card focus:outline-none focus:ring-2 focus:ring-secondary/50" id="inputLocation" type="text" value="Rural / New England (Hanover, New Hampshire)"/>
+</div>
+<!-- Acceptance Rate & Enrollment -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">합격률 (Admit Rate)</label>
+<input class="w-full px-3.5 py-2.5 bg-slate-surface rounded-lg font-label-code-tabular text-body-md text-cost-alert-red font-semibold focus:bg-slate-card focus:outline-none focus:ring-2 focus:ring-secondary/50" id="inputAdmitRate" type="text" value="6.2%"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">학부생 규모 (UG Size)</label>
+<input class="w-full px-3.5 py-2.5 bg-slate-surface rounded-lg font-label-code-tabular text-body-md text-navy-deep focus:bg-slate-card focus:outline-none focus:ring-2 focus:ring-secondary/50" id="inputUgSize" type="text" value="4,556명"/>
+</div>
+</div>
+</div>
+<!-- Campus Seal Asset Box -->
+<div class="mt-space-xs p-space-md bg-slate-surface rounded-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-full bg-slate-card shadow-sm flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-12 h-12 object-contain" data-alt="High-resolution heraldic official academic seal of Dartmouth College in rich pine green and gold with evergreen tree motif, pristine lighting and white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM5LKg87psyCkMPwtzYhgyhZMtCsxMjHHReK6afPbQfVy1bChZ3cbMN4g5PY-EzUj46fBETFTFOvCNC_WGyT-kj4B5vkjJ-nz7QmKIZy-qZE4Vl9S4gjgeV7wx8LOVxXPDSEMoUPmO993RPQBTZOQEy7DDnDXOOnMyqEbUvVdwJL-CYFuOn2zb6GGheO2B9cQe71bFGWLJbSnogAIP25RupgOIUuqdcAmvAPttqHT_RT9yDhdKCn9y"/>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-navy-deep">기관 공식 엠블럼 및 배너 이미지 자산</span>
+<p class="font-label-code-tabular text-body-sm text-on-surface-variant truncate max-w-xs sm:max-w-md">assets.5dmatch.io/seals/us_ivy_dartmouth_shield_vector.svg</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-slate-card text-navy-deep hover:bg-surface-variant font-body-sm text-body-sm font-semibold transition-colors" type="button">
+            자산 재업로드
+          </button>
+</div>
+</section>
+<!-- SECTION 2: International Financial Aid Policy Matrix -->
+<section class="bg-slate-card rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center justify-center w-7 h-7 rounded-lg bg-aid-grant-green text-on-primary font-label-code-tabular text-body-sm font-bold">02</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-navy-deep">국제학생(F-1) 재정 보조 정책 및 가구 부담금 모델링</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">International Financial Aid Policy Matrix &amp; Net Cost Calibration</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-medium text-navy-deep">F-1 장학금 지원 여부</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-badge-safety-bg text-badge-safety-text font-label-code-tabular text-[11px] font-bold">AVAILABLE</span>
+</div>
+</div>
+<!-- Aid Policy Selection Radios -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-headline-sm text-headline-sm text-navy-deep mb-1">국제학생 재정보조 정책 분류 (Int'l Policy Stance)</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<label class="cursor-pointer p-space-md rounded-xl bg-slate-surface hover:bg-surface-container-low transition-all flex items-start gap-space-sm">
+<input class="mt-1 text-secondary focus:ring-secondary" name="aid_policy" type="radio" value="blind"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-navy-deep">Need-Blind for All Internationals</span>
+<span class="px-1.5 py-0.5 rounded bg-badge-need-blind-bg text-badge-need-blind-text font-label-code-tabular text-[10px] font-bold">최상위 극소수</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">입학 심사 시 가계 재정 신청 여부를 일체 고려하지 않으며 100% 보장 (Dartmouth, Harvard, Yale, Princeton 등)</p>
+</div>
+</label>
+<label class="cursor-pointer p-space-md rounded-xl bg-surface-container-low transition-all flex items-start gap-space-sm">
+<input checked="" class="mt-1 text-secondary focus:ring-secondary" name="aid_policy" type="radio" value="aware_100"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-navy-deep">Need-Aware (100% Need Met)</span>
+<span class="px-1.5 py-0.5 rounded bg-badge-need-aware-bg text-badge-need-aware-text font-label-code-tabular text-[10px] font-bold">선택됨</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">장학금 신청 시 심사 난이도 상승(페널티)하나, 최종 합격 시 입증된 필요액을 100% 전액 무상 지원</p>
+</div>
+</label>
+<label class="cursor-pointer p-space-md rounded-xl bg-slate-surface hover:bg-surface-container-low transition-all flex items-start gap-space-sm">
+<input class="mt-1 text-secondary focus:ring-secondary" name="aid_policy" type="radio" value="aware_gap"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-navy-deep">Need-Aware with Partial Gap Aid</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-code-tabular text-[10px]">Unmet Gap</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">합격하더라도 필요액 전액을 채워주지 않고 일부만 지급하여 잔여금 발생 ($10k~$30k 갭 발생 위험)</p>
+</div>
+</label>
+<label class="cursor-pointer p-space-md rounded-xl bg-slate-surface hover:bg-surface-container-low transition-all flex items-start gap-space-sm">
+<input class="mt-1 text-secondary focus:ring-secondary" name="aid_policy" type="radio" value="none"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-navy-deep">No Aid for Non-Resident Aliens</span>
+<span class="px-1.5 py-0.5 rounded bg-badge-reach-bg text-badge-reach-text font-label-code-tabular text-[10px] font-bold">$0 지원</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">대부분의 주립대 및 비지원 사립대로 순수 유학생 대상 학자금 전액 자비 부담 (Full-pay Only)</p>
+</div>
+</label>
+</div>
+</div>
+<!-- 100% Need Met Policy Guarantee Toggle Banner -->
+<div class="p-space-md rounded-lg bg-aid-grant-surface flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-aid-grant-green text-[22px]">verified_user</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-navy-deep">100% Demonstrated Need-Met 보장 서약 기관</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">입증된 필요액 전액에 대해 무상 학자금(Grants/Scholarships)을 대출(Loan) 없이 지급하는 조항 확인</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-border-strong peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-aid-grant-green"></div>
+</label>
+</div>
+<!-- Financial Metrics 4-Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-xs">
+<div class="p-space-md rounded-lg bg-slate-surface flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">연간 총 유학 비용 (COA)</span>
+<div class="mt-2">
+<input class="w-full bg-transparent font-label-code-tabular text-headline-md font-bold text-navy-deep focus:outline-none" id="inputCoa" type="text" value="$87,400"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tuition, Board &amp; Fees</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-aid-grant-surface flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-aid-grant-green font-medium">국제학생 평균 장학금 수혜액</span>
+<div class="mt-2">
+<input class="w-full bg-transparent font-label-code-tabular text-headline-md font-bold text-aid-grant-green focus:outline-none" id="inputAvgAid" type="text" value="$73,200"/>
+<span class="font-body-sm text-body-sm text-aid-grant-green/80">Avg Need-Based Grant</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-slate-surface flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">필수 비면제 유학생 수수료</span>
+<div class="mt-2">
+<input class="w-full bg-transparent font-label-code-tabular text-headline-md font-bold text-navy-deep focus:outline-none" id="inputFees" type="text" value="$1,450"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">SEVIS/Intl Support Fee</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-slate-surface flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">최소 가계 의무 기여 하한선</span>
+<div class="mt-2">
+<input class="w-full bg-transparent font-label-code-tabular text-headline-md font-bold text-navy-deep focus:outline-none" id="inputFloor" type="text" value="$0"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No Mandatory Minimum</span>
+</div>
+</div>
+</div>
+<!-- Documentation Filing Engine -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">필수 제출 재정 증명 양식</label>
+<select class="w-full px-3.5 py-2.5 bg-slate-surface rounded-lg font-body-md text-body-md text-navy-deep focus:bg-slate-card focus:outline-none focus:ring-2 focus:ring-secondary/50">
+<option selected="">CSS Profile (College Board IDOC 포털 증빙 필수)</option>
+<option>ISFAA (무료 국제학생 재정원조 양식 수기 제출)</option>
+<option>대학 자체 포털 재정 보조 신청서 (Institutional Portal)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">CSS School Code / FAFSA Code</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<input class="px-3.5 py-2.5 bg-slate-surface rounded-lg font-label-code-tabular text-body-md text-navy-deep focus:bg-slate-card focus:outline-none" type="text" value="CSS: 3351"/>
+<input class="px-3.5 py-2.5 bg-slate-surface rounded-lg font-label-code-tabular text-body-md text-on-surface-variant focus:bg-slate-card focus:outline-none" type="text" value="FAFSA: 002573"/>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Academic Benchmarks & Rigor Calibration -->
+<section class="bg-slate-card rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center justify-center w-7 h-7 rounded-lg bg-secondary text-on-primary font-label-code-tabular text-body-sm font-bold">03</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-navy-deep">학업 컷오프 &amp; 국제학교 커리큘럼 정합성 기준</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Academic Calibration &amp; Global International School Benchmarks</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-sapphire-subtle font-label-code-tabular text-body-sm text-secondary font-semibold">Strict Tier 1 Standards</span>
+</div>
+<!-- Curriculum Rigor Parameters -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- IB Diploma Criteria -->
+<div class="p-space-md rounded-xl bg-slate-surface flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-navy-deep flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">school</span> IB Diploma 요구 기준
+              </span>
+<span class="px-2 py-0.5 rounded bg-slate-card font-label-code-tabular text-body-sm font-bold text-navy-deep">권장: 40+ / 45</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Predicted Score Mid-50% Range</span>
+<input class="px-3 py-2 bg-slate-card rounded-lg font-label-code-tabular text-body-md text-navy-deep font-semibold focus:outline-none" id="inputIbRange" type="text" value="39 - 43 / 45점"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">HL 과목 필수 요구사항 (STEM/Econ 지망)</span>
+<input class="px-3 py-2 bg-slate-card rounded-lg font-body-sm text-body-sm text-navy-deep focus:outline-none" type="text" value="Math AA HL 6+, Physics HL 6+ 필수 권장"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Core (TOK / EE) 가산 포인트 기대치</span>
+<input class="px-3 py-2 bg-slate-card rounded-lg font-label-code-tabular text-body-sm text-on-surface-variant focus:outline-none" type="text" value="최소 2~3점 필수 (A/B 등급)"/>
+</div>
+</div>
+<!-- AP Rigor Baseline -->
+<div class="p-space-md rounded-xl bg-slate-surface flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-navy-deep flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">history_edu</span> AP Course 권장 표준
+              </span>
+<span class="px-2 py-0.5 rounded bg-slate-card font-label-code-tabular text-body-sm font-bold text-navy-deep">권장: 8+ 과목</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">권장 최소 AP 과목 수 &amp; 점수선</span>
+<input class="px-3 py-2 bg-slate-card rounded-lg font-label-code-tabular text-body-md text-navy-deep font-semibold focus:outline-none" type="text" value="8~10과목 이상 (모두 4점 혹은 5점 기준)"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Unweighted GPA Mid-50% (4.0 Scale)</span>
+<input class="px-3 py-2 bg-slate-card rounded-lg font-label-code-tabular text-body-sm text-navy-deep focus:outline-none" type="text" value="3.88 - 4.00"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">SAT / ACT 50% 구간 (Test-Optional 여부)</span>
+<div class="flex items-center gap-2">
+<input class="w-1/2 px-2.5 py-2 bg-slate-card rounded-lg font-label-code-tabular text-body-sm text-navy-deep focus:outline-none" type="text" value="SAT: 1490-1570"/>
+<input class="w-1/2 px-2.5 py-2 bg-slate-card rounded-lg font-label-code-tabular text-body-sm text-navy-deep focus:outline-none" type="text" value="ACT: 33-35"/>
+</div>
+</div>
+</div>
+</div>
+<!-- English Proficiency & Waiver Policy Engine -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-navy-deep flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">language</span> 공인 영어 성적 및 면제 규칙 (English Proficiency &amp; Waiver Rules)
+            </span>
+<span class="text-secondary font-label-code-tabular text-body-sm font-semibold">TOEFL 100+ / DET 130+</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-slate-card flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-navy-deep font-medium">TOEFL iBT 최소 / 권장</span>
+<span class="font-label-code-tabular text-body-sm font-bold text-navy-deep">100점 (권장 105점 이상)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-slate-card flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-navy-deep font-medium">Duolingo English Test (DET)</span>
+<span class="font-label-code-tabular text-body-sm font-bold text-navy-deep">130점 이상 (Subscore 120+)</span>
+</div>
+</div>
+<!-- Waiver Rule Builder Checkboxes -->
+<div class="flex flex-col gap-2 pt-1">
+<span class="font-headline-sm text-headline-sm text-navy-deep">영어 성적 제출 자동 면제 (Waiver Criteria Rules)</span>
+<label class="flex items-center gap-2.5 p-2 bg-slate-card rounded-lg cursor-pointer">
+<input checked="" class="text-secondary focus:ring-secondary rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-navy-deep">영어 매개 인가 국제학교(English-medium International School) 3~4년 이상 재학 시 자동 면제</span>
+</label>
+<label class="flex items-center gap-2.5 p-2 bg-slate-card rounded-lg cursor-pointer">
+<input checked="" class="text-secondary focus:ring-secondary rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-navy-deep">SAT Evidence-Based Reading &amp; Writing (EBRW) 650점 이상 취득 시 자동 면제</span>
+</label>
+<label class="flex items-center gap-2.5 p-2 bg-slate-card rounded-lg cursor-pointer">
+<input class="text-secondary focus:ring-secondary rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">IB English A (HL or SL) 5점 이상 취득 시 면제 승인</span>
+</label>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Institutional Needs & Qualitative Directives -->
+<section class="bg-slate-card rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center justify-center w-7 h-7 rounded-lg bg-secondary text-on-primary font-label-code-tabular text-body-sm font-bold">04</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-navy-deep">제도적 니즈 &amp; 정성적 선호 프로파일</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Institutional Needs, Major Penalties &amp; Qualitative Preference Vectors</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-code-tabular text-body-sm text-navy-deep font-semibold">Gemini Prompt Tuning</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Institutional Lean Selector -->
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">지원자 인재상 성향 (Applicant Archetype Bias)</label>
+<div class="p-space-sm bg-slate-surface rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-navy-deep font-semibold">Prefers Focused Spike (전문 특화 송곳형)</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">광범위한 팔방미인(Well-Rounded)보다 특정 전공·분야에 독보적 성취를 이룬 스파이크형 지원자 우대</p>
+</div>
+<!-- Demonstrated Interest -->
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-headline-sm text-navy-deep">입학 지원 관심도 반영 (Demonstrated Interest)</label>
+<select class="w-full px-3.5 py-2.5 bg-slate-surface rounded-lg font-body-md text-body-md text-navy-deep focus:bg-slate-card focus:outline-none">
+<option selected="">Not Considered / 동문 인터뷰 및 Supplemental 에세이로만 판정</option>
+<option>Considered (캠퍼스 투어, 설명회 참석 기록 추적)</option>
+<option>Important (얼리 디시전 지원 여부로 집중 판정)</option>
+</select>
+<p class="font-body-sm text-body-sm text-on-surface-variant">아이비리그 공통: 단순 클릭/웨비나 방문은 미반영</p>
+</div>
+</div>
+<!-- Over-Subscribed Major Penalties -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<label class="font-headline-sm text-headline-sm text-navy-deep">과밀 전공 합격 난이도 페널티 인덱스 (Over-Subscribed Majors Penalty)</label>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-badge-reach-bg text-badge-reach-text font-label-code-tabular text-body-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">warning</span> Computer Science (High Selectivity Penalty: +35% Difficulty)
+            </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-badge-need-aware-bg text-badge-need-aware-text font-label-code-tabular text-body-sm font-semibold">
+              Economics &amp; Finance Track (+20% Difficulty)
+            </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-badge-need-aware-bg text-badge-need-aware-text font-label-code-tabular text-body-sm font-semibold">
+              Pre-Med / Biology Track
+            </span>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-slate-surface text-on-surface-variant hover:text-navy-deep font-body-sm text-body-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span> 전공 추가
+            </button>
+</div>
+</div>
+<!-- Counselor Advising Wisdom Directives -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<label class="font-headline-sm text-headline-sm text-navy-deep flex items-center justify-between">
+<span>수석 카운슬러 전담 지도 가이드 (Strategic Counselor Directives)</span>
+<span class="font-label-code-tabular text-[12px] text-secondary">Gemini 3.8 RAG 프롬프트에 직접 주입됨</span>
+</label>
+<textarea class="w-full p-3 bg-slate-surface rounded-lg font-body-md text-body-md text-navy-deep focus:bg-slate-card focus:outline-none focus:ring-2 focus:ring-secondary/50" id="txtDirectives" rows="3">학부 중심 교육(Undergraduate-focused Teaching)과 D-Plan(4학기 유연제)에 대한 완벽한 이해 필수. 단순 Ivy 명성 추종형 에세이는 즉각 불합격 처리됨. Hanover의 고립된 자연환경을 활용한 야외/연구 프로젝트 연계성 및 자유로운 융합 연구 의지를 적극 강조할 것.</textarea>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Sticky Live Gemini 3.8 Inspector & Integrity Audit (30% - 4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg lg:sticky lg:top-20">
+<!-- CARD 1: Gemini 3.8 Injection Payload Preview -->
+<div class="bg-slate-card rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">cognition</span>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep">Gemini 3.8 Context Injection Preview</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-aid-grant-surface text-aid-grant-green font-label-code-tabular text-[11px] font-bold">READY</span>
+</div>
+<div class="p-space-sm rounded-lg bg-slate-surface flex items-center justify-between text-body-sm font-label-code-tabular">
+<span class="text-on-surface-variant">추정 토큰 점유율:</span>
+<span class="text-navy-deep font-bold">480 Tokens / Record</span>
+</div>
+<!-- Live JSON Code Preview -->
+<div class="relative rounded-lg bg-navy-deep p-space-md text-on-primary font-label-code-tabular text-[12px] overflow-x-auto shadow-inner">
+<pre class="leading-relaxed" id="jsonPreview"><code>{
+  "ipeds_id": "182670",
+  "name_en": "Dartmouth College",
+  "carnegie_tier": "R1_Private",
+  "f1_aid_stance": {
+    "policy": "Need-Aware_100Pct_Met",
+    "need_met_pct": 100,
+    "annual_coa_usd": 87400,
+    "avg_int_grant_usd": 73200,
+    "min_efc_floor": 0
+  },
+  "academic_rigor": {
+    "ib_predicted_mid50": "39-43",
+    "toefl_waiver_rules": [
+      "4_yrs_english_hs",
+      "sat_erw_gte_650"
+    ]
+  },
+  "institutional_bias": "Focused_Spike"
+}</code></pre>
+<div class="absolute top-2 right-2 flex items-center gap-1">
+<button class="p-1 rounded bg-navy-subtle hover:bg-slate-surface/20 text-on-primary transition-colors" id="btnCopyJson" title="JSON 복사" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-slate-surface text-navy-deep hover:bg-surface-variant font-headline-sm text-headline-sm flex items-center justify-center gap-2 transition-colors" id="btnRefreshJson" type="button">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+<span>컨텍스트 페이로드 실시간 갱신</span>
+</button>
+</div>
+<!-- CARD 2: Data Integrity & Policy Audit -->
+<div class="bg-slate-card rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-navy-deep flex items-center gap-2">
+<span class="material-symbols-outlined text-aid-grant-green text-[20px]">fact_check</span>
+<span>데이터 정합성 및 무결성 감사</span>
+</h3>
+<span class="font-label-code-tabular text-body-sm font-bold text-aid-grant-green">4 / 4 PASS</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded-full bg-slate-surface overflow-hidden">
+<div class="h-full bg-aid-grant-green rounded-full w-full"></div>
+</div>
+<!-- Audit Checkpoints -->
+<div class="flex flex-col gap-2.5 pt-1">
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-slate-surface">
+<span class="material-symbols-outlined text-aid-grant-green text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-navy-deep">IPEDS NCES 공식 코드 유효성 검증 완료</span>
+<span class="font-label-code-tabular text-[11px] text-on-surface-variant">ID: 182670 (OPEID: 00257300 매핑 정상)</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-slate-surface">
+<span class="material-symbols-outlined text-aid-grant-green text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-navy-deep">COA 대비 국제학생 장학금 역전 검사 통과</span>
+<span class="font-label-code-tabular text-[11px] text-on-surface-variant">Grant($73.2k) &lt; COA($87.4k) 정상 산식</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-slate-surface">
+<span class="material-symbols-outlined text-aid-grant-green text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-navy-deep">국제학교(IB/AP) 환산 스키마 무결성 확인</span>
+<span class="font-label-code-tabular text-[11px] text-on-surface-variant">Tier-1 Ivy League 표준 매트릭스 부합</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-slate-surface">
+<span class="material-symbols-outlined text-aid-grant-green text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-navy-deep">CSS Profile 코드 및 IDOC 기한 연결</span>
+<span class="font-label-code-tabular text-[11px] text-on-surface-variant">Early: Nov 1 / Regular: Jan 5 동기화</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: Audit Trail & Verification Authority -->
+<div class="bg-slate-card rounded-xl shadow-sm p-space-lg flex flex-col gap-space-sm text-body-sm font-body-sm">
+<h3 class="font-headline-sm text-headline-sm text-navy-deep flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">history</span>
+<span>입력 이력 및 감사 로그 (Audit Trail)</span>
+</h3>
+<div class="p-space-sm rounded-lg bg-slate-surface flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">최종 입력/검증 책임자:</span>
+<span class="text-navy-deep font-semibold">Dr. Eleanor Vance</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">직책:</span>
+<span class="text-navy-deep">Director of Academic Intelligence</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">검증 소스:</span>
+<span class="text-navy-deep font-label-code-tabular text-[11px]">CDS 2024-2025 Sec H6/H7</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">최종 동기화 타임스탬프:</span>
+<span class="text-navy-deep font-label-code-tabular text-[11px]">2025-02-28 14:22:05 UTC</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-code-tabular text-[11px] text-aid-grant-green flex items-center gap-1 font-semibold">
+<span class="w-2 h-2 rounded-full bg-aid-grant-green animate-pulse"></span> DB Lock Active (Tamper-Proof)
+          </span>
+<button class="text-secondary hover:underline font-label-code-tabular text-[11px] font-semibold" type="button">로그 전체 조회</button>
+</div>
+</div>
+<!-- Action Confirmation Toast / Notification (Hidden by default, triggered via JS) -->
+<div class="hidden p-space-md rounded-xl bg-navy-deep text-on-primary flex items-center gap-space-sm shadow-xl transition-all" id="toastNotification">
+<span class="material-symbols-outlined text-aid-grant-green text-[22px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-primary">Gemini 3.8 엔진 동기화 완료</span>
+<span class="font-body-sm text-body-sm text-inverse-primary">IPEDS #182670 정책 레코드가 마스터 DB에 정식 반영되었습니다.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Global Metadata Bar -->
+<div class="p-space-md rounded-xl bg-slate-card shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">database</span>
+<span>5D-Match Engine Master Database Management System • Verified Institutional Data Feed for Gemini 3.8 Long-Context LLM</span>
+</div>
+<div class="font-label-code-tabular text-body-sm text-navy-deep font-semibold">
+      Strict Security Tier-3 / AES-256 Encrypted Audit Pipeline
+    </div>
+</div>
+</div>
+<script>
+  // Dynamic Realtime Synchronization between Deep Form & Gemini Payload Preview
+  const inputIpeds = document.getElementById('inputIpeds');
+  const inputUniNameEn = document.getElementById('inputUniNameEn');
+  const inputCoa = document.getElementById('inputCoa');
+  const inputAvgAid = document.getElementById('inputAvgAid');
+  const inputIbRange = document.getElementById('inputIbRange');
+  const jsonPreview = document.getElementById('jsonPreview');
+  const btnCopyJson = document.getElementById('btnCopyJson');
+  const btnRefreshJson = document.getElementById('btnRefreshJson');
+  const btnPublishEngine = document.getElementById('btnPublishEngine');
+  const btnAutoFetch = document.getElementById('btnAutoFetch');
+  const toastNotification = document.getElementById('toastNotification');
+
+  function updateJsonOutput() {
+    const rawCoa = parseInt(inputCoa.value.replace(/[^0-9]/g, '')) || 87400;
+    const rawAid = parseInt(inputAvgAid.value.replace(/[^0-9]/g, '')) || 73200;
+    const ipeds = inputIpeds.value.trim() || "182670";
+    const name = inputUniNameEn.value.trim() || "Dartmouth College";
+    const ibRange = inputIbRange.value.trim() || "39-43";
+
+    const payload = {
+      ipeds_id: ipeds,
+      name_en: name,
+      carnegie_tier: "R1_Private",
+      f1_aid_stance: {
+        policy: "Need-Aware_100Pct_Met",
+        need_met_pct: 100,
+        annual_coa_usd: rawCoa,
+        avg_int_grant_usd: rawAid,
+        min_efc_floor: 0
+      },
+      academic_rigor: {
+        ib_predicted_mid50: ibRange,
+        toefl_waiver_rules: [
+          "4_yrs_english_hs",
+          "sat_erw_gte_650"
+        ]
+      },
+      institutional_bias: "Focused_Spike"
+    };
+
+    jsonPreview.innerHTML = `<code>${JSON.stringify(payload, null, 2)}</code>`;
+  }
+
+  [inputIpeds, inputUniNameEn, inputCoa, inputAvgAid, inputIbRange].forEach(input => {
+    input.addEventListener('input', updateJsonOutput);
+  });
+
+  if (btnRefreshJson) {
+    btnRefreshJson.addEventListener('click', updateJsonOutput);
+  }
+
+  if (btnCopyJson) {
+    btnCopyJson.addEventListener('click', () => {
+      const codeText = jsonPreview.innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        const originalHtml = btnCopyJson.innerHTML;
+        btnCopyJson.innerHTML = '<span class="material-symbols-outlined text-[16px] text-aid-grant-green">check</span>';
+        setTimeout(() => {
+          btnCopyJson.innerHTML = originalHtml;
+        }, 1800);
+      });
+    });
+  }
+
+  if (btnAutoFetch) {
+    btnAutoFetch.addEventListener('click', () => {
+      btnAutoFetch.classList.add('opacity-75');
+      btnAutoFetch.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin text-secondary">sync</span><span>불러오는 중...</span>';
+      setTimeout(() => {
+        inputIpeds.value = "182670";
+        inputUniNameEn.value = "Dartmouth College";
+        updateJsonOutput();
+        btnAutoFetch.classList.remove('opacity-75');
+        btnAutoFetch.innerHTML = '<span class="material-symbols-outlined text-[18px] text-aid-grant-green">done_all</span><span>동기화 완료 (IPEDS API)</span>';
+        setTimeout(() => {
+          btnAutoFetch.innerHTML = '<span class="material-symbols-outlined text-[18px] text-secondary">cloud_download</span><span>IPEDS 코드 자동 불러오기 (API)</span>';
+        }, 2500);
+      }, 700);
+    });
+  }
+
+  if (btnPublishEngine) {
+    btnPublishEngine.addEventListener('click', () => {
+      if (toastNotification) {
+        toastNotification.classList.remove('hidden');
+        toastNotification.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        setTimeout(() => {
+          toastNotification.classList.add('hidden');
+        }, 4500);
+      }
+    });
+  }
+</script></main><footer class="w-full bg-slate-card border-t border-slate-border py-space-md mt-auto"><div class="max-w-[1440px] mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><div>5D-Match Engine • International School Admissions &amp; Financial Simulation Architecture</div><div class="flex items-center gap-space-md font-label-code-tabular text-[12px]"><span>Audited Institutional Data</span><span>•</span><span>EFC Precision Matrix v4.2</span></div></div></footer></body></html>

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "8823",
+    "name": "Grace Lee",
+    "korean_name": "이은혜",
+    "school": "Seoul Foreign School (SFS)",
+    "grade": 12,
+    "cohort": "IBDP Cohort Alpha",
+    "counselor_name": "Mr. David Nah",
+    "dossier_status": "Registered 2026.10.12",
+    "citizenship_status": "International (No Green Card)",
+    "academic_profile": {
+      "curriculum_type": "IB DP",
+      "ib_predicted_score": 43,
+      "unweighted_gpa": 3.95,
+      "weighted_gpa": 4.35,
+      "school_context": "IB DP Diploma Track",
+      "grade_trend": "Consistently Strong",
+      "standardized_tests": {
+        "SAT": 1540,
+        "SAT_RW": 720,
+        "SAT_Math": 780
+      },
+      "years_in_english_school": 4,
+      "english_waiver_eligible": true,
+      "intended_major": "Computer Science"
+    },
+    "financial_profile": {
+      "household_income_usd": 55000.0,
+      "household_assets_usd": 110000.0,
+      "max_annual_budget_usd": 30000.0,
+      "financial_aid_required": true,
+      "estimated_sai_usd": 11000.0
+    },
+    "extracurricular_profile": [
+      {
+        "activity_name": "Academic Project & Club Leadership",
+        "duration_years": 3,
+        "hours_per_week": 8,
+        "role": "President / Founder",
+        "spike_classification": "Spike Focus",
+        "impact": "Led team research and community initiatives."
+      }
+    ],
+    "preferences": {
+      "institution_type": "National University",
+      "geographic_location": "East Coast or West Coast",
+      "campus_setting": "Suburban or Urban"
+    },
+    "simulation": {
+      "evaluated_at": "2026-10-12T00:24:51.821857",
+      "is_published": false,
+      "firewall_status": "DRAFT_MUTED",
+      "counselor_override_note": "Awaiting initial counselor assessment by Mr. David Nah.",
+      "student_analysis": {},
+      "matched_universities": []
+    },
+    "status": "GRADUATED",
+    "graduation_year": 2026,
+    "final_matriculation": "MIT Accepted",
+    "graduated_at": "2026-10-12T00:24:51.853876"
+  }
+]

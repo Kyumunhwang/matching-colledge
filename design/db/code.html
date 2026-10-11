@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-container":"#fefcff","on-primary":"#ffffff","on-error-container":"#93000a","surface-container":"#e5eeff","error":"#ba1a1a","tertiary":"#000000","badge-match-bg":"#DBEAFE","on-surface":"#0b1c30","badge-safety-bg":"#D1FAE5","surface":"#f8f9ff","on-surface-variant":"#45464d","cost-alert-red":"#DC2626","surface-container-lowest":"#ffffff","surface-bright":"#f8f9ff","inverse-primary":"#bec6e0","sapphire-subtle":"#EFF6FF","slate-surface":"#F8FAFC","background":"#f8f9ff","on-tertiary-fixed-variant":"#005137","on-background":"#0b1c30","tertiary-fixed":"#85f8c4","on-secondary-fixed-variant":"#003ea8","primary-fixed":"#dae2fd","primary":"#000000","slate-card":"#FFFFFF","badge-reach-text":"#B91C1C","secondary":"#0051d5","error-container":"#ffdad6","aid-grant-green":"#059669","caution-amber-surface":"#FFFBEB","inverse-surface":"#213145","navy-deep":"#0F172A","on-primary-fixed":"#131b2e","on-primary-container":"#7c839b","sapphire-hover":"#1D4ED8","on-secondary-fixed":"#00174b","badge-reach-bg":"#FEE2E2","inverse-on-surface":"#eaf1ff","on-tertiary":"#ffffff","secondary-fixed-dim":"#b4c5ff","on-tertiary-container":"#069669","badge-safety-text":"#047857","on-primary-fixed-variant":"#3f465c","slate-border-strong":"#CBD5E1","on-secondary":"#ffffff","on-error":"#ffffff","primary-fixed-dim":"#bec6e0","navy-subtle":"#1E293B","primary-container":"#131b2e","badge-need-aware-bg":"#FEF3C7","secondary-fixed":"#dbe1ff","badge-match-text":"#1D4ED8","aid-grant-surface":"#ECFDF5","surface-dim":"#cbdbf5","slate-border":"#E2E8F0","secondary-container":"#316bf3","tertiary-fixed-dim":"#68dba9","outline-variant":"#c6c6cd","surface-tint":"#565e74","tertiary-container":"#002114","outline":"#76777d","on-tertiary-fixed":"#002114","surface-variant":"#d3e4fe","caution-amber":"#F59E0B","cost-alert-surface":"#FEF2F2","badge-need-blind-text":"#0F766E","badge-need-aware-text":"#B45309","surface-container-high":"#dce9ff","surface-container-low":"#eff4ff","badge-need-blind-bg":"#CCFBF1","surface-container-highest":"#d3e4fe"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","gutter-sm":"1rem","space-md":"1rem","space-xs":"0.25rem","margin":"2rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-mobile":"1rem"},fontFamily:{"headline-lg":["Manrope"],"body-md":["Inter"],"badge-status":["Inter"],"label-code-tabular":["JetBrains Mono"],"headline-md":["Manrope"],"display-hero":["Manrope"],"body-lg":["Inter"],"metric-large":["Manrope"],"display-hero-mobile":["Manrope"],"headline-lg-mobile":["Manrope"],"body-sm":["Inter"],"headline-sm":["Manrope"]},fontSize:{"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"badge-status":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"label-code-tabular":["13px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"metric-large":["32px",{lineHeight:"36px",letterSpacing:"-0.03em",fontWeight:"700"}],"display-hero-mobile":["30px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["22px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"600"}]}}}};</script></head><body class="bg-slate-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-slate-card border-b border-slate-border px-gutter flex items-center justify-between shadow-[0_1px_3px_rgba(15,23,42,0.05)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="5D-Match Engine Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WGxCA6PcwIHFkH_mVwkyNde9jl_YTvKhFZCTrbZzdk0O2lUmfvD37OVoY19e9UwheAdtzQ2r9lZg83WRlEuNWfN6aAJKXNTfdEMljrL02eO8qQjHTFG67lAcZQ_v7Q3x9zv09mWow_j2aHi_osX-jfcl1GIksMQfAPQfXWMVJPRiCanTi6CfgTNsC6b7GmPaiMzDFoM3Fc4ctDswUXpWYvRdIWIHGL0vEJHZu8SALnNV7aVGRsiiCIWQ"/><span class="font-headline-sm text-headline-sm text-navy-deep tracking-tight font-bold">5D-Match Engine</span></div><div class="h-5 w-px bg-slate-border"></div><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-surface-container-low text-navy-deep border border-slate-border font-label-code-tabular text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>AY 2025-2026</span><nav class="hidden md:flex items-center gap-space-lg h-16 ml-space-sm" data-active-classes="text-secondary border-b-2 border-secondary font-semibold"><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="student-parent-portal" href="#">Student &amp; Parent Portal</a><a aria-current="page" class="h-16 inline-flex items-center px-1 transition-colors text-secondary border-b-2 border-secondary font-semibold" data-path="college-master-db" href="#">College Master DB</a><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="counselor-admin-hub" href="#">Counselor Admin Hub</a></nav></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-cost-alert-red ring-2 ring-slate-card"></span></button><div class="h-6 w-px bg-slate-border"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-border-strong" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1EYfH08Ys9wk5xDcSpOtmPUTe9Texten2h9QsrZ-WowEA7B-vbRkZsvifP7ocE5CnYSe40YcC0dhOG3svWrGD-lz2HWnQxVJvnuirwKnd-Z2NhzU9LusWKjygTYdMZfoTDlrOL171rG_qT1MZ5Uw82V5fhI8NIBr4E3PiLqewWrxVw259bBimJKy1vNdAa3XL7ilZjOaOXZjpCRlD0bPsKTXCQd5a7Yr976sR30QXduKUEuy2aQR"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-aid-grant-green ring-2 ring-slate-card"></span></div><div class="hidden sm:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-navy-deep leading-tight">Family Roster Access</span><span class="font-label-code-tabular text-[11px] text-on-surface-variant leading-none">Verified Recipient</span></div></div></div></header><main class="w-full pt-16 flex-1 bg-slate-surface px-gutter py-space-lg max-w-[1440px] mx-auto"><div class="flex flex-col w-full">
+<!-- Top Operational Banner & Engine Sync State -->
+<section class="relative bg-slate-card rounded-xl p-space-lg shadow-sm mb-space-lg overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-sapphire-subtle opacity-70 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-secondary font-label-code-tabular text-[12px] font-semibold">
+<span class="w-2 h-2 rounded-full bg-aid-grant-green animate-pulse"></span>
+            IPEDS REPOSITORY 2025-Q1
+          </span>
+<span class="text-on-surface-variant font-label-code-tabular text-[12px] font-medium tracking-tight">SCHEMA: v4.8-STRICT</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-navy-deep tracking-tight mb-space-xs">
+          College Master Database &amp; International Policy Repository
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Verified baseline datasets injected directly into the Gemini 3.8 Context Window to eliminate admissions model hallucination and enforce audited EFC calculations.
+        </p>
+</div>
+<!-- Action Triggers -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-slate-surface text-navy-deep hover:bg-surface-container-high transition-colors font-headline-sm text-body-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Bulk CSV Import (IPEDS)</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-low text-secondary hover:bg-badge-match-bg transition-colors font-headline-sm text-body-md" onclick="openDrawer('new')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Register New College</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-navy-deep text-on-primary hover:bg-navy-subtle active:scale-[0.98] transition-all font-headline-sm text-body-md shadow-md" id="syncEngineBtn" onclick="triggerContextSync()" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed" id="syncIcon">sync</span>
+<span id="syncText">Sync Context to Gemini Engine</span>
+<span class="ml-1.5 px-2 py-0.5 rounded-full bg-navy-subtle text-tertiary-fixed font-label-code-tabular text-[11px]">1,420 Active</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Metric Architecture & Live Telemetry -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Stat 1 -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase tracking-wider font-semibold">Total Profiled Institutions</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-large text-metric-large text-navy-deep font-bold">1,420</span>
+<span class="font-label-code-tabular text-body-sm text-aid-grant-green font-semibold">100% Curated</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Title IV &amp; Non-Federal Scope</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase tracking-wider font-semibold">Int'l Need-Blind Cohort</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-large text-metric-large text-secondary font-bold">8</span>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant">0.56% of total</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Harvard, Yale, Princeton, Dartmouth...</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-badge-match-bg flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase tracking-wider font-semibold">100% Demonstrated Need-Met</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-large text-metric-large text-aid-grant-green font-bold">72</span>
+<span class="font-label-code-tabular text-body-sm text-aid-grant-green font-semibold">Full Profile</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">CSS Profile or ISFAA Required</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-aid-grant-surface flex items-center justify-center text-aid-grant-green">
+<span class="material-symbols-outlined text-[26px]">price_check</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant uppercase tracking-wider font-semibold">Zero-Aid Public Systems</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-large text-metric-large text-cost-alert-red font-bold">410</span>
+<span class="font-label-code-tabular text-body-sm text-cost-alert-red font-semibold">Full Pay Int'l</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">UC, SUNY, Texas, Big Ten Networks</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-cost-alert-surface flex items-center justify-center text-cost-alert-red">
+<span class="material-symbols-outlined text-[26px]">block</span>
+</div>
+</div>
+</section>
+<!-- Filter & Global Query Bar -->
+<section class="bg-slate-card rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-11 pr-4 py-2 bg-slate-surface text-navy-deep rounded-lg font-body-md text-body-md focus:outline-none focus:bg-slate-card focus:shadow-md transition-all placeholder:text-outline" id="collegeSearch" onkeyup="filterTable()" placeholder="Search by Institution Name, IPEDS Code, Carnegie Tier, or City..." type="text"/>
+</div>
+<!-- Facet Filters -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-1.5 bg-slate-surface px-3 py-1.5 rounded-lg text-body-sm font-body-md text-navy-deep">
+<span class="text-on-surface-variant font-medium">Type:</span>
+<select class="bg-transparent font-semibold text-navy-deep focus:outline-none cursor-pointer" id="typeFilter" onchange="filterTable()">
+<option value="ALL">All Types</option>
+<option value="Ivy League">Ivy League</option>
+<option value="Top LAC">Top LAC</option>
+<option value="Public Flagship">Public Flagship</option>
+<option value="Private Research">Private Research</option>
+</select>
+</div>
+<div class="flex items-center gap-1.5 bg-slate-surface px-3 py-1.5 rounded-lg text-body-sm font-body-md text-navy-deep">
+<span class="text-on-surface-variant font-medium">Aid Policy:</span>
+<select class="bg-transparent font-semibold text-navy-deep focus:outline-none cursor-pointer" id="aidFilter" onchange="filterTable()">
+<option value="ALL">All Aid Modes</option>
+<option value="Need-Blind">Need-Blind</option>
+<option value="Need-Aware">Need-Aware</option>
+<option value="No Aid for Int'l">No Aid for Int'l</option>
+</select>
+</div>
+<div class="flex items-center gap-1.5 bg-slate-surface px-3 py-1.5 rounded-lg text-body-sm font-body-md text-navy-deep">
+<span class="text-on-surface-variant font-medium">100% Need Met:</span>
+<select class="bg-transparent font-semibold text-navy-deep focus:outline-none cursor-pointer" id="needMetFilter" onchange="filterTable()">
+<option value="ALL">Any Status</option>
+<option value="YES">Yes Only</option>
+<option value="NO">No Only</option>
+</select>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-navy-deep hover:bg-slate-surface rounded-lg transition-colors" onclick="resetFilters()" title="Reset Filters" type="button">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Master Data Table Section -->
+<section class="bg-slate-card rounded-xl shadow-sm overflow-hidden mb-space-xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="masterTable">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-code-tabular text-[12px] uppercase tracking-wider">
+<th class="py-3.5 px-4 font-semibold">IPEDS ID</th>
+<th class="py-3.5 px-4 font-semibold min-w-[200px]">Institution &amp; Classification</th>
+<th class="py-3.5 px-4 font-semibold">Int'l Aid Policy</th>
+<th class="py-3.5 px-4 font-semibold">100% Met</th>
+<th class="py-3.5 px-4 font-semibold text-right">Avg. Int'l Grant</th>
+<th class="py-3.5 px-4 font-semibold text-right">Total Out-of-State COA</th>
+<th class="py-3.5 px-4 font-semibold">TOEFL / Duo Waiver Policy</th>
+<th class="py-3.5 px-4 font-semibold">Audit State</th>
+<th class="py-3.5 px-4 font-semibold text-center">Manage</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-navy-deep font-body-md text-body-md" id="tableBody">
+<!-- Row 1: Harvard -->
+<tr class="hover:bg-slate-surface transition-colors cursor-pointer group" onclick="openDrawer('166027')">
+<td class="py-4 px-4 font-label-code-tabular text-[13px] font-semibold text-secondary">
+              166027
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-headline-sm text-secondary font-bold text-sm">
+                  HU
+                </div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-navy-deep group-hover:text-secondary transition-colors">
+                    Harvard University
+                  </div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container-low text-navy-deep">Ivy League</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Cambridge, MA</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-badge-need-blind-bg text-badge-need-blind-text font-label-code-tabular text-badge-status font-bold tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-badge-need-blind-text"></span>
+                NEED-BLIND
+              </span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-aid-grant-surface text-aid-grant-green font-label-code-tabular text-[12px] font-bold">
+                YES 100%
+              </span>
+</td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-aid-grant-green">
+              $76,500
+            </td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-navy-deep">
+              $89,400
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-aid-grant-green text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Waiver: 4 yrs int'l school</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-surface text-navy-deep font-label-code-tabular text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>
+                AY 2025-26
+              </span>
+</td>
+<td class="py-4 px-4 text-center">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-navy-deep hover:bg-surface-container transition-colors" onclick="event.stopPropagation(); openDrawer('166027')" type="button">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Dartmouth -->
+<tr class="hover:bg-slate-surface transition-colors cursor-pointer group bg-sapphire-subtle/30" onclick="openDrawer('182670')">
+<td class="py-4 px-4 font-label-code-tabular text-[13px] font-semibold text-secondary">
+              182670
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-headline-sm text-secondary font-bold text-sm">
+                  DC
+                </div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-navy-deep group-hover:text-secondary transition-colors">
+                    Dartmouth College
+                  </div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container-low text-navy-deep">Ivy League</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Hanover, NH</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-badge-need-blind-bg text-badge-need-blind-text font-label-code-tabular text-badge-status font-bold tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-badge-need-blind-text"></span>
+                NEED-BLIND
+              </span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-aid-grant-surface text-aid-grant-green font-label-code-tabular text-[12px] font-bold">
+                YES 100%
+              </span>
+</td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-aid-grant-green">
+              $73,200
+            </td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-navy-deep">
+              $87,400
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-aid-grant-green text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Waiver: SAT ERW 650+</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-surface text-navy-deep font-label-code-tabular text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>
+                AY 2025-26
+              </span>
+</td>
+<td class="py-4 px-4 text-center">
+<button class="p-1.5 rounded-lg text-secondary hover:bg-badge-match-bg transition-colors" onclick="event.stopPropagation(); openDrawer('182670')" type="button">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: UC Berkeley -->
+<tr class="hover:bg-slate-surface transition-colors cursor-pointer group" onclick="openDrawer('110635')">
+<td class="py-4 px-4 font-label-code-tabular text-[13px] font-semibold text-secondary">
+              110635
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-headline-sm text-secondary font-bold text-sm">
+                  UCB
+                </div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-navy-deep group-hover:text-secondary transition-colors">
+                    UC Berkeley
+                  </div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container-low text-navy-deep">Public Flagship</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Berkeley, CA</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-cost-alert-surface text-cost-alert-red font-label-code-tabular text-badge-status font-bold tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-cost-alert-red"></span>
+                NO AID FOR INT'L
+              </span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-cost-alert-surface text-cost-alert-red font-label-code-tabular text-[12px] font-bold">
+                NO 0%
+              </span>
+</td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-on-surface-variant">
+              $0
+            </td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-navy-deep">
+              $74,200
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-cost-alert-red text-[18px]">error</span>
+<span class="font-body-sm text-body-sm text-cost-alert-red font-medium">TOEFL 100+ req. (No Waiver)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-surface text-navy-deep font-label-code-tabular text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>
+                AY 2025-26
+              </span>
+</td>
+<td class="py-4 px-4 text-center">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-navy-deep hover:bg-surface-container transition-colors" onclick="event.stopPropagation(); openDrawer('110635')" type="button">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: University of Rochester -->
+<tr class="hover:bg-slate-surface transition-colors cursor-pointer group" onclick="openDrawer('195030')">
+<td class="py-4 px-4 font-label-code-tabular text-[13px] font-semibold text-secondary">
+              195030
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-headline-sm text-secondary font-bold text-sm">
+                  UR
+                </div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-navy-deep group-hover:text-secondary transition-colors">
+                    University of Rochester
+                  </div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container-low text-navy-deep">Private Research</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Rochester, NY</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-badge-need-aware-bg text-badge-need-aware-text font-label-code-tabular text-badge-status font-bold tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-badge-need-aware-text"></span>
+                NEED-AWARE
+              </span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-aid-grant-surface text-aid-grant-green font-label-code-tabular text-[12px] font-bold">
+                YES 100% MET
+              </span>
+</td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-aid-grant-green">
+              $64,500
+            </td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-navy-deep">
+              $82,000
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-aid-grant-green text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">3 yrs English curriculum</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-surface text-navy-deep font-label-code-tabular text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>
+                AY 2025-26
+              </span>
+</td>
+<td class="py-4 px-4 text-center">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-navy-deep hover:bg-surface-container transition-colors" onclick="event.stopPropagation(); openDrawer('195030')" type="button">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Amherst College -->
+<tr class="hover:bg-slate-surface transition-colors cursor-pointer group" onclick="openDrawer('164465')">
+<td class="py-4 px-4 font-label-code-tabular text-[13px] font-semibold text-secondary">
+              164465
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center font-headline-sm text-secondary font-bold text-sm">
+                  AC
+                </div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-navy-deep group-hover:text-secondary transition-colors">
+                    Amherst College
+                  </div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-surface-container-low text-navy-deep">Top LAC</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Amherst, MA</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-badge-need-blind-bg text-badge-need-blind-text font-label-code-tabular text-badge-status font-bold tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-badge-need-blind-text"></span>
+                NEED-BLIND
+              </span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-aid-grant-surface text-aid-grant-green font-label-code-tabular text-[12px] font-bold">
+                YES 100%
+              </span>
+</td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-aid-grant-green">
+              $73,200
+            </td>
+<td class="py-4 px-4 text-right font-label-code-tabular text-body-md font-bold text-navy-deep">
+              $86,000
+            </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-aid-grant-green text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Waiver: Automatic for IB/AP</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-surface text-navy-deep font-label-code-tabular text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>
+                AY 2025-26
+              </span>
+</td>
+<td class="py-4 px-4 text-center">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-navy-deep hover:bg-surface-container transition-colors" onclick="event.stopPropagation(); openDrawer('164465')" type="button">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="px-space-md py-space-sm bg-slate-card flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-label-code-tabular text-[12px] text-on-surface-variant">
+        Displaying 5 of 1,420 institutions • Partition: Int'l Tier 1 Core
+      </span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-slate-surface text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container cursor-not-allowed opacity-60" type="button">Previous</button>
+<span class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-code-tabular text-[12px] font-bold">1</span>
+<span class="px-2.5 py-1 rounded hover:bg-slate-surface text-navy-deep font-label-code-tabular text-[12px] cursor-pointer">2</span>
+<span class="px-2.5 py-1 rounded hover:bg-slate-surface text-navy-deep font-label-code-tabular text-[12px] cursor-pointer">3</span>
+<span class="px-1 text-on-surface-variant">...</span>
+<span class="px-2.5 py-1 rounded hover:bg-slate-surface text-navy-deep font-label-code-tabular text-[12px] cursor-pointer">284</span>
+<button class="px-3 py-1.5 rounded-lg bg-slate-surface text-navy-deep font-body-sm text-body-sm hover:bg-surface-container" type="button">Next</button>
+</div>
+</div>
+</section>
+<!-- Editorial Institutional Context & Token Payload Indicator -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-xl">
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-2 text-secondary">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<h4 class="font-headline-sm text-headline-sm font-bold">Gemini Context Injection</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Policies stored here bypass general LLM web assumptions. During match simulation, this verified institutional matrix overrides parametric memory with strict need-aware constraints.
+      </p>
+</div>
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-2 text-aid-grant-green">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<h4 class="font-headline-sm text-headline-sm font-bold">The Information Firewall</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Modifications made by counselors in this console do not reach the client parent portal until signed off with the institutional verification stamp and an AY timestamp lock.
+      </p>
+</div>
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-2 text-navy-deep">
+<span class="material-symbols-outlined text-[20px]">database</span>
+<h4 class="font-headline-sm text-headline-sm font-bold">IPEDS &amp; CDS Reconciliation</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Cross-referenced against Section H of the 2024–2025 Common Data Set and NAFSA non-resident financial tables for 99.4% calculated grant accuracy.
+      </p>
+</div>
+</section>
+<!-- SLIDE-OVER DRAWER MODAL: 'Edit International Aid Policy' -->
+<div class="fixed inset-0 bg-navy-deep/60 backdrop-blur-sm z-50 hidden transition-opacity duration-300 opacity-0" id="drawerBackdrop" onclick="closeDrawer()"></div>
+<aside class="fixed top-0 right-0 w-full max-w-xl h-full bg-slate-card shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col overflow-hidden" id="editDrawer">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-code-tabular text-[11px] font-bold">IPEDS #182670</span>
+<span class="inline-flex items-center gap-1 font-label-code-tabular text-[11px] text-aid-grant-green font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span> Verified Cohort
+          </span>
+</div>
+<h2 class="font-headline-lg text-headline-md font-bold text-navy-deep" id="drawerTitle">
+          Edit Policy: Dartmouth College
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Common Data Set Section H6/H7 &amp; Non-Resident Alien Baseline
+        </p>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-navy-deep hover:bg-slate-surface rounded-lg transition-colors" onclick="closeDrawer()" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Drawer Form Content (Scrollable) -->
+<div class="p-space-lg flex-1 overflow-y-auto space-y-space-md">
+<!-- Live Context Status Tile -->
+<div class="bg-sapphire-subtle rounded-xl p-space-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-badge-match-bg text-secondary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<div>
+<div class="font-headline-sm text-body-md font-bold text-navy-deep">Ready for Prompt Injection</div>
+<div class="font-label-code-tabular text-[12px] text-secondary font-semibold">Context Window Footprint: ~480 tokens</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-aid-grant-green text-on-primary font-label-code-tabular text-[11px] font-bold tracking-tight">
+          ACTIVE IN LLM
+        </span>
+</div>
+<!-- General Identifiers -->
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-1.5">IPEDS ID</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-slate-surface text-navy-deep font-label-code-tabular text-body-md font-semibold cursor-not-allowed" id="drawerIpeds" readonly="" type="text" value="182670"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-1.5">Carnegie Type</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-slate-surface text-navy-deep font-body-md text-body-md focus:bg-slate-card focus:outline-none focus:shadow-sm" id="drawerType" type="text" value="Ivy League / R1 Private"/>
+</div>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-1.5">Institution Name</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-slate-surface text-navy-deep font-headline-sm text-body-lg font-bold focus:bg-slate-card focus:outline-none focus:shadow-sm" id="drawerName" type="text" value="Dartmouth College"/>
+</div>
+<!-- International Aid Master Switch & Type Selection -->
+<div class="bg-slate-surface rounded-xl p-space-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<div class="font-headline-sm text-body-md font-bold text-navy-deep">International Need-Based Aid Available</div>
+<div class="font-body-sm text-[12px] text-on-surface-variant">Enables CSS Profile / ISFAA submission logic</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="aidToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-aid-grant-green"></div>
+</label>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-1.5">Aid Policy Classification</label>
+<select class="w-full px-3.5 py-2.5 rounded-lg bg-slate-card text-navy-deep font-headline-sm text-body-md shadow-sm focus:outline-none cursor-pointer" id="drawerAidPolicy">
+<option selected="" value="Need-Blind">Need-Blind (Admissions Decision Unaffected by EFC)</option>
+<option value="Need-Aware">Need-Aware (Financial Need Impacts Admissions Odds)</option>
+<option value="Merit-Only">Merit-Only (No Institutional Need-Based Grants)</option>
+<option value="No Aid">No Financial Assistance for Non-US Citizens</option>
+</select>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary cursor-pointer" id="needMetCheck" type="checkbox"/>
+<label class="font-body-md text-body-md font-semibold text-navy-deep cursor-pointer" for="needMetCheck">
+            100% Demonstrated Financial Need Met Guarantee
+          </label>
+</div>
+</div>
+<!-- Financial Metrics Stack -->
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-1.5">Average Int'l Grant ($)</label>
+<div class="relative">
+<span class="absolute left-3.5 top-1/2 -translate-y-1/2 font-label-code-tabular text-body-md text-on-surface-variant font-bold">$</span>
+<input class="w-full pl-8 pr-3.5 py-2.5 rounded-lg bg-slate-surface text-aid-grant-green font-label-code-tabular text-body-lg font-bold focus:bg-slate-card focus:outline-none focus:shadow-sm" id="drawerAvgGrant" type="number" value="73200"/>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1 block">CDS Section H6 row c</span>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-1.5">Mandatory Int'l Student Fee ($)</label>
+<div class="relative">
+<span class="absolute left-3.5 top-1/2 -translate-y-1/2 font-label-code-tabular text-body-md text-on-surface-variant font-bold">$</span>
+<input class="w-full pl-8 pr-3.5 py-2.5 rounded-lg bg-slate-surface text-navy-deep font-label-code-tabular text-body-lg font-bold focus:bg-slate-card focus:outline-none focus:shadow-sm" id="drawerIntlFee" type="number" value="1450"/>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1 block">Non-waivable per semester</span>
+</div>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-1.5">Out-of-State Total COA ($)</label>
+<div class="relative">
+<span class="absolute left-3.5 top-1/2 -translate-y-1/2 font-label-code-tabular text-body-md text-on-surface-variant font-bold">$</span>
+<input class="w-full pl-8 pr-3.5 py-2.5 rounded-lg bg-slate-surface text-navy-deep font-label-code-tabular text-body-lg font-bold focus:bg-slate-card focus:outline-none focus:shadow-sm" id="drawerTotalCOA" type="number" value="87400"/>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1 block">Tuition, Housing, Food, Books &amp; Personal expenses</span>
+</div>
+<!-- Language Waiver Policy -->
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-1.5">TOEFL / DuoLingo Waiver Criteria</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg bg-slate-surface text-navy-deep font-body-md text-body-md focus:bg-slate-card focus:outline-none focus:shadow-sm" id="drawerWaiver" rows="2">Waiver: SAT ERW 650+ OR 4 full academic years at accredited English-instruction secondary institution.</textarea>
+</div>
+<!-- Audit Metadata & Stamp -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Last Audited By:</span>
+<span class="font-semibold text-navy-deep">Dr. Marcus Vance (Director)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Timestamp Hash:</span>
+<span class="font-label-code-tabular text-[11px] text-secondary">2025-02-18T14:32:09-EST</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Data Integrity:</span>
+<span class="font-label-code-tabular text-[11px] text-aid-grant-green font-bold">SHA-256 MATCHED</span>
+</div>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-space-lg bg-slate-card shadow-lg flex items-center justify-between gap-space-sm">
+<button class="px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-slate-surface transition-colors font-headline-sm text-body-md" onclick="closeDrawer()" type="button">
+        Discard Changes
+      </button>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2.5 rounded-lg bg-slate-surface text-navy-deep hover:bg-surface-container-high transition-colors font-headline-sm text-body-md" onclick="savePolicyDraft()" type="button">
+          Save Draft Only
+        </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-navy-deep text-on-primary hover:bg-navy-subtle active:scale-[0.98] transition-all font-headline-sm text-body-md shadow-md flex items-center gap-2" onclick="publishAndLockPolicy()" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Publish &amp; Inject</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Interactive Logic -->
+<script>
+    function openDrawer(ipeds) {
+      const drawer = document.getElementById('editDrawer');
+      const backdrop = document.getElementById('drawerBackdrop');
+      
+      if (ipeds === '166027') {
+        document.getElementById('drawerTitle').innerText = 'Edit Policy: Harvard University';
+        document.getElementById('drawerIpeds').value = '166027';
+        document.getElementById('drawerName').value = 'Harvard University';
+        document.getElementById('drawerType').value = 'Ivy League / R1 Private';
+        document.getElementById('drawerAidPolicy').value = 'Need-Blind';
+        document.getElementById('drawerAvgGrant').value = '76500';
+        document.getElementById('drawerTotalCOA').value = '89400';
+        document.getElementById('drawerWaiver').value = 'Waiver: 4 yrs accredited intl English curriculum.';
+      } else if (ipeds === '110635') {
+        document.getElementById('drawerTitle').innerText = 'Edit Policy: UC Berkeley';
+        document.getElementById('drawerIpeds').value = '110635';
+        document.getElementById('drawerName').value = 'UC Berkeley';
+        document.getElementById('drawerType').value = 'Public Flagship / UC System';
+        document.getElementById('drawerAidPolicy').value = 'No Aid';
+        document.getElementById('drawerAvgGrant').value = '0';
+        document.getElementById('drawerTotalCOA').value = '74200';
+        document.getElementById('needMetCheck').checked = false;
+        document.getElementById('drawerWaiver').value = 'Strict requirement: TOEFL 100+ or IELTS 7.5. No waivers.';
+      } else if (ipeds === 'new') {
+        document.getElementById('drawerTitle').innerText = 'Register New Institutional Profile';
+        document.getElementById('drawerIpeds').value = 'NEW-000';
+        document.getElementById('drawerName').value = '';
+        document.getElementById('drawerType').value = 'National University';
+        document.getElementById('drawerAvgGrant').value = '0';
+        document.getElementById('drawerTotalCOA').value = '0';
+        document.getElementById('drawerWaiver').value = '';
+      } else {
+        document.getElementById('drawerTitle').innerText = 'Edit Policy: Dartmouth College';
+        document.getElementById('drawerIpeds').value = '182670';
+        document.getElementById('drawerName').value = 'Dartmouth College';
+        document.getElementById('drawerType').value = 'Ivy League / R1 Private';
+        document.getElementById('drawerAidPolicy').value = 'Need-Blind';
+        document.getElementById('drawerAvgGrant').value = '73200';
+        document.getElementById('drawerTotalCOA').value = '87400';
+        document.getElementById('drawerWaiver').value = 'Waiver: SAT ERW 650+ OR 4 full academic years at accredited English-instruction secondary institution.';
+      }
+
+      backdrop.classList.remove('hidden');
+      setTimeout(() => {
+        backdrop.classList.remove('opacity-0');
+        drawer.classList.remove('translate-x-full');
+      }, 10);
+    }
+
+    function closeDrawer() {
+      const drawer = document.getElementById('editDrawer');
+      const backdrop = document.getElementById('drawerBackdrop');
+      
+      drawer.classList.add('translate-x-full');
+      backdrop.classList.add('opacity-0');
+      setTimeout(() => {
+        backdrop.classList.add('hidden');
+      }, 300);
+    }
+
+    function triggerContextSync() {
+      const btn = document.getElementById('syncEngineBtn');
+      const icon = document.getElementById('syncIcon');
+      const text = document.getElementById('syncText');
+
+      icon.classList.add('animate-spin');
+      text.innerText = 'Compiling Context AST...';
+
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+        icon.innerText = 'done_all';
+        text.innerText = 'Gemini Context Synchronized';
+        btn.classList.remove('bg-navy-deep');
+        btn.classList.add('bg-aid-grant-green');
+
+        setTimeout(() => {
+          icon.innerText = 'sync';
+          text.innerText = 'Sync Context to Gemini Engine';
+          btn.classList.remove('bg-aid-grant-green');
+          btn.classList.add('bg-navy-deep');
+        }, 3000);
+      }, 1400);
+    }
+
+    function filterTable() {
+      const query = document.getElementById('collegeSearch').value.toLowerCase();
+      const type = document.getElementById('typeFilter').value;
+      const aid = document.getElementById('aidFilter').value;
+      const rows = document.querySelectorAll('#tableBody tr');
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const matchesQuery = text.includes(query);
+        const matchesType = (type === 'ALL') || text.includes(type.toLowerCase());
+        const matchesAid = (aid === 'ALL') || text.includes(aid.toLowerCase());
+
+        if (matchesQuery && matchesType && matchesAid) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    function resetFilters() {
+      document.getElementById('collegeSearch').value = '';
+      document.getElementById('typeFilter').value = 'ALL';
+      document.getElementById('aidFilter').value = 'ALL';
+      document.getElementById('needMetFilter').value = 'ALL';
+      filterTable();
+    }
+
+    function savePolicyDraft() {
+      alert('Draft parameters preserved locally in counselor buffer.');
+      closeDrawer();
+    }
+
+    function publishAndLockPolicy() {
+      alert('Policy cryptographically signed, updated in master database, and queued for Gemini injection.');
+      closeDrawer();
+    }
+  </script>
+</div></main><footer class="w-full bg-slate-card border-t border-slate-border py-space-md mt-auto"><div class="max-w-[1440px] mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><div>5D-Match Engine • International School Admissions &amp; Financial Simulation Architecture</div><div class="flex items-center gap-space-md font-label-code-tabular text-[12px]"><span>Audited Institutional Data</span><span>•</span><span>EFC Precision Matrix v4.2</span></div></div></footer></body></html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-container":"#fefcff","on-primary":"#ffffff","on-error-container":"#93000a","surface-container":"#e5eeff","error":"#ba1a1a","tertiary":"#000000","badge-match-bg":"#DBEAFE","on-surface":"#0b1c30","badge-safety-bg":"#D1FAE5","surface":"#f8f9ff","on-surface-variant":"#45464d","cost-alert-red":"#DC2626","surface-container-lowest":"#ffffff","surface-bright":"#f8f9ff","inverse-primary":"#bec6e0","sapphire-subtle":"#EFF6FF","slate-surface":"#F8FAFC","background":"#f8f9ff","on-tertiary-fixed-variant":"#005137","on-background":"#0b1c30","tertiary-fixed":"#85f8c4","on-secondary-fixed-variant":"#003ea8","primary-fixed":"#dae2fd","primary":"#000000","slate-card":"#FFFFFF","badge-reach-text":"#B91C1C","secondary":"#0051d5","error-container":"#ffdad6","aid-grant-green":"#059669","caution-amber-surface":"#FFFBEB","inverse-surface":"#213145","navy-deep":"#0F172A","on-primary-fixed":"#131b2e","on-primary-container":"#7c839b","sapphire-hover":"#1D4ED8","on-secondary-fixed":"#00174b","badge-reach-bg":"#FEE2E2","inverse-on-surface":"#eaf1ff","on-tertiary":"#ffffff","secondary-fixed-dim":"#b4c5ff","on-tertiary-container":"#069669","badge-safety-text":"#047857","on-primary-fixed-variant":"#3f465c","slate-border-strong":"#CBD5E1","on-secondary":"#ffffff","on-error":"#ffffff","primary-fixed-dim":"#bec6e0","navy-subtle":"#1E293B","primary-container":"#131b2e","badge-need-aware-bg":"#FEF3C7","secondary-fixed":"#dbe1ff","badge-match-text":"#1D4ED8","aid-grant-surface":"#ECFDF5","surface-dim":"#cbdbf5","slate-border":"#E2E8F0","secondary-container":"#316bf3","tertiary-fixed-dim":"#68dba9","outline-variant":"#c6c6cd","surface-tint":"#565e74","tertiary-container":"#002114","outline":"#76777d","on-tertiary-fixed":"#002114","surface-variant":"#d3e4fe","caution-amber":"#F59E0B","cost-alert-surface":"#FEF2F2","badge-need-blind-text":"#0F766E","badge-need-aware-text":"#B45309","surface-container-high":"#dce9ff","surface-container-low":"#eff4ff","badge-need-blind-bg":"#CCFBF1","surface-container-highest":"#d3e4fe"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","gutter-sm":"1rem","space-md":"1rem","space-xs":"0.25rem","margin":"2rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-mobile":"1rem"},fontFamily:{"headline-lg":["Manrope"],"body-md":["Inter"],"badge-status":["Inter"],"label-code-tabular":["JetBrains Mono"],"headline-md":["Manrope"],"display-hero":["Manrope"],"body-lg":["Inter"],"metric-large":["Manrope"],"display-hero-mobile":["Manrope"],"headline-lg-mobile":["Manrope"],"body-sm":["Inter"],"headline-sm":["Manrope"]},fontSize:{"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"badge-status":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"label-code-tabular":["13px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"metric-large":["32px",{lineHeight:"36px",letterSpacing:"-0.03em",fontWeight:"700"}],"display-hero-mobile":["30px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["22px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"600"}]}}}};</script></head><body class="bg-slate-surface font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-slate-card border-b border-slate-border px-gutter flex items-center justify-between shadow-[0_1px_3px_rgba(15,23,42,0.05)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="5D-Match Engine Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WGxCA6PcwIHFkH_mVwkyNde9jl_YTvKhFZCTrbZzdk0O2lUmfvD37OVoY19e9UwheAdtzQ2r9lZg83WRlEuNWfN6aAJKXNTfdEMljrL02eO8qQjHTFG67lAcZQ_v7Q3x9zv09mWow_j2aHi_osX-jfcl1GIksMQfAPQfXWMVJPRiCanTi6CfgTNsC6b7GmPaiMzDFoM3Fc4ctDswUXpWYvRdIWIHGL0vEJHZu8SALnNV7aVGRsiiCIWQ"/><span class="font-headline-sm text-headline-sm text-navy-deep tracking-tight font-bold">5D-Match Engine</span></div><div class="h-5 w-px bg-slate-border"></div><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-surface-container-low text-navy-deep border border-slate-border font-label-code-tabular text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>AY 2025-2026</span><nav class="hidden lg:flex items-center gap-space-lg h-16 ml-space-sm" data-active-classes="text-secondary border-b-2 border-secondary font-semibold"><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="counselor-admin-hub" href="#">Counselor Admin Hub</a><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="student-parent-portal" href="#">Student &amp; Parent Portal</a><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="college-master-db" href="#">College Master DB</a></nav></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-cost-alert-red ring-2 ring-slate-card"></span></button><button class="p-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-6 w-px bg-slate-border"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-border-strong" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1EYfH08Ys9wk5xDcSpOtmPUTe9Texten2h9QsrZ-WowEA7B-vbRkZsvifP7ocE5CnYSe40YcC0dhOG3svWrGD-lz2HWnQxVJvnuirwKnd-Z2NhzU9LusWKjygTYdMZfoTDlrOL171rG_qT1MZ5Uw82V5fhI8NIBr4E3PiLqewWrxVw259bBimJKy1vNdAa3XL7ilZjOaOXZjpCRlD0bPsKTXCQd5a7Yr976sR30QXduKUEuy2aQR"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-aid-grant-green ring-2 ring-slate-card"></span></div><div class="hidden sm:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-navy-deep leading-tight">Dr. Eleanor Vance</span><span class="font-label-code-tabular text-[11px] text-on-surface-variant leading-none">Director of Admissions</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-slate-card border-r border-slate-border z-40 flex flex-col justify-between py-space-md"><div class="px-space-md flex flex-col gap-space-lg"><div class="px-space-sm"><span class="font-label-code-tabular text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Counseling Cockpit</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container text-secondary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors font-body-md text-body-md" data-path="counselor-admin-hub" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span>Student Roster</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors font-body-md text-body-md" data-path="financial-aid-modeler" href="#"><span class="material-symbols-outlined text-[20px]">calculate</span><span>Aid &amp; EFC Modeler</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors font-body-md text-body-md" data-path="match-matrix-auditor" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>5D Match Matrix</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors font-body-md text-body-md" data-path="firewall-publication-desk" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Publication Desk</span></a></nav></div><div class="px-space-md pt-space-md border-t border-slate-border flex flex-col gap-space-sm"><div class="p-space-sm rounded-xl bg-caution-amber-surface border border-caution-amber/30"><div class="flex items-center gap-1.5 text-badge-need-aware-text font-badge-status text-badge-status"><span class="material-symbols-outlined text-[14px]">lock_clock</span><span>FIREWALL ACTIVE</span></div><p class="font-body-sm text-[11px] text-on-surface-variant mt-1">Algorithmic draft metrics hidden from client view until counselor release.</p></div><div class="flex items-center justify-between px-space-sm pt-space-xs text-on-surface-variant"><span class="font-label-code-tabular text-[11px]">Sync: Real-time</span><span class="material-symbols-outlined text-[16px] text-aid-grant-green">check_circle</span></div></div></aside><div class="pl-64"><main class="w-full pt-16 min-h-screen bg-slate-surface px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Dossier Action Sub-Header -->
+<div class="sticky top-16 z-30 bg-slate-card/95 backdrop-blur-md border-b border-slate-border -mx-gutter px-gutter py-3.5 mb-6 flex flex-col xl:flex-row xl:items-center justify-between gap-4 shadow-[0_1px_4px_rgba(15,23,42,0.04)]">
+<div class="flex flex-wrap items-center gap-4">
+<div class="relative">
+<img class="w-12 h-12 rounded-xl object-cover ring-2 ring-slate-border" data-alt="High resolution studio portrait of an ambitious East Asian male international high school student wearing navy blue school blazer, looking confident and thoughtful, editorial lighting on subtle neutral gradient background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFXZ4-y52P-Rb32fZsrdvw8TtNyEBcaCP66W5tf33Naic9Dk60IKREgJneQpekSYgI1DFDLSq9FAcBobIW2Y3JgyDJjioBK8EoQbE7cx8uZRe96Kfdk0loYOase7rGRTm78h12s7OXLta02hY2P8aUWDghCibB6asAPKFOw0G3rl6816WTSGvZe0WUnvCvZlPOUPt8Xq2_cS0D7yLY5fMwV-cjMEX3c0hkFrvIjCChPtuBBiKJEeUm"/>
+<span class="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-aid-grant-green ring-2 ring-slate-card text-[9px] text-on-secondary font-bold">✓</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2.5 flex-wrap">
+<h1 class="font-headline-md text-headline-md text-navy-deep font-bold tracking-tight">David Kim <span class="text-on-surface-variant font-medium text-body-md">(김태윤)</span></h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-secondary-fixed text-navy-deep font-label-code-tabular text-[11px] font-semibold">ID #8821</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-badge-match-bg text-badge-match-text font-badge-status text-badge-status">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>IBDP Cohort Alpha
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-aid-grant-surface text-aid-grant-green font-badge-status text-badge-status font-semibold">
+<span class="material-symbols-outlined text-[13px]">verified</span>Dossier 92% Complete
+          </span>
+</div>
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+<span class="font-semibold text-navy-deep">Seoul Foreign School (SFS)</span>
+<span class="text-slate-border-strong">•</span>
+<span>Grade 12 (Class of 2026)</span>
+<span class="text-slate-border-strong">•</span>
+<span class="inline-flex items-center gap-1 text-caution-amber font-medium">
+<span class="material-symbols-outlined text-[14px]">pending_actions</span>1 Dimension Under Review
+          </span>
+</div>
+</div>
+</div>
+<!-- Quick Actions Toolbar -->
+<div class="flex items-center gap-2.5 flex-wrap self-end xl:self-auto">
+<span class="text-body-sm text-on-surface-variant font-label-code-tabular mr-1 hidden sm:inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-aid-grant-green">cloud_done</span>Auto-saved 1m ago
+      </span>
+<button class="px-3 py-1.5 rounded-lg bg-slate-surface text-on-surface-variant hover:text-navy-deep hover:bg-slate-border transition-colors font-body-md text-body-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">history</span>Drafts
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-slate-surface text-on-surface-variant hover:text-navy-deep hover:bg-slate-border transition-colors font-body-md text-body-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>Export JSON
+      </button>
+<button class="px-4 py-2 rounded-xl bg-navy-deep hover:bg-navy-subtle text-on-primary transition-all shadow-sm font-body-md text-body-sm font-semibold flex items-center gap-2 active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Save &amp; Run 5D Simulation</span>
+</button>
+</div>
+</div>
+<!-- Editorial Sub-Navigation Context Tabs -->
+<div class="flex items-center justify-between border-b border-slate-border mb-6 overflow-x-auto">
+<div class="flex items-center gap-1 min-w-max">
+<button class="px-4 py-2.5 border-b-2 border-secondary font-headline-sm text-body-md text-secondary font-semibold flex items-center gap-2 bg-sapphire-subtle/40 rounded-t-lg" type="button">
+<span class="material-symbols-outlined text-[18px]">space_dashboard</span>
+<span>5-Dimensional Core Profile</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] bg-secondary text-on-secondary font-label-code-tabular">Active</span>
+</button>
+<button class="px-4 py-2.5 border-b-2 border-transparent font-body-md text-body-md text-on-surface-variant hover:text-navy-deep transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+<span>Standardized Tests &amp; Official Records</span>
+</button>
+<button class="px-4 py-2.5 border-b-2 border-transparent font-body-md text-body-md text-on-surface-variant hover:text-navy-deep transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+<span>Financial Aid &amp; CSS Verification</span>
+</button>
+<button class="px-4 py-2.5 border-b-2 border-transparent font-body-md text-body-md text-on-surface-variant hover:text-navy-deep transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+<span>Target Matrix &amp; Counselor Directives</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-2 pl-4 py-2 text-body-sm text-on-surface-variant font-label-code-tabular">
+<span>Calibrated Model:</span>
+<span class="font-bold text-navy-deep">GEMINI-3.8-ADMIT-PREVIEW</span>
+</div>
+</div>
+<!-- Primary Deep-Input Grid Workspace (3-Column Asymmetric) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Quick-Jump Section Navigator (Sticky 2 Cols) -->
+<aside class="hidden lg:block lg:col-span-3 sticky top-36 space-y-4">
+<div class="bg-slate-card rounded-2xl p-4 border border-slate-border shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-slate-border">
+<span class="font-label-code-tabular text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Dimension Navigation</span>
+<span class="text-[11px] font-label-code-tabular text-aid-grant-green font-semibold">5 / 5 Configured</span>
+</div>
+<nav class="mt-3 flex flex-col gap-1.5 font-body-sm text-body-sm">
+<a class="flex items-center justify-between px-3 py-2 rounded-xl bg-sapphire-subtle text-secondary font-semibold transition-colors" href="#dimension-d1">
+<span class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-md bg-secondary/10 flex items-center justify-center font-label-code-tabular text-[10px] text-secondary font-bold">D1</span>
+<span>학업 역량 및 커리큘럼</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-aid-grant-green">check_circle</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-navy-deep transition-colors" href="#dimension-d2">
+<span class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-md bg-cost-alert-surface flex items-center justify-center font-label-code-tabular text-[10px] text-cost-alert-red font-bold">D2</span>
+<span>신분 및 재정 보조 설정</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-cost-alert-red" title="Pure Int'l Aid Factor">warning</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-navy-deep transition-colors" href="#dimension-d3">
+<span class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-md bg-slate-surface flex items-center justify-center font-label-code-tabular text-[10px] text-navy-deep font-bold">D3</span>
+<span>비교과 스파이크 &amp; 포트폴리오</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-aid-grant-green">check_circle</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-navy-deep transition-colors" href="#dimension-d4">
+<span class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-md bg-slate-surface flex items-center justify-center font-label-code-tabular text-[10px] text-navy-deep font-bold">D4</span>
+<span>제도적 니즈 &amp; 포지셔닝</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-aid-grant-green">check_circle</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-navy-deep transition-colors" href="#dimension-d5">
+<span class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-md bg-slate-surface flex items-center justify-center font-label-code-tabular text-[10px] text-navy-deep font-bold">D5</span>
+<span>캠퍼스 환경 &amp; 문화 적합도</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-aid-grant-green">check_circle</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-navy-deep transition-colors" href="#dimension-dossier">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>서류 &amp; 카운셀러 비공개 노트</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-caution-amber">pending</span>
+</a>
+</nav>
+</div>
+<!-- Counselor Quick Sticky Summary -->
+<div class="bg-navy-deep text-on-primary rounded-2xl p-4 shadow-sm relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 rounded-full bg-secondary/20 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[11px] font-label-code-tabular text-secondary-fixed font-bold uppercase tracking-wider">Candidate Archetype</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary/30 text-[10px] font-bold text-surface-container">AI Rigor 9.8</span>
+</div>
+<div class="font-headline-sm text-body-lg font-bold text-on-primary mb-1">STEM Spike / AI Ethics</div>
+<p class="font-body-sm text-body-sm text-inverse-primary/80 leading-relaxed">
+          High-rigor IB candidate with exceptional programming spike, bounded strictly by $18k hard family SAI limit.
+        </p>
+<div class="mt-4 pt-3 border-t border-navy-subtle flex items-center justify-between text-[11px] font-label-code-tabular">
+<span class="text-on-primary-container">Auditor: Dr. Vance</span>
+<span class="text-aid-grant-green">Live Linked</span>
+</div>
+</div>
+</aside>
+<!-- CENTER COLUMN: Deep Input Worksheets (6 Cols) -->
+<main class="lg:col-span-6 space-y-6">
+<!-- ================= SECTION D1: ACADEMICS & RIGOR ================= -->
+<section class="bg-slate-card rounded-2xl border border-slate-border p-6 shadow-sm scroll-mt-36" id="dimension-d1">
+<div class="flex items-start justify-between pb-4 border-b border-slate-border">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-sapphire-subtle text-secondary flex items-center justify-center font-headline-sm font-bold">
+              D1
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-sm font-bold text-navy-deep">Academic Rigor &amp; Transcript Calibration</h2>
+<span class="px-2 py-0.5 rounded-full bg-badge-safety-bg text-badge-safety-text font-badge-status text-[10px]">Verified High Rigor</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">IB Diploma Program / AP Capstone context scoring calibrated against SFS school profile</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-aid-grant-green text-[22px]">check_circle</span>
+</div>
+<!-- Curriculum Switcher Pill -->
+<div class="mt-5">
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-2">Primary High School Curriculum Pathway</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 p-1 bg-slate-surface rounded-xl border border-slate-border">
+<button class="py-2 px-3 rounded-lg bg-slate-card text-navy-deep font-semibold shadow-xs text-center font-body-sm text-body-sm border border-slate-border/50" type="button">
+              IB Diploma (DP)
+            </button>
+<button class="py-2 px-3 rounded-lg text-on-surface-variant hover:text-navy-deep text-center font-body-sm text-body-sm" type="button">
+              AP Capstone / APs
+            </button>
+<button class="py-2 px-3 rounded-lg text-on-surface-variant hover:text-navy-deep text-center font-body-sm text-body-sm" type="button">
+              US Regular / Honors
+            </button>
+<button class="py-2 px-3 rounded-lg text-on-surface-variant hover:text-navy-deep text-center font-body-sm text-body-sm" type="button">
+              British A-Levels
+            </button>
+</div>
+</div>
+<!-- Dynamic IB Data Matrix -->
+<div class="mt-5 p-4 rounded-xl bg-slate-surface border border-slate-border/80 space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-md font-bold text-navy-deep flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">school</span>
+              IB Predicted Score Architecture
+            </span>
+<span class="font-label-code-tabular text-body-sm font-bold text-secondary bg-sapphire-subtle px-2.5 py-0.5 rounded-md">
+              Target Official Upload: Oct 15
+            </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="bg-slate-card p-3 rounded-xl border border-slate-border">
+<label class="block text-body-sm text-on-surface-variant text-[11px]">Predicted Total Score</label>
+<div class="flex items-baseline gap-1 mt-1">
+<input class="font-metric-large text-[26px] font-bold text-navy-deep w-16 bg-transparent outline-none focus:text-secondary" type="number" value="41"/>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant font-semibold">/ 45</span>
+</div>
+<span class="text-[11px] font-label-code-tabular text-aid-grant-green">Top 1.5% Worldwide</span>
+</div>
+<div class="bg-slate-card p-3 rounded-xl border border-slate-border">
+<label class="block text-body-sm text-on-surface-variant text-[11px]">Core Points (TOK / EE)</label>
+<div class="flex items-baseline gap-1 mt-1">
+<input class="font-metric-large text-[26px] font-bold text-navy-deep w-12 bg-transparent outline-none" type="number" value="3"/>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant font-semibold">/ 3</span>
+</div>
+<span class="text-[11px] font-label-code-tabular text-on-surface-variant">EE: CS (A), TOK (A)</span>
+</div>
+<div class="bg-slate-card p-3 rounded-xl border border-slate-border">
+<label class="block text-body-sm text-on-surface-variant text-[11px]">Unweighted GPA Conversion</label>
+<div class="flex items-baseline gap-1 mt-1">
+<input class="font-metric-large text-[26px] font-bold text-navy-deep w-20 bg-transparent outline-none" type="text" value="3.92"/>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant font-semibold">/ 4.00</span>
+</div>
+<span class="text-[11px] font-label-code-tabular text-aid-grant-green">Class Decile: Top 2%</span>
+</div>
+</div>
+<!-- Subject Breakdown Grid -->
+<div class="space-y-2 pt-2">
+<div class="text-[11px] font-bold text-on-surface-variant font-label-code-tabular uppercase tracking-wider">
+              Higher Level (HL) Subjects • 3 Mandatory
+            </div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-card border border-slate-border">
+<span class="font-body-sm text-body-sm text-navy-deep font-semibold truncate">Math AA HL</span>
+<span class="px-2 py-0.5 rounded bg-aid-grant-surface text-aid-grant-green font-label-code-tabular font-bold text-body-sm">7 / 7</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-card border border-slate-border">
+<span class="font-body-sm text-body-sm text-navy-deep font-semibold truncate">Physics HL</span>
+<span class="px-2 py-0.5 rounded bg-aid-grant-surface text-aid-grant-green font-label-code-tabular font-bold text-body-sm">7 / 7</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-card border border-slate-border">
+<span class="font-body-sm text-body-sm text-navy-deep font-semibold truncate">Computer Sci HL</span>
+<span class="px-2 py-0.5 rounded bg-aid-grant-surface text-aid-grant-green font-label-code-tabular font-bold text-body-sm">7 / 7</span>
+</div>
+</div>
+<div class="text-[11px] font-bold text-on-surface-variant font-label-code-tabular uppercase tracking-wider pt-2">
+              Standard Level (SL) Subjects
+            </div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-card border border-slate-border">
+<span class="font-body-sm text-body-sm text-navy-deep font-semibold truncate">English L&amp;L SL</span>
+<span class="px-2 py-0.5 rounded bg-badge-match-bg text-badge-match-text font-label-code-tabular font-bold text-body-sm">6 / 7</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-card border border-slate-border">
+<span class="font-body-sm text-body-sm text-navy-deep font-semibold truncate">Economics SL</span>
+<span class="px-2 py-0.5 rounded bg-aid-grant-surface text-aid-grant-green font-label-code-tabular font-bold text-body-sm">7 / 7</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-card border border-slate-border">
+<span class="font-body-sm text-body-sm text-navy-deep font-semibold truncate">Spanish B SL</span>
+<span class="px-2 py-0.5 rounded bg-badge-match-bg text-badge-match-text font-label-code-tabular font-bold text-body-sm">6 / 7</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rigor Trajectory & English Waiver Status -->
+<div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="p-3.5 rounded-xl bg-slate-surface border border-slate-border flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-body-sm font-semibold text-navy-deep">Grade Progression Trend</span>
+<span class="px-2 py-0.5 rounded text-[10px] bg-aid-grant-surface text-aid-grant-green font-bold">+0.15 Algorithm Wt.</span>
+</div>
+<div class="flex items-center gap-2 mt-3 font-label-code-tabular text-body-sm">
+<span class="px-2 py-1 rounded bg-slate-card border border-slate-border text-on-surface-variant">9th: 3.70</span>
+<span class="material-symbols-outlined text-[14px] text-aid-grant-green">trending_up</span>
+<span class="px-2 py-1 rounded bg-slate-card border border-slate-border text-on-surface-variant">10th: 3.90</span>
+<span class="material-symbols-outlined text-[14px] text-aid-grant-green">trending_up</span>
+<span class="px-2 py-1 rounded bg-slate-card border border-slate-border text-navy-deep font-bold">11th: 4.00</span>
+</div>
+<p class="text-[11px] text-on-surface-variant mt-2 font-body-sm">Steep upward acceleration in STEM core courses.</p>
+</div>
+<div class="p-3.5 rounded-xl bg-slate-surface border border-slate-border flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-body-sm font-semibold text-navy-deep">English Testing Waiver</span>
+<span class="px-2 py-0.5 rounded text-[10px] bg-badge-need-blind-bg text-badge-need-blind-text font-bold">Auto-Verified</span>
+</div>
+<div class="space-y-1.5 mt-2">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant text-[12px]">Instruction Medium:</span>
+<span class="font-label-code-tabular font-semibold text-navy-deep">4+ Yrs English (SFS)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant text-[12px]">SAT Reading/Writing:</span>
+<span class="font-label-code-tabular font-bold text-secondary">740 (Exceeds 650)</span>
+</div>
+</div>
+<p class="text-[11px] text-aid-grant-green font-medium mt-1">Exempt from TOEFL/IELTS at 98% of target schools.</p>
+</div>
+</div>
+</section>
+<!-- ================= SECTION D2: FINANCIAL & CITIZENSHIP ================= -->
+<section class="bg-slate-card rounded-2xl border border-slate-border p-6 shadow-sm scroll-mt-36" id="dimension-d2">
+<div class="flex items-start justify-between pb-4 border-b border-slate-border">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-cost-alert-surface text-cost-alert-red flex items-center justify-center font-headline-sm font-bold">
+              D2
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-sm font-bold text-navy-deep">Citizenship Status &amp; Financial Reality (Hard Ceiling)</h2>
+<span class="px-2 py-0.5 rounded-full bg-cost-alert-surface text-cost-alert-red font-badge-status text-[10px]">Critical Constraint</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Governs Need-Aware vs Need-Blind algorithmic match penalties for international admissions</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-cost-alert-red text-[22px]">error</span>
+</div>
+<!-- Citizenship Toggle -->
+<div class="mt-5">
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-2">Legal Residency / Visa Classification</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<label class="relative flex items-center p-3.5 rounded-xl bg-caution-amber-surface/60 border-2 border-caution-amber cursor-pointer">
+<input checked="" class="w-4 h-4 text-secondary focus:ring-secondary" name="citizenship" type="radio"/>
+<div class="ml-3">
+<span class="block font-headline-sm text-body-md font-bold text-navy-deep">Pure International (F-1 Visa)</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Korean Passport Holder • Subject to Need-Aware caps</span>
+</div>
+</label>
+<label class="relative flex items-center p-3.5 rounded-xl bg-slate-surface border border-slate-border cursor-pointer hover:bg-slate-card transition-colors">
+<input class="w-4 h-4 text-secondary focus:ring-secondary" name="citizenship" type="radio"/>
+<div class="ml-3">
+<span class="block font-headline-sm text-body-md font-bold text-navy-deep">US Citizen / Permanent Resident</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Eligible for Federal Title IV aid &amp; FAFSA SAI</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Financial Parameters & Budget Cap Matrix -->
+<div class="mt-5 p-4 rounded-xl bg-slate-surface border border-slate-border space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-md font-bold text-navy-deep flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-cost-alert-red">account_balance</span>
+              Family Contribution Capacity &amp; EFC/SAI Target
+            </span>
+<span class="font-badge-status text-badge-status bg-badge-reach-bg text-badge-reach-text px-2 py-0.5 rounded">
+              High Aid Need
+            </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="bg-slate-card p-3 rounded-xl border-2 border-cost-alert-red/30">
+<label class="block text-body-sm text-cost-alert-red font-semibold text-[11px]">Annual Hard Budget Cap</label>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-label-code-tabular text-body-md font-bold text-navy-deep">$</span>
+<input class="font-metric-large text-[24px] font-bold text-cost-alert-red w-full bg-transparent outline-none" type="number" value="18000"/>
+</div>
+<span class="text-[11px] font-label-code-tabular text-on-surface-variant">KRW 24,500,000 / yr</span>
+</div>
+<div class="bg-slate-card p-3 rounded-xl border border-slate-border">
+<label class="block text-body-sm text-on-surface-variant text-[11px]">Household Gross Income</label>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-label-code-tabular text-body-md font-bold text-navy-deep">$</span>
+<input class="font-metric-large text-[24px] font-bold text-navy-deep w-full bg-transparent outline-none" type="number" value="78000"/>
+</div>
+<span class="text-[11px] font-label-code-tabular text-on-surface-variant">KRW 105,000,000 / yr</span>
+</div>
+<div class="bg-slate-card p-3 rounded-xl border border-slate-border">
+<label class="block text-body-sm text-on-surface-variant text-[11px]">CSS Estimated Family Need</label>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-label-code-tabular text-body-md font-bold text-navy-deep">$</span>
+<input class="font-metric-large text-[24px] font-bold text-navy-deep w-full bg-transparent outline-none" type="number" value="64000"/>
+</div>
+<span class="text-[11px] font-label-code-tabular text-aid-grant-green">Grant Req: ~$64k/yr</span>
+</div>
+</div>
+<!-- Strict Auto-Enforced Admissions Warning Banner -->
+<div class="p-3.5 rounded-xl bg-cost-alert-surface border border-cost-alert-red/30 flex items-start gap-3">
+<span class="material-symbols-outlined text-cost-alert-red text-[20px] shrink-0 mt-0.5">policy</span>
+<div class="text-body-sm text-navy-deep">
+<p class="font-semibold text-cost-alert-red">Algorithmic Boundary Notice: Public Universities Auto-Restricted</p>
+<p class="text-[12px] text-on-surface-variant mt-0.5 leading-relaxed">
+                As a pure international applicant needing &gt;$60,000/yr aid, out-of-state public flagships (UCs, Michigan, UVA, Georgia Tech) offer negligible institutional need-aid. 
+                <span class="font-semibold text-navy-deep">Algorithm automatically flags non-private institutions as Financial Unfeasible.</span>
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION D3: EXTRACURRICULARS & SPIKE ================= -->
+<section class="bg-slate-card rounded-2xl border border-slate-border p-6 shadow-sm scroll-mt-36" id="dimension-d3">
+<div class="flex items-start justify-between pb-4 border-b border-slate-border">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-badge-match-bg text-badge-match-text flex items-center justify-center font-headline-sm font-bold">
+              D3
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-sm font-bold text-navy-deep">Extracurricular Spike &amp; Portfolio Profile</h2>
+<span class="px-2 py-0.5 rounded-full bg-badge-match-bg text-badge-match-text font-badge-status text-[10px]">Spike Index: 88</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Classifies student between focused spike vs well-rounded profile for institutional role matching</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-aid-grant-green text-[22px]">check_circle</span>
+</div>
+<!-- Archetype Classifier Switch -->
+<div class="mt-5 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-slate-surface border border-slate-border">
+<div>
+<span class="font-headline-sm text-body-md font-bold text-navy-deep">Profile Archetype Classification</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Determines admissions committee reading rubrics</p>
+</div>
+<div class="flex items-center gap-2 bg-slate-card p-1 rounded-xl border border-slate-border">
+<button class="px-3.5 py-1.5 rounded-lg bg-navy-deep text-on-primary font-semibold font-body-sm text-body-sm flex items-center gap-1.5 shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>Spike (송곳형)</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-navy-deep font-body-sm text-body-sm" type="button">
+              Well-Rounded (다재다능)
+            </button>
+</div>
+</div>
+<!-- Activities Deep Rows -->
+<div class="mt-5 space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-code-tabular text-[12px] font-bold text-navy-deep uppercase tracking-wider">Prioritized Activities (Ranked Top 3 of 10)</span>
+<button class="text-secondary hover:text-sapphire-hover text-body-sm font-semibold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>Add Activity
+            </button>
+</div>
+<!-- Activity #1: Tier 1 Spike -->
+<div class="p-4 rounded-xl bg-slate-surface border-2 border-secondary/30 relative">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-code-tabular font-bold text-[11px]">Rank 1 • Tier 1 Spike</span>
+<span class="text-body-sm font-bold text-navy-deep">Founder, Open-Source AI Tutor Platform</span>
+</div>
+<span class="font-label-code-tabular text-body-sm font-semibold text-secondary">CS &amp; EdTech</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              Engineered lightweight LLM tutoring interface for low-income secondary students. Built custom vector store on textbook curriculum.
+            </p>
+<div class="mt-3 pt-3 border-t border-slate-border flex flex-wrap items-center justify-between gap-2 text-[12px] font-label-code-tabular">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span>12 hrs/wk • 42 wks/yr • 3 yrs</span>
+<span class="text-slate-border-strong">•</span>
+<span class="text-aid-grant-green font-semibold">1,200 Active Monthly Users</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-slate-card text-navy-deep border border-slate-border">Featured in Tech Daily Korea</span>
+</div>
+</div>
+<!-- Activity #2 -->
+<div class="p-4 rounded-xl bg-slate-surface border border-slate-border">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-slate-card text-on-surface-variant border border-slate-border font-label-code-tabular font-bold text-[11px]">Rank 2 • Tier 2 Leadership</span>
+<span class="text-body-sm font-bold text-navy-deep">VEX Robotics Team Captain &amp; Firmware Lead</span>
+</div>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant">STEM Team</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              Programmed autonomous tracking PID loop using C++; managed 14-member build squad; earned 2nd place at regional finals.
+            </p>
+<div class="mt-3 pt-3 border-t border-slate-border flex items-center justify-between text-[12px] font-label-code-tabular text-on-surface-variant">
+<span>10 hrs/wk • 30 wks/yr • 3 yrs</span>
+<span class="text-navy-deep font-semibold">State Championship Finalist</span>
+</div>
+</div>
+<!-- Activity #3 -->
+<div class="p-4 rounded-xl bg-slate-surface border border-slate-border">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-slate-card text-on-surface-variant border border-slate-border font-label-code-tabular font-bold text-[11px]">Rank 3 • Artistic Depth</span>
+<span class="text-body-sm font-bold text-navy-deep">Seoul Youth Philharmonic &amp; School Orchestra</span>
+</div>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant">Performing Arts</span>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-[12px] font-label-code-tabular text-on-surface-variant">
+<span>1st Violin / Associate Concertmaster • 4 yrs</span>
+<span class="text-navy-deep">Annual Charity Gala Soloist</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION D4 & D5: INSTITUTIONAL & CULTURAL FIT ================= -->
+<section class="bg-slate-card rounded-2xl border border-slate-border p-6 shadow-sm scroll-mt-36" id="dimension-d4">
+<div class="flex items-start justify-between pb-4 border-b border-slate-border">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-slate-surface text-navy-deep flex items-center justify-center font-headline-sm font-bold border border-slate-border">
+              D4
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-sm font-bold text-navy-deep">Institutional Positioning &amp; Niche Angle</h2>
+<span class="px-2 py-0.5 rounded-full bg-slate-surface text-navy-deep border border-slate-border font-badge-status text-[10px]">Strategic Pivot</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">De-saturating ultra-competitive pure CS candidate pools</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-aid-grant-green text-[22px]">check_circle</span>
+</div>
+<div class="mt-5 space-y-4">
+<div>
+<label class="block font-body-sm text-body-sm font-semibold text-navy-deep mb-1">Declared Primary Major Preference</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-border bg-slate-surface text-navy-deep font-body-md text-body-sm focus:border-secondary outline-none font-medium" type="text" value="Computer Science &amp; Cognitive Ethics / Symbolic Systems"/>
+</div>
+<!-- Counselor Strategic Positioning Directive Box -->
+<div class="p-4 rounded-xl bg-sapphire-subtle/70 border border-secondary/20">
+<div class="flex items-center gap-2 text-secondary font-headline-sm text-body-sm font-bold mb-1.5">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+              Counselor Directive: Interdisciplinary Steering Angle
+            </div>
+<p class="text-body-sm text-navy-deep leading-relaxed">
+              Candidate has raw software metrics, but pure Asian male international CS pool has &lt;4% admit rate. 
+              <span class="font-semibold text-secondary">Strategic pivot applied:</span> Frame personal statement around philosophical epistemologies of AI decision making to target College of Arts &amp; Sciences programs rather than School of Engineering bottlenecks.
+            </p>
+</div>
+</div>
+<!-- Section D5 Embedded Context -->
+<div class="mt-6 pt-5 border-t border-slate-border scroll-mt-36" id="dimension-d5">
+<div class="flex items-center gap-2 mb-3">
+<span class="w-6 h-6 rounded bg-slate-surface text-navy-deep font-label-code-tabular text-[11px] font-bold flex items-center justify-center border border-slate-border">D5</span>
+<h3 class="font-headline-sm text-body-lg font-bold text-navy-deep">Campus Environment &amp; Community Alignment</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-body-sm">
+<div class="p-3 rounded-xl bg-slate-surface border border-slate-border">
+<span class="text-on-surface-variant text-[11px] font-label-code-tabular block mb-1">Geographic Priority</span>
+<span class="font-semibold text-navy-deep">East Coast • Mid-Atlantic • New England</span>
+</div>
+<div class="p-3 rounded-xl bg-slate-surface border border-slate-border">
+<span class="text-on-surface-variant text-[11px] font-label-code-tabular block mb-1">Institution Type</span>
+<span class="font-semibold text-navy-deep">Top LACs (Amherst, Williams) + Medium Private Univs</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= CONFIDENTIAL COUNSELOR DOSSIER ================= -->
+<section class="bg-slate-card rounded-2xl border border-slate-border p-6 shadow-sm scroll-mt-36" id="dimension-dossier">
+<div class="flex items-center justify-between pb-4 border-b border-slate-border">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-caution-amber">lock</span>
+<h2 class="font-headline-md text-headline-sm font-bold text-navy-deep">Confidential Counselor Dossier &amp; Institutional Notes</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-caution-amber-surface text-badge-need-aware-text font-badge-status text-[11px] font-bold">Client-Firewalled</span>
+</div>
+<div class="mt-4 space-y-3">
+<label class="block font-body-sm text-body-sm text-on-surface-variant">Internal Counseling Notes (Hidden from Student &amp; Parents)</label>
+<textarea class="w-full p-3 rounded-xl border border-slate-border bg-slate-surface font-body-md text-body-sm text-navy-deep focus:border-secondary outline-none leading-relaxed" rows="3">Family has communicated strict $18,000 cap cannot be stretched even with loans. Need to ensure student applies to at least 4 need-blind private institutions (Amherst, Bowdoin, Dartmouth, Harvard) plus high-end merit LACs that provide full-ride global scholarships regardless of CSS calculation.</textarea>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-aid-grant-green">check</span>
+<span>Encrypted on AWS AES-256</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-slate-surface hover:bg-slate-border text-navy-deep text-body-sm font-medium transition-colors" type="button">
+              Update Private Note
+            </button>
+</div>
+</div>
+</section>
+</main>
+<!-- RIGHT COLUMN: Floating Helper Panel (3 Cols Sticky) -->
+<aside class="lg:col-span-3 sticky top-36 space-y-4">
+<!-- Real-Time AI Readiness Score Card -->
+<div class="bg-slate-card rounded-2xl p-5 border border-slate-border shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-slate-border">
+<span class="font-label-code-tabular text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">AI Model Readiness</span>
+<span class="inline-flex items-center gap-1 font-label-code-tabular text-[11px] text-aid-grant-green font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>Verified
+          </span>
+</div>
+<!-- Gauge Visual -->
+<div class="py-4 flex flex-col items-center justify-center">
+<div class="relative w-28 h-28 flex items-center justify-center">
+<!-- Inline SVG Gauge Ring -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-slate-border" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-metric-large text-[28px] font-bold text-navy-deep leading-none">92</span>
+<span class="font-label-code-tabular text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold">/ 100</span>
+</div>
+</div>
+<span class="font-headline-sm text-body-sm font-bold text-navy-deep mt-2">High Precision Data Feed</span>
+<p class="font-body-sm text-[11px] text-on-surface-variant text-center mt-0.5">Sufficient for 5D Monte Carlo simulation</p>
+</div>
+<!-- Pre-Flight Parameter Summary -->
+<div class="space-y-2 pt-3 border-t border-slate-border font-label-code-tabular text-[12px]">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Curriculum Rigor:</span>
+<span class="font-bold text-navy-deep">Tier 1 (IB 41/45)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Aid Cohort:</span>
+<span class="font-bold text-cost-alert-red">Pure Int'l Aid Needed</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Max Net Price:</span>
+<span class="font-bold text-navy-deep">≤ $18,000 / yr</span>
+</div>
+</div>
+<!-- Simulation Run CTA -->
+<button class="w-full mt-5 py-2.5 px-4 rounded-xl bg-secondary hover:bg-sapphire-hover text-on-secondary font-headline-sm text-body-sm font-bold shadow-sm transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Run 5D Simulation Test</span>
+</button>
+</div>
+<!-- Verified Documents Checklist Drawer -->
+<div class="bg-slate-card rounded-2xl p-5 border border-slate-border shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm font-bold text-navy-deep">Document Verification</span>
+<span class="text-[11px] font-label-code-tabular text-on-surface-variant">3 of 4 Ready</span>
+</div>
+<div class="space-y-2 text-body-sm font-body-sm">
+<div class="flex items-center justify-between p-2 rounded-lg bg-slate-surface">
+<span class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[16px] text-aid-grant-green">check_circle</span>
+<span class="text-navy-deep text-[12px] truncate">Official SFS Transcript</span>
+</span>
+<span class="text-[10px] font-label-code-tabular text-on-surface-variant">PDF</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-slate-surface">
+<span class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[16px] text-aid-grant-green">check_circle</span>
+<span class="text-navy-deep text-[12px] truncate">CSS Profile Draft 2026</span>
+</span>
+<span class="text-[10px] font-label-code-tabular text-on-surface-variant">VERIFIED</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-slate-surface">
+<span class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[16px] text-aid-grant-green">check_circle</span>
+<span class="text-navy-deep text-[12px] truncate">2024 Korean Tax Return</span>
+</span>
+<span class="text-[10px] font-label-code-tabular text-on-surface-variant">AUDITED</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-caution-amber-surface/70 border border-caution-amber/30">
+<span class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[16px] text-caution-amber">pending</span>
+<span class="text-navy-deep text-[12px] truncate">Counselor Recommendation</span>
+</span>
+<span class="text-[10px] font-label-code-tabular text-caution-amber font-semibold">80% DRAFT</span>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-slate-surface hover:bg-slate-border text-navy-deep text-body-sm font-semibold transition-colors flex items-center justify-center gap-1.5 mt-2" type="button">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>Upload Supplementary Doc
+        </button>
+</div>
+<!-- Quick Audit Log Tag -->
+<div class="p-3 rounded-xl bg-slate-surface border border-slate-border text-[11px] font-label-code-tabular text-on-surface-variant flex items-center justify-between">
+<span>Last Calibrated By: Vance, E.</span>
+<span>14:28 KST</span>
+</div>
+</aside>
+</div>
+</div></main></div></body></html>

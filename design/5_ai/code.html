@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-container":"#fefcff","on-primary":"#ffffff","on-error-container":"#93000a","surface-container":"#e5eeff","error":"#ba1a1a","tertiary":"#000000","badge-match-bg":"#DBEAFE","on-surface":"#0b1c30","badge-safety-bg":"#D1FAE5","surface":"#f8f9ff","on-surface-variant":"#45464d","cost-alert-red":"#DC2626","surface-container-lowest":"#ffffff","surface-bright":"#f8f9ff","inverse-primary":"#bec6e0","sapphire-subtle":"#EFF6FF","slate-surface":"#F8FAFC","background":"#f8f9ff","on-tertiary-fixed-variant":"#005137","on-background":"#0b1c30","tertiary-fixed":"#85f8c4","on-secondary-fixed-variant":"#003ea8","primary-fixed":"#dae2fd","primary":"#000000","slate-card":"#FFFFFF","badge-reach-text":"#B91C1C","secondary":"#0051d5","error-container":"#ffdad6","aid-grant-green":"#059669","caution-amber-surface":"#FFFBEB","inverse-surface":"#213145","navy-deep":"#0F172A","on-primary-fixed":"#131b2e","on-primary-container":"#7c839b","sapphire-hover":"#1D4ED8","on-secondary-fixed":"#00174b","badge-reach-bg":"#FEE2E2","inverse-on-surface":"#eaf1ff","on-tertiary":"#ffffff","secondary-fixed-dim":"#b4c5ff","on-tertiary-container":"#069669","badge-safety-text":"#047857","on-primary-fixed-variant":"#3f465c","slate-border-strong":"#CBD5E1","on-secondary":"#ffffff","on-error":"#ffffff","primary-fixed-dim":"#bec6e0","navy-subtle":"#1E293B","primary-container":"#131b2e","badge-need-aware-bg":"#FEF3C7","secondary-fixed":"#dbe1ff","badge-match-text":"#1D4ED8","aid-grant-surface":"#ECFDF5","surface-dim":"#cbdbf5","slate-border":"#E2E8F0","secondary-container":"#316bf3","tertiary-fixed-dim":"#68dba9","outline-variant":"#c6c6cd","surface-tint":"#565e74","tertiary-container":"#002114","outline":"#76777d","on-tertiary-fixed":"#002114","surface-variant":"#d3e4fe","caution-amber":"#F59E0B","cost-alert-surface":"#FEF2F2","badge-need-blind-text":"#0F766E","badge-need-aware-text":"#B45309","surface-container-high":"#dce9ff","surface-container-low":"#eff4ff","badge-need-blind-bg":"#CCFBF1","surface-container-highest":"#d3e4fe"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","gutter-sm":"1rem","space-md":"1rem","space-xs":"0.25rem","margin":"2rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-mobile":"1rem"},fontFamily:{"headline-lg":["Manrope"],"body-md":["Inter"],"badge-status":["Inter"],"label-code-tabular":["JetBrains Mono"],"headline-md":["Manrope"],"display-hero":["Manrope"],"body-lg":["Inter"],"metric-large":["Manrope"],"display-hero-mobile":["Manrope"],"headline-lg-mobile":["Manrope"],"body-sm":["Inter"],"headline-sm":["Manrope"]},fontSize:{"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"badge-status":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"label-code-tabular":["13px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"metric-large":["32px",{lineHeight:"36px",letterSpacing:"-0.03em",fontWeight:"700"}],"display-hero-mobile":["30px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["22px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"600"}]}}}};</script></head><body class="bg-slate-surface font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-slate-card border-b border-slate-border px-gutter flex items-center justify-between shadow-[0_1px_3px_rgba(15,23,42,0.05)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="5D-Match Engine Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WGxCA6PcwIHFkH_mVwkyNde9jl_YTvKhFZCTrbZzdk0O2lUmfvD37OVoY19e9UwheAdtzQ2r9lZg83WRlEuNWfN6aAJKXNTfdEMljrL02eO8qQjHTFG67lAcZQ_v7Q3x9zv09mWow_j2aHi_osX-jfcl1GIksMQfAPQfXWMVJPRiCanTi6CfgTNsC6b7GmPaiMzDFoM3Fc4ctDswUXpWYvRdIWIHGL0vEJHZu8SALnNV7aVGRsiiCIWQ"/><span class="font-headline-sm text-headline-sm text-navy-deep tracking-tight font-bold">5D-Match Engine</span></div><div class="h-5 w-px bg-slate-border"></div><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-surface-container-low text-navy-deep border border-slate-border font-label-code-tabular text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span>AY 2025-2026</span><nav class="hidden lg:flex items-center gap-space-lg h-16 ml-space-sm" data-active-classes="text-secondary border-b-2 border-secondary font-semibold"><a aria-current="page" class="h-16 inline-flex items-center px-1 transition-colors text-secondary border-b-2 border-secondary font-semibold" data-path="counselor-admin-hub" href="#">Counselor Admin Hub</a><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="student-parent-portal" href="#">Student &amp; Parent Portal</a><a class="h-16 inline-flex items-center px-1 text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md border-b-2 border-transparent" data-path="college-master-db" href="#">College Master DB</a></nav></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-cost-alert-red ring-2 ring-slate-card"></span></button><button class="p-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-6 w-px bg-slate-border"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-border-strong" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1EYfH08Ys9wk5xDcSpOtmPUTe9Texten2h9QsrZ-WowEA7B-vbRkZsvifP7ocE5CnYSe40YcC0dhOG3svWrGD-lz2HWnQxVJvnuirwKnd-Z2NhzU9LusWKjygTYdMZfoTDlrOL171rG_qT1MZ5Uw82V5fhI8NIBr4E3PiLqewWrxVw259bBimJKy1vNdAa3XL7ilZjOaOXZjpCRlD0bPsKTXCQd5a7Yr976sR30QXduKUEuy2aQR"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-aid-grant-green ring-2 ring-slate-card"></span></div><div class="hidden sm:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-navy-deep leading-tight">Dr. Eleanor Vance</span><span class="font-label-code-tabular text-[11px] text-on-surface-variant leading-none">Director of Admissions</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-slate-card border-r border-slate-border z-40 flex flex-col justify-between py-space-md"><div class="px-space-md flex flex-col gap-space-lg"><div class="px-space-sm"><span class="font-label-code-tabular text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Counseling Cockpit</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container text-secondary font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl transition-colors bg-surface-container text-secondary font-semibold" data-path="counselor-admin-hub" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span>Student Roster</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors font-body-md text-body-md" data-path="financial-aid-modeler" href="#"><span class="material-symbols-outlined text-[20px]">calculate</span><span>Aid &amp; EFC Modeler</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors font-body-md text-body-md" data-path="match-matrix-auditor" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>5D Match Matrix</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-slate-surface hover:text-on-surface transition-colors font-body-md text-body-md" data-path="firewall-publication-desk" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Publication Desk</span></a></nav></div><div class="px-space-md pt-space-md border-t border-slate-border flex flex-col gap-space-sm"><div class="p-space-sm rounded-xl bg-caution-amber-surface border border-caution-amber/30"><div class="flex items-center gap-1.5 text-badge-need-aware-text font-badge-status text-badge-status"><span class="material-symbols-outlined text-[14px]">lock_clock</span><span>FIREWALL ACTIVE</span></div><p class="font-body-sm text-[11px] text-on-surface-variant mt-1">Algorithmic draft metrics hidden from client view until counselor release.</p></div><div class="flex items-center justify-between px-space-sm pt-space-xs text-on-surface-variant"><span class="font-label-code-tabular text-[11px]">Sync: Real-time</span><span class="material-symbols-outlined text-[16px] text-aid-grant-green">check_circle</span></div></div></aside><div class="pl-64"><main class="w-full pt-16 min-h-screen bg-slate-surface px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Cockpit Control Breadcrumb & Status Ribbon -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg px-space-xs">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-xs font-label-code-tabular text-body-sm text-on-surface-variant">
+<span>SESSION ID</span>
+<span class="text-navy-deep font-semibold">ADM-2026-X884</span>
+<span class="text-slate-border-strong mx-1">/</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container font-medium text-secondary">IBDP Cohort Alpha</span>
+</div>
+<div class="flex items-center gap-2 px-2.5 py-1 rounded-xl bg-caution-amber-surface text-badge-need-aware-text font-badge-status text-badge-status shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>SECURITY FIREWALL ACTIVE : CLIENT MUTED</span>
+</div>
+</div>
+<!-- Global Quick Actions -->
+<div class="flex items-center gap-space-sm">
+<button class="px-3 py-1.5 rounded-xl bg-slate-card text-navy-deep hover:bg-slate-surface font-body-sm text-body-sm font-semibold shadow-sm transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+        Audit Trail (14)
+      </button>
+<button class="px-3 py-1.5 rounded-xl bg-slate-card text-navy-deep hover:bg-slate-surface font-body-sm text-body-sm font-semibold shadow-sm transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+        Model Weights
+      </button>
+</div>
+</div>
+<!-- 3-Column Core Cockpit Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- ========================================== -->
+<!-- COLUMN 1: STUDENT NAVIGATOR (Left Rail)    -->
+<!-- ========================================== -->
+<div class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Search & Filters Container -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-navy-deep">Student Roster</span>
+<span class="font-label-code-tabular text-[11px] px-2 py-0.5 rounded-full bg-surface-container font-semibold text-secondary">38 ACTIVE</span>
+</div>
+<!-- Search Input -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-on-surface-variant">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-slate-surface rounded-xl font-body-md text-body-md text-navy-deep placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-inner" placeholder="Search by name, school, SAT..." type="text" value="David Kim"/>
+</div>
+<!-- Filter Segmented Chips -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-code-tabular text-body-sm">
+<span>COHORT</span>
+<div class="flex gap-1">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-secondary font-semibold cursor-pointer">Grade 12</span>
+<span class="px-2 py-0.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors">Grade 11</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-code-tabular text-body-sm">
+<span>AID TYPE</span>
+<div class="flex gap-1">
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-secondary font-semibold cursor-pointer">Intl Need</span>
+<span class="px-2 py-0.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors">US Dom</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Student Queue Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- ACTIVE STUDENT CARD: David Kim -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-md cursor-pointer transition-all relative overflow-hidden bg-gradient-to-r from-sapphire-subtle/50 via-slate-card to-slate-card">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-start justify-between gap-space-sm mb-2 pl-1">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm font-bold text-[14px]">
+                DK
+              </div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-navy-deep font-bold flex items-center gap-1.5">
+                  David Kim
+                  <span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Seoul Foreign School (SFS) • Gr 12</p>
+</div>
+</div>
+<span class="font-label-code-tabular text-[11px] font-bold px-2 py-0.5 rounded-full bg-badge-match-bg text-badge-match-text">
+              IB 41/45
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pl-1 my-2 font-label-code-tabular text-body-sm">
+<div class="bg-slate-surface p-2 rounded-lg">
+<span class="text-on-surface-variant block text-[10px] uppercase font-bold tracking-wider">Citizenship</span>
+<span class="text-navy-deep font-semibold">Pure Int'l (KR)</span>
+</div>
+<div class="bg-slate-surface p-2 rounded-lg">
+<span class="text-on-surface-variant block text-[10px] uppercase font-bold tracking-wider">Cap Budget</span>
+<span class="text-cost-alert-red font-semibold">$18,000 / yr</span>
+</div>
+</div>
+<!-- Status Ribbon -->
+<div class="flex items-center justify-between pl-1 pt-1 mt-1 font-body-sm text-body-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-caution-amber-surface text-badge-need-aware-text font-semibold text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-caution-amber animate-pulse"></span>
+              AI Matched / Pending Review
+            </span>
+<span class="font-label-code-tabular text-on-surface-variant text-[11px]">Just now</span>
+</div>
+</div>
+<!-- STUDENT CARD 2: Chloe Park -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm hover:shadow-md cursor-pointer transition-all opacity-90 hover:opacity-100">
+<div class="flex items-start justify-between gap-space-sm mb-2">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-surface-container text-navy-deep flex items-center justify-center font-headline-sm font-semibold text-[14px]">
+                CP
+              </div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-navy-deep font-semibold">Chloe Park</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Korea Int'l School (KIS) • Gr 11</p>
+</div>
+</div>
+<span class="font-label-code-tabular text-[11px] font-bold px-2 py-0.5 rounded-full bg-badge-safety-bg text-badge-safety-text">
+              AP 8 Courses
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-2 my-2 font-label-code-tabular text-body-sm">
+<div class="bg-slate-surface p-2 rounded-lg">
+<span class="text-on-surface-variant block text-[10px] uppercase font-bold tracking-wider">Status</span>
+<span class="text-navy-deep font-semibold">US Dual Citizen</span>
+</div>
+<div class="bg-slate-surface p-2 rounded-lg">
+<span class="text-on-surface-variant block text-[10px] uppercase font-bold tracking-wider">Fin Aid</span>
+<span class="text-aid-grant-green font-semibold">No Aid Needed</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-body-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-badge-safety-bg text-badge-safety-text font-semibold text-[11px]">
+<span class="material-symbols-outlined text-[13px]">check</span>
+              Published to Portal
+            </span>
+<span class="font-label-code-tabular text-on-surface-variant text-[11px]">2d ago</span>
+</div>
+</div>
+<!-- STUDENT CARD 3: Alex Chen -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm hover:shadow-md cursor-pointer transition-all opacity-90 hover:opacity-100">
+<div class="flex items-start justify-between gap-space-sm mb-2">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-surface-container text-navy-deep flex items-center justify-center font-headline-sm font-semibold text-[14px]">
+                AC
+              </div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-navy-deep font-semibold">Alex Chen</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chadwick Int'l • Gr 12</p>
+</div>
+</div>
+<span class="font-label-code-tabular text-[11px] font-bold px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">
+              IB 38/45
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-2 my-2 font-label-code-tabular text-body-sm">
+<div class="bg-slate-surface p-2 rounded-lg">
+<span class="text-on-surface-variant block text-[10px] uppercase font-bold tracking-wider">Citizenship</span>
+<span class="text-navy-deep font-semibold">Pure Int'l (TW)</span>
+</div>
+<div class="bg-slate-surface p-2 rounded-lg">
+<span class="text-on-surface-variant block text-[10px] uppercase font-bold tracking-wider">Cap Budget</span>
+<span class="text-navy-deep font-semibold">$45,000 / yr</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-body-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-semibold text-[11px]">
+<span class="material-symbols-outlined text-[13px]">edit_note</span>
+              Counselor Draft
+            </span>
+<span class="font-label-code-tabular text-on-surface-variant text-[11px]">4h ago</span>
+</div>
+</div>
+</div>
+<!-- Counselor Quick Productivity Note -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-2 text-navy-deep font-headline-sm font-semibold mb-1">
+<span class="material-symbols-outlined text-[18px] text-secondary">info</span>
+          Directives &amp; Deadlines
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          ED1 / EA submission lock on Nov 1st. International need-aware applications require dual counselor sign-off on Net Price calculations.
+        </p>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- COLUMN 2: 5-DIMENSIONAL DATA ENTRY STAGE (Center Center)  -->
+<!-- ======================================================== -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Center Top Dossier Header -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-lg text-headline-lg text-navy-deep">David Kim</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-secondary font-label-code-tabular text-body-sm font-semibold">G12 #8821</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Seoul Foreign School (SFS) • Intended Major: <span class="text-navy-deep font-semibold">Computer Science &amp; Data Science</span>
+</p>
+</div>
+<div class="flex items-center gap-2 self-start sm:self-center">
+<button class="px-3 py-1.5 rounded-xl bg-surface-container text-secondary hover:bg-secondary hover:text-on-secondary font-body-sm text-body-sm font-semibold transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+            Export PDF
+          </button>
+<button class="p-2 rounded-xl bg-slate-surface text-navy-deep hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Dimension 1: Academic Profile & Rigor -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container text-secondary font-label-code-tabular font-bold flex items-center justify-center text-[12px]">D1</span>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep font-bold">Academic Profile &amp; School Context</h3>
+</div>
+<span class="font-label-code-tabular text-body-sm text-aid-grant-green font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-aid-grant-green"></span> Top 2% School Decile
+          </span>
+</div>
+<!-- Micro stats grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 font-label-code-tabular">
+<div class="bg-slate-surface p-2.5 rounded-xl">
+<span class="text-[11px] text-on-surface-variant uppercase block">IB Predicted</span>
+<span class="font-metric-large text-[22px] font-bold text-navy-deep leading-tight">41<span class="text-[14px] text-on-surface-variant font-normal">/45</span></span>
+</div>
+<div class="bg-slate-surface p-2.5 rounded-xl">
+<span class="text-[11px] text-on-surface-variant uppercase block">Unweighted GPA</span>
+<span class="font-metric-large text-[22px] font-bold text-navy-deep leading-tight">3.92</span>
+</div>
+<div class="bg-slate-surface p-2.5 rounded-xl">
+<span class="text-[11px] text-on-surface-variant uppercase block">SAT Composite</span>
+<span class="font-metric-large text-[22px] font-bold text-navy-deep leading-tight">1520<span class="text-[11px] text-aid-grant-green ml-1 font-medium">800M</span></span>
+</div>
+<div class="bg-slate-surface p-2.5 rounded-xl">
+<span class="text-[11px] text-on-surface-variant uppercase block">HL Course Rigor</span>
+<span class="font-metric-large text-[22px] font-bold text-navy-deep leading-tight">6<span class="text-[14px] text-on-surface-variant font-normal">/22 off.</span></span>
+</div>
+</div>
+<!-- Context Badges & Waivers -->
+<div class="flex flex-wrap items-center gap-2 pt-1 font-body-sm text-body-sm">
+<div class="px-2.5 py-1 rounded-lg bg-surface-container-low text-navy-deep flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">trending_up</span>
+<span>Grade Trend: <strong class="text-navy-deep">Steep Upward Trajectory (Gr 11/12)</strong></span>
+</div>
+<div class="px-2.5 py-1 rounded-lg bg-aid-grant-surface text-aid-grant-green font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span>TOEFL Waiver Granted (4 yrs English-medium school)</span>
+</div>
+</div>
+</div>
+<!-- Dimension 2: Citizenship & Financial Modeling -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container text-secondary font-label-code-tabular font-bold flex items-center justify-center text-[12px]">D2</span>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep font-bold">Citizenship &amp; Financial Profile</h3>
+</div>
+<span class="font-badge-status text-badge-status px-2 py-0.5 rounded-full bg-badge-reach-bg text-badge-reach-text font-bold">
+            HIGH AID SENSITIVITY
+          </span>
+</div>
+<!-- Citizenship Fork Toggle -->
+<div class="grid grid-cols-2 gap-2 bg-slate-surface p-1 rounded-xl">
+<button class="py-2 px-3 rounded-lg bg-slate-card font-body-sm text-body-sm font-semibold text-navy-deep shadow-sm flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-cost-alert-red">public_off</span>
+            Pure International (Non-US Citizen/PR)
+          </button>
+<button class="py-2 px-3 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-navy-deep transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+            US Citizen / Permanent Resident
+          </button>
+</div>
+<!-- Financial Parameters Row -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-1">
+<div class="p-3 bg-slate-surface rounded-xl">
+<span class="text-on-surface-variant font-label-code-tabular text-[11px] uppercase block">Household Income</span>
+<span class="font-label-code-tabular text-[18px] font-bold text-navy-deep leading-tight">$78,000 <span class="text-[11px] font-normal text-on-surface-variant">/ yr</span></span>
+<span class="text-body-sm text-on-surface-variant block mt-0.5">KRW ~104,000,000</span>
+</div>
+<div class="p-3 bg-slate-surface rounded-xl">
+<span class="text-on-surface-variant font-label-code-tabular text-[11px] uppercase block">Estimated SAI / EFC</span>
+<span class="font-label-code-tabular text-[18px] font-bold text-secondary leading-tight">$14,500 <span class="text-[11px] font-normal text-on-surface-variant">/ yr</span></span>
+<span class="text-body-sm text-aid-grant-green block mt-0.5">Calculated Profile-based</span>
+</div>
+<div class="p-3 bg-cost-alert-surface rounded-xl">
+<span class="text-cost-alert-red font-label-code-tabular text-[11px] uppercase font-bold block">Hard Family Cap</span>
+<span class="font-label-code-tabular text-[18px] font-bold text-cost-alert-red leading-tight">$18,000 <span class="text-[11px] font-normal text-cost-alert-red/80">/ yr</span></span>
+<span class="text-body-sm text-cost-alert-red block mt-0.5">Zero loan tolerance</span>
+</div>
+</div>
+<!-- Interactive Budget Cap Slider -->
+<div class="bg-slate-surface p-3 rounded-xl flex flex-col gap-2 mt-1">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-semibold text-navy-deep">Annual Family Contribution Ceiling:</span>
+<span class="font-label-code-tabular font-bold text-secondary text-[15px]">$18,000 / year</span>
+</div>
+<!-- Track & Slider Visual -->
+<div class="relative w-full py-1">
+<div class="h-2.5 w-full bg-slate-card rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 25%;"></div>
+<div class="bg-aid-grant-green h-full" style="width: 55%;"></div>
+<div class="bg-surface-container h-full" style="width: 20%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-code-tabular text-[11px] text-on-surface-variant mt-1.5">
+<span>$5,000</span>
+<span class="text-secondary font-semibold">▲ Current: $18,000</span>
+<span>$40,000</span>
+<span>Full Pay ($85k+)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Dimension 3: Extracurricular Portfolio (Spike & Tiering) -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container text-secondary font-label-code-tabular font-bold flex items-center justify-center text-[12px]">D3</span>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep font-bold">Extracurricular Portfolio</h3>
+</div>
+<span class="font-label-code-tabular text-[11px] px-2 py-0.5 rounded-lg bg-surface-container-high text-navy-deep font-bold">
+            SPIKE: CS &amp; EDTECH
+          </span>
+</div>
+<!-- 3 Primary Activities -->
+<div class="flex flex-col gap-2">
+<!-- Activity 1 -->
+<div class="p-3 rounded-xl bg-slate-surface flex items-start gap-3">
+<span class="px-2 py-1 rounded bg-secondary/10 text-secondary font-label-code-tabular text-body-sm font-bold">T1</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-navy-deep">Founder, Open-Source AI Tutor for Low-Income Students</span>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant">12 hrs/wk • 2 yrs</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Engineered zero-cost LLM interface scaled to 1,200 active students in regional community centers; featured in National Tech Daily.
+              </p>
+</div>
+</div>
+<!-- Activity 2 -->
+<div class="p-3 rounded-xl bg-slate-surface flex items-start gap-3">
+<span class="px-2 py-1 rounded bg-secondary/10 text-secondary font-label-code-tabular text-body-sm font-bold">T2</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-navy-deep">VEX Robotics Team Captain &amp; State Finalist</span>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant">10 hrs/wk • 3 yrs</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Directed 8-person firmware division, led autonomous pathfinding strategy to State Championship 2nd place.
+              </p>
+</div>
+</div>
+<!-- Activity 3 -->
+<div class="p-3 rounded-xl bg-slate-surface flex items-start gap-3">
+<span class="px-2 py-1 rounded bg-slate-card text-on-surface-variant font-label-code-tabular text-body-sm font-bold">T3</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-navy-deep">High School Orchestra 1st Violin</span>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant">4 hrs/wk • 4 yrs</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Concertmaster associate chair; organized annual charity hospital performance series.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Dimensions 4 & 5: Strategic Positioning & Environmental Fit -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Dimension 4 -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container text-secondary font-label-code-tabular font-bold flex items-center justify-center text-[12px]">D4</span>
+<h4 class="font-headline-sm text-headline-sm text-navy-deep font-semibold">Institutional Positioning</h4>
+</div>
+<div class="p-2.5 rounded-lg bg-caution-amber-surface text-badge-need-aware-text font-body-sm text-body-sm">
+<strong>Demographic Factor:</strong> Asian Male in Computer Science (Ultra-competitive cohort).
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>Strategy:</strong> Pivot away from pure software engineering towards interdisciplinary AI Ethics, Math Philosophy, and community deployment.
+          </p>
+</div>
+<!-- Dimension 5 -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container text-secondary font-label-code-tabular font-bold flex items-center justify-center text-[12px]">D5</span>
+<h4 class="font-headline-sm text-headline-sm text-navy-deep font-semibold">Environmental &amp; Cultural Fit</h4>
+</div>
+<div class="flex flex-wrap gap-1 font-label-code-tabular text-[11px] pt-1">
+<span class="px-2 py-0.5 bg-slate-surface rounded-md text-navy-deep">East Coast / Mid-Atlantic</span>
+<span class="px-2 py-0.5 bg-slate-surface rounded-md text-navy-deep">Medium Research or Top LAC</span>
+<span class="px-2 py-0.5 bg-slate-surface rounded-md text-navy-deep">Urban / Suburban</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Prefers close mentorship with faculty, cold weather climate acceptable, collaborative non-cutthroat culture.
+          </p>
+</div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- COLUMN 3: AI ENGINE & SCREENING FIREWALL (Right Rail)    -->
+<!-- ======================================================== -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Trigger Bar & Model Meta -->
+<div class="bg-navy-deep text-on-primary rounded-xl p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between relative z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px]">auto_awesome</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary">Gemini 3.8 Match Engine</span>
+</div>
+<span class="font-label-code-tabular text-[11px] px-2 py-0.5 rounded bg-navy-subtle text-tertiary-fixed font-semibold">
+            T=0.1 Deterministic
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-inverse-primary relative z-10">
+          Cross-referencing CDS 2024-25 datasets, international admit grant matrices, and unrounded family budget constraints.
+        </p>
+<button class="w-full py-2.5 rounded-xl bg-secondary hover:bg-sapphire-hover text-on-primary font-body-md text-body-md font-bold shadow-md transition-all flex items-center justify-center gap-2 mt-1 relative z-10" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+          Run Multi-Dimensional Match
+        </button>
+<div class="flex items-center justify-between text-[11px] font-label-code-tabular text-inverse-primary/80 pt-1 border-t border-navy-subtle relative z-10">
+<span>Engine: g-3.8-pro-admit</span>
+<span>15 Candidate Colleges Computed</span>
+</div>
+</div>
+<!-- Active Firewall Alert Box -->
+<div class="bg-caution-amber-surface rounded-xl p-space-md shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-caution-amber text-[24px] mt-0.5">shield</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-badge-need-aware-text font-bold">Client Publication Firewall</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Parent &amp; Student portal currently displays <span class="font-semibold text-navy-deep">ZERO</span> colleges for David Kim. Only institutions checked below will be released to the family.
+          </p>
+</div>
+</div>
+<!-- Raw AI Match Results Roster -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-headline-sm text-headline-sm text-navy-deep font-bold">Screening Queue</span>
+<span class="font-label-code-tabular text-body-sm text-on-surface-variant">Showing Top 5 of 15</span>
+</div>
+<!-- College 1: Dartmouth College (Reach) -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-2 relative">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-sm text-headline-sm text-navy-deep font-bold">Dartmouth College</h4>
+<span class="px-2 py-0.2 rounded font-badge-status text-badge-status bg-badge-reach-bg text-badge-reach-text font-bold">REACH</span>
+</div>
+<div class="flex items-center gap-2 font-label-code-tabular text-body-sm text-on-surface-variant mt-0.5">
+<span class="text-aid-grant-green font-semibold">Score: 94%</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-badge-need-blind-bg text-badge-need-blind-text font-medium text-[11px]">Need-Blind Intl</span>
+</div>
+</div>
+</div>
+<div class="text-right font-label-code-tabular">
+<span class="text-[11px] text-on-surface-variant block uppercase">Est Net Price</span>
+<span class="font-bold text-aid-grant-green text-[15px]">$14,200</span>
+</div>
+</div>
+<div class="bg-slate-surface rounded-lg p-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-navy-deep">Financial Fit:</span> 100% Demonstrated Need Met. Expected aid grant: $74,800/yr. Well within $18k family cap.
+          </div>
+<!-- Counselor Comment input -->
+<div class="mt-1">
+<label class="block font-label-code-tabular text-[11px] text-on-surface-variant uppercase font-semibold mb-1">Counselor Endorsement Note</label>
+<input class="w-full px-3 py-1.5 bg-slate-surface rounded-lg font-body-sm text-body-sm text-navy-deep focus:outline-none focus:bg-surface-container-lowest transition-colors" type="text" value="Strong fit for undergraduate research and AI ethics interest."/>
+</div>
+</div>
+<!-- College 2: Amherst College (Reach) -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-sm text-headline-sm text-navy-deep font-bold">Amherst College</h4>
+<span class="px-2 py-0.2 rounded font-badge-status text-badge-status bg-badge-reach-bg text-badge-reach-text font-bold">REACH</span>
+</div>
+<div class="flex items-center gap-2 font-label-code-tabular text-body-sm text-on-surface-variant mt-0.5">
+<span class="text-aid-grant-green font-semibold">Score: 92%</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-badge-need-blind-bg text-badge-need-blind-text font-medium text-[11px]">Need-Blind Intl</span>
+</div>
+</div>
+</div>
+<div class="text-right font-label-code-tabular">
+<span class="text-[11px] text-on-surface-variant block uppercase">Est Net Price</span>
+<span class="font-bold text-aid-grant-green text-[15px]">$12,800</span>
+</div>
+</div>
+<div class="bg-slate-surface rounded-lg p-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-navy-deep">Financial Fit:</span> Open curriculum aligns with double CS/Philosophy focus. 100% need met without loans.
+          </div>
+</div>
+<!-- College 3: Williams College (Reach - Counselor Excluded) -->
+<div class="bg-slate-card/75 rounded-xl p-space-md shadow-sm flex flex-col gap-2 opacity-75">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-sm text-headline-sm text-on-surface-variant line-through font-semibold">Williams College</h4>
+<span class="px-2 py-0.2 rounded font-badge-status text-badge-status bg-surface-container text-on-surface-variant">EXCLUDED</span>
+</div>
+<div class="flex items-center gap-2 font-label-code-tabular text-body-sm text-on-surface-variant mt-0.5">
+<span>Score: 90%</span>
+<span>•</span>
+<span class="text-[11px]">Need-Blind Intl</span>
+</div>
+</div>
+</div>
+<div class="text-right font-label-code-tabular">
+<span class="text-[11px] text-on-surface-variant block uppercase">Action</span>
+<span class="text-on-surface-variant font-medium text-[13px]">Unselected</span>
+</div>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant italic pl-6">
+            Excluded by Counselor: Student strongly prefers urban/suburban accessibility; Williamstown location flagged as incompatible in D5.
+          </p>
+</div>
+<!-- College 4: University of Rochester (Match) -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-sm text-headline-sm text-navy-deep font-bold">Univ. of Rochester</h4>
+<span class="px-2 py-0.2 rounded font-badge-status text-badge-status bg-badge-match-bg text-badge-match-text font-bold">MATCH</span>
+</div>
+<div class="flex items-center gap-2 font-label-code-tabular text-body-sm text-on-surface-variant mt-0.5">
+<span class="text-secondary font-semibold">Score: 89%</span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-badge-need-aware-bg text-badge-need-aware-text font-medium text-[11px]">Need-Aware (Generous)</span>
+</div>
+</div>
+</div>
+<div class="text-right font-label-code-tabular">
+<span class="text-[11px] text-on-surface-variant block uppercase">Est Net Price</span>
+<span class="font-bold text-navy-deep text-[15px]">$17,500</span>
+</div>
+</div>
+<div class="bg-slate-surface rounded-lg p-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-navy-deep">Financial Fit:</span> Handler Scholarship &amp; Alan and Jane Model grant potential covers $62k.
+          </div>
+</div>
+<!-- College 5: Case Western Reserve (Safety) -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-sm text-headline-sm text-navy-deep font-bold">Case Western Reserve</h4>
+<span class="px-2 py-0.2 rounded font-badge-status text-badge-status bg-badge-safety-bg text-badge-safety-text font-bold">SAFETY</span>
+</div>
+<div class="flex items-center gap-2 font-label-code-tabular text-body-sm text-on-surface-variant mt-0.5">
+<span class="text-aid-grant-green font-semibold">Score: 86%</span>
+<span>•</span>
+<span class="text-[11px] text-on-surface-variant">High IB 40+ Admit</span>
+</div>
+</div>
+</div>
+<div class="text-right font-label-code-tabular">
+<span class="text-[11px] text-on-surface-variant block uppercase">Est Net Price</span>
+<span class="font-bold text-aid-grant-green text-[15px]">$16,900</span>
+</div>
+</div>
+<div class="bg-slate-surface rounded-lg p-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-navy-deep">Strategic Anchor:</span> Robust merit matrix for &gt;1500 SAT / &gt;40 IB. Early Action recommended.
+          </div>
+</div>
+<!-- Financially Excluded Warning Badge Item: UC Berkeley -->
+<div class="p-3 rounded-xl bg-cost-alert-surface flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cost-alert-red text-[20px] mt-0.5">block</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<h5 class="font-body-md text-body-md font-bold text-cost-alert-red">UC Berkeley (Financially Excluded)</h5>
+<span class="font-label-code-tabular text-[11px] text-cost-alert-red font-bold">OUT-OF-STATE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              COA $74,000/yr. Public university policy grants <span class="font-semibold text-cost-alert-red">$0 need aid</span> to international undergraduates. Gap: <strong>+$56,000/yr over family cap</strong>. Auto-suppressed from portal.
+            </p>
+</div>
+</div>
+</div>
+<!-- Counselor Override & Publishing Actions Box -->
+<div class="bg-slate-card rounded-xl p-space-md shadow-md flex flex-col gap-space-sm mt-1">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant font-label-code-tabular">FIREWALL STATUS:</span>
+<span class="font-badge-status text-badge-status px-2 py-0.5 rounded bg-caution-amber-surface text-badge-need-aware-text font-bold">
+            QUARANTINE ACTIVE (2 HIDDEN)
+          </span>
+</div>
+<div class="flex items-center gap-2">
+<!-- Category Override Selector -->
+<div class="flex-1">
+<label class="block font-label-code-tabular text-[10px] uppercase text-on-surface-variant font-semibold mb-1">Batch Category Tag</label>
+<select class="w-full px-2.5 py-1.5 rounded-lg bg-slate-surface font-body-sm text-body-sm text-navy-deep focus:outline-none">
+<option>Preserve AI Tags (1 Reach, 1 Match, 1 Safety)</option>
+<option>Rebalance as Aggressive Reach</option>
+<option>Force Conservative Bias</option>
+</select>
+</div>
+</div>
+<!-- High Visibility Publish CTA Button -->
+<button class="w-full py-3 px-4 rounded-xl bg-navy-deep hover:bg-navy-subtle text-on-primary font-body-md text-body-md font-bold shadow-lg transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px] text-aid-grant-green">publish</span>
+<span>Publish to Parent &amp; Student Portal (4 Colleges Selected)</span>
+</button>
+<p class="font-body-sm text-[11px] text-on-surface-variant text-center">
+          Family will receive notification for David Kim. Algorithmic draft scores will be formatted into official client-ready cards.
+        </p>
+</div>
+</div>
+</div>
+<!-- Inline Script for Interactivity Micro-Demos -->
+<script>
+    // Micro-interaction handlers for checkbox toggles and budget cap adjustment
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(box => {
+        box.addEventListener('change', (e) => {
+          const card = e.target.closest('.bg-slate-card');
+          if (card) {
+            if (!e.target.checked) {
+              card.classList.add('opacity-75');
+            } else {
+              card.classList.remove('opacity-75');
+            }
+          }
+        });
+      });
+    });
+  </script>
+</div></main></div></body></html>
