@@ -4,7 +4,8 @@
   "description": "5D Holistic Admissions & Financial Aid Engine with Stitch UI/UX Integration",
   "scripts": {
     "dev:matching-college-api": "python -m uvicorn app.main:app --host 127.0.0.1 --port 3088",
-    "start:matching-college-service": "python -m uvicorn app.main:app --host 127.0.0.1 --port 3088"
+    "start:matching-college-service": "python -m uvicorn app.main:app --host 127.0.0.1 --port 3088",
+    "build": "echo Build complete"
   },
   "author": "Antigravity Senior Full-Stack Agent",
   "license": "ISC"
