@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matching College - 5D Holistic Admissions & Financial Aid Engine</title>
+  
+  <!-- Material Symbols & Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "navy-deep": "#0F172A",
+            "navy-subtle": "#1E293B",
+            "secondary": "#0051d5",
+            "secondary-container": "#316bf3",
+            "secondary-fixed": "#dbe1ff",
+            "sapphire-hover": "#1D4ED8",
+            "sapphire-subtle": "#EFF6FF",
+            "slate-surface": "#F8FAFC",
+            "slate-card": "#FFFFFF",
+            "slate-border": "#E2E8F0",
+            "slate-border-strong": "#CBD5E1",
+            "on-surface": "#0b1c30",
+            "on-surface-variant": "#45464d",
+            "surface-container": "#e5eeff",
+            "surface-container-low": "#eff4ff",
+            "surface-variant": "#d3e4fe",
+            "aid-grant-green": "#059669",
+            "aid-grant-surface": "#ECFDF5",
+            "cost-alert-red": "#DC2626",
+            "cost-alert-surface": "#FEF2F2",
+            "caution-amber": "#F59E0B",
+            "caution-amber-surface": "#FFFBEB",
+            "badge-safety-text": "#047857",
+            "badge-safety-bg": "#D1FAE5",
+            "badge-match-text": "#1D4ED8",
+            "badge-match-bg": "#DBEAFE",
+            "badge-reach-text": "#B91C1C",
+            "badge-reach-bg": "#FEE2E2",
+            "badge-need-blind-text": "#0F766E",
+            "badge-need-blind-bg": "#CCFBF1",
+            "badge-need-aware-text": "#B45309",
+            "badge-need-aware-bg": "#FEF3C7"
+          },
+          fontFamily: {
+            "headline-lg": ["Manrope", "sans-serif"],
+            "headline-md": ["Manrope", "sans-serif"],
+            "headline-sm": ["Manrope", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-code-tabular": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F8FAFC;
+      color: #0b1c30;
+    }
+    .font-mono-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-variant-numeric: tabular-nums;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background-color: #CBD5E1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+  <!-- TOP MASTER APP HEADER -->
+  <header class="fixed top-0 left-0 right-0 h-16 z-50 bg-slate-card border-b border-slate-border px-6 flex items-center justify-between shadow-[0_1px_3px_rgba(15,23,42,0.05)]">
+    <div class="flex items-center gap-6">
+      <!-- LOGO & BRAND TITLE -->
+      <div class="flex items-center gap-3 cursor-pointer" onclick="switchMainTab('counselor')">
+        <img src="/static/images/lis-logo.png" alt="Matching College Logo" class="h-9 w-auto object-contain"/>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-base text-navy-deep tracking-tight font-bold leading-none">Matching College</span>
+          <span class="text-[10px] text-on-surface-variant font-mono-num tracking-wider">5D ADMISSIONS ENGINE</span>
+        </div>
+      </div>
+      <div class="h-5 w-px bg-slate-border"></div>
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-surface-container-low text-navy-deep border border-slate-border font-mono-num text-xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-aid-grant-green"></span><span id="academicYearBadge">AY 2026-2027</span>
+      </span>
+
+      <!-- MAIN NAVIGATION LINKS -->
+      <nav class="hidden md:flex items-center gap-6 h-16 ml-2" id="mainNavBar">
+        <button onclick="switchMainTab('counselor')" id="nav-counselor" class="h-16 inline-flex items-center px-1 font-body-md text-sm border-b-2 border-secondary text-secondary font-semibold transition-colors">
+          Counselor Admin Hub
+        </button>
+        <button onclick="switchMainTab('portal')" id="nav-portal" class="h-16 inline-flex items-center px-1 font-body-md text-sm border-b-2 border-transparent text-on-surface-variant hover:text-navy-deep transition-colors">
+          Student & Parent Portal
+        </button>
+        <button onclick="switchMainTab('masterdb')" id="nav-masterdb" class="h-16 inline-flex items-center px-1 font-body-md text-sm border-b-2 border-transparent text-on-surface-variant hover:text-navy-deep transition-colors">
+          College Master DB
+        </button>
+      </nav>
+    </div>
+
+    <!-- HEADER RIGHT CONTROLS -->
+    <div class="flex items-center gap-4">
+      <div id="headerFirewallBadge" class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-caution-amber-surface text-badge-need-aware-text text-xs font-semibold border border-caution-amber/30">
+        <span class="material-symbols-outlined text-[15px]">lock_clock</span>
+        <span>FIREWALL: <span id="headerFirewallStatus">ACTIVE</span></span>
+      </div>
+
+      <div class="h-6 w-px bg-slate-border hidden sm:block"></div>
+
+      <!-- COUNSELOR PROFILE -->
+      <div class="flex items-center gap-2.5 pl-1">
+        <div class="relative">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1EYfH08Ys9wk5xDcSpOtmPUTe9Texten2h9QsrZ-WowEA7B-vbRkZsvifP7ocE5CnYSe40YcC0dhOG3svWrGD-lz2HWnQxVJvnuirwKnd-Z2NhzU9LusWKjygTYdMZfoTDlrOL171rG_qT1MZ5Uw82V5fhI8NIBr4E3PiLqewWrxVw259bBimJKy1vNdAa3XL7ilZjOaOXZjpCRlD0bPsKTXCQd5a7Yr976sR30QXduKUEuy2aQR" alt="Counselor Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-border-strong"/>
+          <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-aid-grant-green ring-2 ring-slate-card"></span>
+        </div>
+        <div class="hidden sm:flex flex-col text-left">
+          <span class="text-xs font-semibold text-navy-deep leading-tight">Mr. David Nah</span>
+          <span class="font-mono-num text-[10px] text-on-surface-variant leading-none">College Counsellor</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- VIEW 1: COUNSELOR ADMIN HUB                                   -->
+  <!-- ============================================================ -->
+  <div id="view-counselor" class="pt-16 min-h-screen flex flex-col">
+    <div class="flex flex-1">
+      <!-- LEFT SIDEBAR: STUDENT NAVIGATOR -->
+      <aside class="w-80 bg-slate-card border-r border-slate-border flex flex-col justify-between py-4 fixed left-0 top-16 bottom-0 z-40">
+        <div class="px-4 flex flex-col gap-3 overflow-y-auto custom-scroll flex-1">
+          <div class="flex items-center justify-between">
+            <span class="font-mono-num text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Student Roster</span>
+            <button onclick="openNewStudentModal()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-navy-deep hover:bg-navy-subtle text-white text-xs font-semibold shadow-sm transition-all active:scale-95">
+              <span class="material-symbols-outlined text-[14px]">person_add</span>
+              <span>+ Add Student</span>
+            </button>
+          </div>
+
+          <!-- STATUS TABS: ACTIVE / ALUMNI / WITHDRAWN -->
+          <div class="flex items-center p-1 rounded-xl bg-slate-surface border border-slate-border text-xs font-semibold">
+            <button onclick="switchRosterFilter('active')" id="tab-roster-active" class="flex-1 py-1.5 rounded-lg bg-slate-card text-secondary shadow-sm text-center transition-all">
+              Active (<span id="countActiveBadge">2</span>)
+            </button>
+            <button onclick="switchRosterFilter('alumni')" id="tab-roster-alumni" class="flex-1 py-1.5 rounded-lg text-on-surface-variant hover:text-navy-deep text-center transition-all">
+              Alumni (<span id="countAlumniBadge">0</span>)
+            </button>
+            <button onclick="switchRosterFilter('withdrawn')" id="tab-roster-withdrawn" class="flex-1 py-1.5 rounded-lg text-on-surface-variant hover:text-navy-deep text-center transition-all">
+              Withdrawn (<span id="countWithdrawnBadge">0</span>)
+            </button>
+          </div>
+
+          <!-- SEARCH INPUT -->
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-on-surface-variant">search</span>
+            <input id="studentSearchInput" type="text" placeholder="Search student name, school..." class="w-full pl-9 pr-3 py-1.5 bg-slate-surface rounded-lg text-xs text-navy-deep placeholder:text-gray-400 border border-slate-border focus:outline-none focus:border-secondary transition-colors"/>
+          </div>
+
+          <!-- STUDENT LIST CONTAINER -->
+          <div id="studentListContainer" class="flex flex-col gap-1.5 pt-1">
+            <!-- Dynamic injected students -->
+          </div>
+        </div>
+
+        <!-- SIDEBAR FOOTER: CLEAN ROSTER SUMMARY -->
+        <div class="px-4 pt-3 border-t border-slate-border flex flex-col gap-1.5 bg-slate-card">
+          <div class="flex items-center justify-between text-xs text-on-surface-variant">
+            <span class="font-medium">School:</span>
+            <span class="font-semibold text-navy-deep">Seoul Foreign School (SFS)</span>
+          </div>
+          <div class="flex items-center justify-between text-[11px] text-on-surface-variant">
+            <span class="font-mono-num">Counsellor:</span>
+            <span class="font-semibold text-secondary">Mr. David Nah</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT AREA FOR COUNSELOR -->
+      <main class="pl-80 flex-1 w-full bg-slate-surface px-8 py-6">
+        
+        <!-- SUB-HEADER / DOSSIER IDENTITY -->
+        <div class="bg-slate-card rounded-xl p-5 shadow-sm border border-slate-border mb-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <div class="relative">
+              <div class="w-12 h-12 rounded-xl bg-navy-deep text-white font-headline-md font-bold flex items-center justify-center text-lg shadow-sm" id="studentAvatarInitials">
+                DK
+              </div>
+              <span class="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-aid-grant-green ring-2 ring-slate-card text-[9px] text-white font-bold">✓</span>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center gap-2.5 flex-wrap">
+                <h1 class="font-headline-md text-xl text-navy-deep font-bold tracking-tight" id="studentDisplayName">David Kim <span class="text-on-surface-variant font-medium text-sm" id="studentKoreanName">(김태윤)</span></h1>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-secondary-fixed text-navy-deep font-mono-num text-xs font-semibold" id="studentIdBadge">ID #8821</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-badge-match-bg text-badge-match-text text-xs font-semibold" id="studentCohortBadge">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>IBDP Cohort Alpha
+                </span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-aid-grant-surface text-aid-grant-green text-xs font-semibold" id="studentFirewallBadge">
+                  <span class="material-symbols-outlined text-[14px]">verified</span>Published to Client
+                </span>
+              </div>
+              <div class="flex items-center gap-3 text-xs text-on-surface-variant mt-1">
+                <span class="font-semibold text-navy-deep" id="studentSchool">Seoul Foreign School (SFS)</span>
+                <span>•</span>
+                <span id="studentGrade">Grade 12 (Class of 2026)</span>
+                <span>•</span>
+                <span id="studentCitizenshipBadge" class="font-medium text-secondary">International Track</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOP ACTION BUTTONS -->
+          <div class="flex items-center gap-2.5 flex-wrap">
+            <button onclick="saveStudentProfile()" class="px-3 py-2 rounded-lg bg-slate-surface border border-slate-border text-navy-deep hover:bg-slate-border text-xs font-semibold flex items-center gap-1.5 transition-colors">
+              <span class="material-symbols-outlined text-[15px]">save</span>Save Profile
+            </button>
+            <button onclick="openGraduateModal()" class="px-3 py-2 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 hover:bg-emerald-100 text-xs font-semibold flex items-center gap-1.5 transition-colors">
+              <span class="material-symbols-outlined text-[15px]">school</span>Graduate (졸업 처리)
+            </button>
+            <button onclick="openWithdrawModal()" class="px-3 py-2 rounded-lg bg-rose-50 border border-rose-200 text-rose-800 hover:bg-rose-100 text-xs font-semibold flex items-center gap-1.5 transition-colors">
+              <span class="material-symbols-outlined text-[15px]">person_off</span>Withdraw (자퇴 처리)
+            </button>
+            <button onclick="triggerSimulation()" id="btnRunSim" class="px-4 py-2 rounded-xl bg-navy-deep hover:bg-navy-subtle text-white text-xs font-semibold flex items-center gap-2 shadow-sm transition-all active:scale-95">
+              <span class="material-symbols-outlined text-[16px] text-yellow-300">bolt</span>
+              <span>Save & Run 5D Simulation</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- COUNSELOR SUB-TABS: 1. Core Profile Modeling | 2. 5D Match Matrix & Publication Desk -->
+        <div class="flex items-center border-b border-slate-border mb-6">
+          <button onclick="switchCounselorTab('form')" id="counselor-tab-form" class="px-4 py-2.5 border-b-2 border-secondary font-headline-sm text-sm text-secondary font-semibold flex items-center gap-2 bg-sapphire-subtle/50 rounded-t-lg">
+            <span class="material-symbols-outlined text-[18px]">tune</span>
+            <span>5-Dimensional Profile Modeling</span>
+          </button>
+          <button onclick="switchCounselorTab('matrix')" id="counselor-tab-matrix" class="px-4 py-2.5 border-b-2 border-transparent font-body-md text-sm text-on-surface-variant hover:text-navy-deep flex items-center gap-2 transition-colors">
+            <span class="material-symbols-outlined text-[18px]">analytics</span>
+            <span>5D Match Matrix & Publication Desk</span>
+            <span id="matchMatrixCountBadge" class="ml-1 px-1.5 py-0.2 rounded-full text-[10px] bg-secondary text-white font-mono-num">6</span>
+          </button>
+        </div>
+
+        <!-- SECTION 1: 5-DIMENSIONAL PROFILE MODELING FORM -->
+        <div id="counselor-section-form" class="flex flex-col gap-6">
+          <!-- GRID OF 5 DIMENSIONS -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <!-- DIMENSION 1: ACADEMIC PROFILE -->
+            <div class="bg-slate-card rounded-xl p-5 shadow-sm border border-slate-border flex flex-col gap-4">
+              <div class="flex items-center justify-between border-b border-slate-border pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-md bg-secondary text-white flex items-center justify-center font-bold text-xs">01</span>
+                  <h3 class="font-headline-sm text-sm font-bold text-navy-deep">Academic Rigor & Testing</h3>
+                </div>
+                <span class="font-mono-num text-[11px] text-aid-grant-green font-semibold" id="academicTierDisplay">Tier 1 Elite</span>
+              </div>
+
+              <!-- Curriculum Type & Predicted Score -->
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">Curriculum Track</label>
+                  <select id="inpCurriculumType" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm text-navy-deep font-medium">
+                    <option value="IB DP">IB DP (International Baccalaureate)</option>
+                    <option value="AP">AP (Advanced Placement)</option>
+                    <option value="Regular / Honors">Regular / Honors</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">IB Predicted (or AP Count)</label>
+                  <input id="inpIbPredicted" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="41"/>
+                </div>
+              </div>
+
+              <!-- GPA & Trend -->
+              <div class="grid grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">Unweighted GPA</label>
+                  <input id="inpUnweightedGpa" type="number" step="0.01" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="3.92"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">Weighted GPA</label>
+                  <input id="inpWeightedGpa" type="number" step="0.01" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="4.38"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">SAT Total</label>
+                  <input id="inpSatTotal" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="1520"/>
+                </div>
+              </div>
+
+              <!-- Sub-scores & English Waiver -->
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">SAT Reading & Writing</label>
+                  <input id="inpSatRw" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="740"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">Years in English Medium</label>
+                  <input id="inpEnglishYears" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="4"/>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-lg bg-surface-container-low border border-slate-border flex items-center justify-between text-xs">
+                <span class="text-on-surface-variant">TOEFL / IELTS Waiver Qualification:</span>
+                <span id="englishWaiverBadge" class="font-bold text-aid-grant-green">QUALIFIED (>= 3 Yrs / SAT RW >= 650)</span>
+              </div>
+            </div>
+
+            <!-- DIMENSION 2: FINANCIAL PROFILE & BUDGET -->
+            <div class="bg-slate-card rounded-xl p-5 shadow-sm border border-slate-border flex flex-col gap-4">
+              <div class="flex items-center justify-between border-b border-slate-border pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-md bg-secondary text-white flex items-center justify-center font-bold text-xs">02</span>
+                  <h3 class="font-headline-sm text-sm font-bold text-navy-deep">Financial Match & SAI / EFC</h3>
+                </div>
+                <span class="font-mono-num text-[11px] text-secondary font-semibold" id="saiDisplay">Est. SAI: $18,500</span>
+              </div>
+
+              <!-- Citizenship Track Toggle -->
+              <div>
+                <label class="block text-xs font-semibold text-on-surface-variant mb-1">Citizenship Track (Admissions Fork)</label>
+                <select id="inpCitizenship" onchange="handleCitizenshipChange()" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm text-navy-deep font-semibold">
+                  <option value="International (No Green Card)">International Student (No Green Card - Need-Aware Penalty Active)</option>
+                  <option value="US Citizen (Green Card / Passport)">US Citizen / Permanent Resident (Federal Aid / QuestBridge Active)</option>
+                </select>
+              </div>
+
+              <!-- Household Financial Inputs -->
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">Annual Household Income (USD)</label>
+                  <input id="inpIncome" oninput="recalcSai()" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="85000"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">Household Assets (USD)</label>
+                  <input id="inpAssets" oninput="recalcSai()" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="180000"/>
+                </div>
+              </div>
+
+              <!-- Max Family Annual Budget Slider -->
+              <div>
+                <div class="flex items-center justify-between mb-1 text-xs">
+                  <span class="font-semibold text-on-surface-variant">Max Annual Out-of-Pocket Budget:</span>
+                  <span class="font-mono-num font-bold text-navy-deep" id="budgetValDisplay">$25,000 / yr</span>
+                </div>
+                <input id="inpBudget" oninput="updateBudgetDisplay()" type="range" min="0" max="90000" step="1000" value="25000" class="w-full h-2 bg-slate-border rounded-lg appearance-none cursor-pointer accent-secondary"/>
+                <div class="flex justify-between text-[10px] text-gray-400 font-mono-num mt-1">
+                  <span>$0 (Full Aid)</span>
+                  <span>$45,000</span>
+                  <span>$90,000+ (Full Pay)</span>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-lg bg-surface-container-low border border-slate-border text-xs flex items-center justify-between">
+                <span class="text-on-surface-variant">QuestBridge Eligibility:</span>
+                <span id="questbridgeStatusBadge" class="font-bold text-gray-500">Not Eligible (International)</span>
+              </div>
+            </div>
+
+            <!-- DIMENSION 3: HOLISTIC & EXTRACURRICULAR SPIKE -->
+            <div class="bg-slate-card rounded-xl p-5 shadow-sm border border-slate-border flex flex-col gap-4">
+              <div class="flex items-center justify-between border-b border-slate-border pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-md bg-secondary text-white flex items-center justify-center font-bold text-xs">03</span>
+                  <h3 class="font-headline-sm text-sm font-bold text-navy-deep">Extracurricular Spike & Impact</h3>
+                </div>
+                <span class="font-mono-num text-[11px] text-secondary font-semibold" id="ecSpikeBadge">Spike Focus</span>
+              </div>
+
+              <div id="ecActivitiesContainer" class="flex flex-col gap-3">
+                <!-- Activities injected dynamically -->
+              </div>
+            </div>
+
+            <!-- DIMENSION 4 & 5: INSTITUTIONAL & PREFERENCES -->
+            <div class="bg-slate-card rounded-xl p-5 shadow-sm border border-slate-border flex flex-col gap-4">
+              <div class="flex items-center justify-between border-b border-slate-border pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-md bg-secondary text-white flex items-center justify-center font-bold text-xs">04/05</span>
+                  <h3 class="font-headline-sm text-sm font-bold text-navy-deep">Institutional Fit & Preferences</h3>
+                </div>
+                <span class="font-mono-num text-[11px] text-gray-500 font-semibold">Environment Match</span>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-on-surface-variant mb-1">Intended Major / Academic Focus</label>
+                <input id="inpMajor" type="text" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-medium text-navy-deep" value="Computer Science & Robotics"/>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">Institution Type Preference</label>
+                  <select id="inpPrefType" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm text-navy-deep">
+                    <option value="National University">National Research University</option>
+                    <option value="Liberal Arts College">Liberal Arts College (LAC)</option>
+                    <option value="Open / Both">Open to Both</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">Geographic Region</label>
+                  <select id="inpPrefRegion" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm text-navy-deep">
+                    <option value="Northeast & West Coast">Northeast & West Coast</option>
+                    <option value="Midwest">Midwest Flagships</option>
+                    <option value="Any US Region">Any US Region</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-on-surface-variant mb-1">Campus Setting</label>
+                <input id="inpPrefSetting" type="text" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm text-navy-deep" value="Suburban or Urban"/>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SECTION 2: 5D MATCH MATRIX & PUBLICATION DESK -->
+        <div id="counselor-section-matrix" class="hidden flex flex-col gap-6">
+
+          <!-- FIREWALL STATUS & PUBLICATION BANNER -->
+          <div class="bg-slate-card rounded-xl p-5 shadow-sm border border-slate-border flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <div id="firewallIconBox" class="w-10 h-10 rounded-xl bg-aid-grant-surface text-aid-grant-green flex items-center justify-center">
+                <span class="material-symbols-outlined text-[24px]">verified_user</span>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-mono-num font-bold tracking-wider" id="firewallStatusText">PUBLISHED TO CLIENT</span>
+                  <span class="h-3 w-px bg-slate-border"></span>
+                  <span class="text-xs text-on-surface-variant" id="firewallLastEvalText">Last evaluated 2025.10.14</span>
+                </div>
+                <p class="text-xs text-on-surface-variant mt-0.5">Counselor overrides and notes are synchronized with the Student & Parent Portal upon publication.</p>
+              </div>
+            </div>
+            
+            <button onclick="publishToPortal()" id="btnPublish" class="px-5 py-2.5 rounded-xl bg-aid-grant-green hover:bg-emerald-700 text-white font-semibold text-xs flex items-center gap-2 shadow-sm transition-all active:scale-95">
+              <span class="material-symbols-outlined text-[18px]">publish</span>
+              <span>Publish Verified Dossier to Client Portal</span>
+            </button>
+          </div>
+
+          <!-- COUNSELOR OVERALL ADVICE EDITOR -->
+          <div class="bg-slate-card rounded-xl p-5 shadow-sm border border-slate-border flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-sm text-sm font-bold text-navy-deep flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-secondary">rate_review</span>
+                Counselor Master Advice Note (Presented to Family)
+              </h3>
+              <button onclick="saveCounselorNote()" class="text-xs font-semibold text-secondary hover:underline">Save Note</button>
+            </div>
+            <textarea id="inpCounselorMasterNote" rows="3" class="w-full p-3 rounded-lg border border-slate-border bg-slate-surface text-sm text-navy-deep focus:outline-none focus:border-secondary transition-colors" placeholder="Enter counselor synthesis and admissions strategy for the student dossier..."></textarea>
+          </div>
+
+          <!-- MATCH MATRIX TABLE WITH OVERRIDES -->
+          <div class="bg-slate-card rounded-xl shadow-sm border border-slate-border overflow-hidden">
+            <div class="p-4 border-b border-slate-border flex items-center justify-between bg-slate-surface">
+              <div class="flex items-center gap-2">
+                <h3 class="font-headline-sm text-sm font-bold text-navy-deep">Simulated Institution Matches</h3>
+                <span class="text-xs text-on-surface-variant">(Review & Override Categories before publication)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono-num text-on-surface-variant">Filter:</span>
+                <button onclick="filterMatrixCategory('ALL')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-navy-deep text-white">All</button>
+                <button onclick="filterMatrixCategory('Reach')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-badge-reach-bg text-badge-reach-text">Reach</button>
+                <button onclick="filterMatrixCategory('Match')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-badge-match-bg text-badge-match-text">Match</button>
+                <button onclick="filterMatrixCategory('Safety')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-badge-safety-bg text-badge-safety-text">Safety</button>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-slate-surface text-on-surface-variant uppercase font-mono-num border-b border-slate-border text-[11px]">
+                  <tr>
+                    <th class="py-3 px-4">Visibility</th>
+                    <th class="py-3 px-4">Institution Name</th>
+                    <th class="py-3 px-4">5D Score</th>
+                    <th class="py-3 px-4">AI Category</th>
+                    <th class="py-3 px-4">Counselor Override</th>
+                    <th class="py-3 px-4">Est. COA</th>
+                    <th class="py-3 px-4">Expected Aid</th>
+                    <th class="py-3 px-4">Net Price</th>
+                    <th class="py-3 px-4">Counselor Commentary</th>
+                  </tr>
+                </thead>
+                <tbody id="matrixTableBody" class="divide-y divide-slate-border font-body-md text-navy-deep">
+                  <!-- Injected dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- VIEW 2: STUDENT & PARENT PORTAL                               -->
+  <!-- ============================================================ -->
+  <div id="view-portal" class="hidden pt-16 min-h-screen flex flex-col bg-slate-surface">
+    <main class="w-full max-w-[1440px] mx-auto px-8 py-8 flex flex-col gap-6">
+
+      <!-- TOP CLIENT BANNER -->
+      <section class="relative w-full rounded-2xl bg-slate-card shadow-sm border border-slate-border p-6 overflow-hidden">
+        <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sapphire-subtle text-secondary font-mono-num text-xs font-semibold">
+                <span class="material-symbols-outlined text-[15px]">school</span>
+                CLASS OF 2026 ADMISSIONS DOSSIER
+              </span>
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-aid-grant-surface text-aid-grant-green font-mono-num text-xs font-semibold">
+                <span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Counselor Curated • Verified
+              </span>
+            </div>
+            <div class="flex items-baseline gap-3 mt-1">
+              <h1 class="font-headline-lg text-2xl text-navy-deep font-bold tracking-tight" id="portalStudentName">
+                David Kim <span class="text-on-surface-variant font-normal text-lg" id="portalStudentKoreanName">(김태윤 • Grade 12)</span>
+              </h1>
+              <span class="text-on-surface-variant text-sm" id="portalSchoolName">Seoul Foreign School (SFS)</span>
+            </div>
+            <p class="text-xs text-on-surface-variant flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+              <span>College Counsellor: <strong class="text-navy-deep font-semibold">Mr. David Nah</strong></span>
+              <span class="text-slate-border-strong">•</span>
+              <span class="font-mono-num text-[11px] text-on-surface-variant" id="portalSyncTime">Synchronized AY 2026-2027</span>
+            </p>
+          </div>
+
+          <!-- LANGUAGE SELECTOR & ACTIONS -->
+          <div class="flex items-center gap-4 flex-wrap">
+            <div class="flex items-center p-1 rounded-xl bg-slate-surface border border-slate-border">
+              <button onclick="setPortalLanguage('en')" id="lang-en" class="px-3 py-1.5 rounded-lg bg-slate-card text-navy-deep font-semibold shadow-sm text-xs transition-colors">English</button>
+              <button onclick="setPortalLanguage('ko')" id="lang-ko" class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-navy-deep text-xs transition-colors">한국어</button>
+              <button onclick="setPortalLanguage('zh')" id="lang-zh" class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-navy-deep text-xs transition-colors">中文</button>
+            </div>
+            <button onclick="alert('Counselor Consultation Request Sent. Mr. David Nah will contact you within 24 hours.')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-navy-deep hover:bg-navy-subtle text-white text-xs font-medium shadow-sm transition-all">
+              <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+              <span id="txtCounselorSchedule">Schedule Consultation</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- KPI OVERVIEW 4-METRIC BENTO GRID -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- KPI 1 -->
+        <div class="bg-slate-card rounded-xl p-4 shadow-sm border border-slate-border flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-xs text-on-surface-variant uppercase font-semibold font-mono-num" id="kpiLabel1">Curated Colleges</span>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span class="font-headline-lg text-2xl text-navy-deep font-bold" id="portalApprovedCount">6</span>
+              <span class="font-mono-num text-xs text-aid-grant-green font-semibold" id="kpiApprovedText">100% Verified</span>
+            </div>
+            <span class="text-[11px] text-on-surface-variant mt-0.5">Across Reach/Match/Safety</span>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+            <span class="material-symbols-outlined text-[22px]">account_balance</span>
+          </div>
+        </div>
+
+        <!-- KPI 2 -->
+        <div class="bg-slate-card rounded-xl p-4 shadow-sm border border-slate-border flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-xs text-on-surface-variant uppercase font-semibold font-mono-num" id="kpiLabel2">Max Predicted Aid</span>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span class="font-headline-lg text-2xl text-aid-grant-green font-bold font-mono-num" id="portalMaxAid">$70,900</span>
+              <span class="font-mono-num text-xs text-aid-grant-green font-semibold">/ yr</span>
+            </div>
+            <span class="text-[11px] text-on-surface-variant mt-0.5">Need-Blind Package (Harvard)</span>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-aid-grant-surface flex items-center justify-center text-aid-grant-green">
+            <span class="material-symbols-outlined text-[22px]">payments</span>
+          </div>
+        </div>
+
+        <!-- KPI 3 -->
+        <div class="bg-slate-card rounded-xl p-4 shadow-sm border border-slate-border flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-xs text-on-surface-variant uppercase font-semibold font-mono-num" id="kpiLabel3">Family Budget Target</span>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span class="font-headline-lg text-2xl text-navy-deep font-bold font-mono-num" id="portalBudgetTarget">$25,000</span>
+              <span class="font-mono-num text-xs text-secondary font-semibold">Ceiling</span>
+            </div>
+            <span class="text-[11px] text-on-surface-variant mt-0.5" id="portalSaiText">Est. Family SAI: $18,500</span>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+            <span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+          </div>
+        </div>
+
+        <!-- KPI 4 -->
+        <div class="bg-slate-card rounded-xl p-4 shadow-sm border border-slate-border flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="text-xs text-on-surface-variant uppercase font-semibold font-mono-num" id="kpiLabel4">Admissions Track</span>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span class="font-headline-lg text-xl text-navy-deep font-bold" id="portalTrackBadge">Int'l Track</span>
+            </div>
+            <span class="text-[11px] text-on-surface-variant mt-0.5">TOEFL Waiver Verified</span>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
+            <span class="material-symbols-outlined text-[22px]">public</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- COUNSELOR STRATEGY NOTE CALLOUT -->
+      <section class="bg-slate-card rounded-xl p-5 shadow-sm border-l-4 border-l-secondary border-slate-border flex flex-col gap-2">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[20px] text-secondary">assignment_ind</span>
+          <h3 class="font-headline-sm text-sm font-bold text-navy-deep" id="txtCounselorAdviceTitle">Counselor Admissions Strategy & Recommendation</h3>
+        </div>
+        <p class="text-xs text-on-surface-variant leading-relaxed" id="portalCounselorNote">
+          David boasts a distinctive Robotics Spike and an elite IB 41 prediction. Because he is an international student requesting need-based financial aid, we have placed Harvard and Amherst under Reach (Need-Blind ensures zero admissions aid penalty), while noting that Stanford carries severe Need-Aware quota constraints. UIUC & Purdue offer rock-solid academic stability if the family budget allows out-of-state tuition.
+        </p>
+      </section>
+
+      <!-- APPROVED COLLEGE MATCHING CARDS -->
+      <section class="flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="font-headline-md text-lg text-navy-deep font-bold" id="txtApprovedHeader">Counselor-Curated University List</h2>
+            <p class="text-xs text-on-surface-variant" id="txtApprovedSubheader">Evaluated against academic standing, international aid policy, and family affordability</p>
+          </div>
+          <div class="flex items-center gap-2" id="portalCategoryFilter">
+            <button onclick="renderPortalCards('ALL')" class="px-3 py-1 rounded-lg text-xs font-semibold bg-navy-deep text-white">All</button>
+            <button onclick="renderPortalCards('Reach')" class="px-3 py-1 rounded-lg text-xs font-semibold bg-badge-reach-bg text-badge-reach-text">Reach</button>
+            <button onclick="renderPortalCards('Match')" class="px-3 py-1 rounded-lg text-xs font-semibold bg-badge-match-bg text-badge-match-text">Match</button>
+            <button onclick="renderPortalCards('Safety')" class="px-3 py-1 rounded-lg text-xs font-semibold bg-badge-safety-bg text-badge-safety-text">Safety</button>
+          </div>
+        </div>
+
+        <div id="portalCardsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamic Matching Cards with Affordability Gauge Injected Here -->
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- VIEW 3: COLLEGE MASTER DB & REPOSITORY                        -->
+  <!-- ============================================================ -->
+  <div id="view-masterdb" class="hidden pt-16 min-h-screen flex flex-col bg-slate-surface">
+    <main class="w-full max-w-[1440px] mx-auto px-8 py-8 flex flex-col gap-6">
+      
+      <!-- TOP BANNER -->
+      <section class="bg-slate-card rounded-xl p-6 shadow-sm border border-slate-border flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div class="flex flex-col max-w-2xl">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-low text-secondary font-mono-num text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-aid-grant-green animate-pulse"></span>
+              IPEDS REPOSITORY 2025-Q1
+            </span>
+            <span class="text-on-surface-variant font-mono-num text-xs">SCHEMA: v4.8-STRICT</span>
+          </div>
+          <h1 class="font-headline-lg text-xl text-navy-deep font-bold">
+            College Master Database & International Aid Repository
+          </h1>
+          <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">
+            Curated institution datasets injected directly into the Gemini Engine Context to eliminate hallucination and enforce accurate Need-Blind / Need-Aware policies.
+          </p>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="flex items-center gap-3 flex-wrap">
+          <button onclick="openRegisterCollegeModal()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container text-secondary hover:bg-badge-match-bg font-semibold text-xs transition-colors">
+            <span class="material-symbols-outlined text-[18px]">add_circle</span>
+            <span>+ Register New College</span>
+          </button>
+          <button onclick="triggerContextSync()" id="btnSyncEngine" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-navy-deep text-white hover:bg-navy-subtle font-semibold text-xs shadow-md transition-all active:scale-95">
+            <span class="material-symbols-outlined text-[18px] text-yellow-300" id="syncIcon">sync</span>
+            <span id="syncText">Sync Context to Gemini Engine</span>
+            <span id="totalCollegesCountBadge" class="ml-1 px-2 py-0.5 rounded-full bg-navy-subtle text-yellow-300 font-mono-num text-[11px]">20 Active</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- SEARCH & FILTER BAR -->
+      <div class="bg-slate-card rounded-xl p-4 shadow-sm border border-slate-border flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="relative flex-1 max-w-md">
+          <span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-on-surface-variant">search</span>
+          <input id="collegeSearchInput" oninput="filterCollegesTable()" type="text" placeholder="Search by institution name, state, IPEDS..." class="w-full pl-9 pr-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs text-navy-deep focus:outline-none focus:border-secondary"/>
+        </div>
+        <div class="flex items-center gap-3 flex-wrap text-xs">
+          <label class="text-on-surface-variant font-semibold">Filter Policy:</label>
+          <select id="colFilterPolicy" onchange="filterCollegesTable()" class="px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-navy-deep text-xs">
+            <option value="ALL">All Aid Policies</option>
+            <option value="Need-Blind">Need-Blind for Int'l</option>
+            <option value="Need-Aware">Need-Aware for Int'l</option>
+            <option value="No Need-Based Aid for Int'l">No Aid for Int'l</option>
+          </select>
+          <select id="colFilterType" onchange="filterCollegesTable()" class="px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-navy-deep text-xs">
+            <option value="ALL">All University Types</option>
+            <option value="National University">National University</option>
+            <option value="Liberal Arts College">Liberal Arts College</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- COLLEGE MASTER TABLE -->
+      <div class="bg-slate-card rounded-xl shadow-sm border border-slate-border overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-surface text-on-surface-variant uppercase font-mono-num border-b border-slate-border text-[11px]">
+              <tr>
+                <th class="py-3 px-4">IPEDS ID</th>
+                <th class="py-3 px-4">Institution Name</th>
+                <th class="py-3 px-4">State</th>
+                <th class="py-3 px-4">Type</th>
+                <th class="py-3 px-4">Admit Rate</th>
+                <th class="py-3 px-4">Median SAT</th>
+                <th class="py-3 px-4">Annual COA</th>
+                <th class="py-3 px-4">Int'l Aid Policy</th>
+                <th class="py-3 px-4">100% Need Met</th>
+                <th class="py-3 px-4">QuestBridge</th>
+              </tr>
+            </thead>
+            <tbody id="collegesTableBody" class="divide-y divide-slate-border font-body-md text-navy-deep">
+              <!-- Dynamically injected -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- REGISTER COLLEGE MODAL -->
+  <div id="modalRegisterCollege" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-card rounded-2xl max-w-lg w-full p-6 shadow-xl border border-slate-border flex flex-col gap-4">
+      <div class="flex items-center justify-between border-b border-slate-border pb-3">
+        <h3 class="font-headline-md text-base font-bold text-navy-deep">Register Institution to Master DB</h3>
+        <button onclick="closeRegisterCollegeModal()" class="text-gray-400 hover:text-navy-deep">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-3 text-xs">
+        <div>
+          <label class="block font-semibold text-on-surface-variant mb-1">IPEDS NCES Code *</label>
+          <input id="newColIpeds" type="text" placeholder="e.g. 166027" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+        </div>
+        <div>
+          <label class="block font-semibold text-on-surface-variant mb-1">University Name *</label>
+          <input id="newColName" type="text" placeholder="e.g. Harvard University" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-medium"/>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">State</label>
+            <input id="newColState" type="text" placeholder="e.g. MA" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs"/>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Institution Type</label>
+            <select id="newColType" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs">
+              <option value="National University">National University</option>
+              <option value="Liberal Arts College">Liberal Arts College</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Admit Rate (%)</label>
+            <input id="newColAdmitRate" type="number" step="0.1" placeholder="4.5" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Median SAT</label>
+            <input id="newColMedianSat" type="number" placeholder="1520" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Annual COA ($)</label>
+            <input id="newColCoa" type="number" placeholder="88000" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Aid Policy for Internationals</label>
+            <select id="newColAidPolicy" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs">
+              <option value="Need-Blind">Need-Blind</option>
+              <option value="Need-Aware">Need-Aware</option>
+              <option value="No Need-Based Aid for Int'l">No Need Aid for Int'l</option>
+            </select>
+          </div>
+          <div class="flex items-center gap-2 pt-5">
+            <input id="newColNeedMet" type="checkbox" checked class="w-4 h-4 rounded text-secondary"/>
+            <label for="newColNeedMet" class="font-semibold text-navy-deep">100% Need Met Guarantee</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-border">
+        <button onclick="closeRegisterCollegeModal()" class="px-4 py-2 rounded-lg bg-slate-surface text-navy-deep text-xs font-semibold">Cancel</button>
+        <button onclick="submitNewCollege()" class="px-4 py-2 rounded-lg bg-navy-deep text-white text-xs font-semibold shadow-sm">Save to Master DB</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 1: REGISTER NEW STUDENT -->
+  <div id="modalNewStudent" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-card rounded-2xl max-w-lg w-full p-6 shadow-xl border border-slate-border flex flex-col gap-4">
+      <div class="flex items-center justify-between border-b border-slate-border pb-3">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[20px] text-secondary">person_add</span>
+          <h3 class="font-headline-md text-base font-bold text-navy-deep">Register New Student to Roster</h3>
+        </div>
+        <button onclick="closeNewStudentModal()" class="text-gray-400 hover:text-navy-deep">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-3 text-xs max-h-[70vh] overflow-y-auto pr-1 custom-scroll">
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Student Legal Name (English) *</label>
+            <input id="addStudentName" type="text" placeholder="e.g. Lucas Choi" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-medium"/>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Korean Name (한글) *</label>
+            <input id="addStudentKoreanName" type="text" placeholder="e.g. 최민준" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-medium"/>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">High School</label>
+            <input id="addStudentSchool" type="text" value="Seoul Foreign School (SFS)" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-semibold text-navy-deep"/>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Grade</label>
+            <select id="addStudentGrade" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs">
+              <option value="12" selected>Grade 12 (Senior)</option>
+              <option value="11">Grade 11 (Junior)</option>
+              <option value="10">Grade 10 (Sophomore)</option>
+              <option value="9">Grade 9 (Freshman)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Cohort Tag</label>
+            <input id="addStudentCohort" type="text" value="IBDP Cohort Alpha" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs"/>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Citizenship Track</label>
+            <select id="addStudentCitizenship" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs">
+              <option value="International (No Green Card)">International Student</option>
+              <option value="US Citizen (Green Card / Passport)">US Citizen / Green Card</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Curriculum</label>
+            <select id="addStudentCurriculum" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs">
+              <option value="IB DP">IB DP</option>
+              <option value="AP">AP</option>
+              <option value="Regular / Honors">Regular</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">IB Pred / APs</label>
+            <input id="addStudentIb" type="number" value="40" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Unweighted GPA</label>
+            <input id="addStudentGpa" type="number" step="0.01" value="3.90" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">SAT Score</label>
+            <input id="addStudentSat" type="number" value="1510" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Household Income</label>
+            <input id="addStudentIncome" type="number" value="85000" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+          </div>
+          <div>
+            <label class="block font-semibold text-on-surface-variant mb-1">Annual Budget ($)</label>
+            <input id="addStudentBudget" type="number" value="25000" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-on-surface-variant mb-1">Intended Major</label>
+          <input id="addStudentMajor" type="text" value="Computer Science & Data Analytics" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs"/>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-surface-container-low border border-slate-border flex items-center justify-between text-xs">
+          <span class="text-on-surface-variant">Assigned Counsellor:</span>
+          <span class="font-bold text-secondary">Mr. David Nah</span>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-border">
+        <button onclick="closeNewStudentModal()" class="px-4 py-2 rounded-lg bg-slate-surface text-navy-deep text-xs font-semibold">Cancel</button>
+        <button onclick="submitNewStudent()" class="px-4 py-2 rounded-lg bg-navy-deep text-white text-xs font-semibold shadow-sm flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[15px]">check</span>Register Student
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: WITHDRAW STUDENT (자퇴 처리) -->
+  <div id="modalWithdrawStudent" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-card rounded-2xl max-w-md w-full p-6 shadow-xl border border-rose-200 flex flex-col gap-4">
+      <div class="flex items-center justify-between border-b border-slate-border pb-3">
+        <div class="flex items-center gap-2 text-rose-700">
+          <span class="material-symbols-outlined text-[20px]">person_off</span>
+          <h3 class="font-headline-md text-base font-bold">Process Student Withdrawal (자퇴 처리)</h3>
+        </div>
+        <button onclick="closeWithdrawModal()" class="text-gray-400 hover:text-navy-deep">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        Archive <strong id="withdrawStudentTargetName" class="text-navy-deep">David Kim</strong> from active roster and save to the <code class="px-1 py-0.5 rounded bg-rose-50 text-rose-800 font-mono-num text-[11px]">app/data/withdrawn/</code> repository.
+      </p>
+
+      <div class="flex flex-col gap-3 text-xs">
+        <div>
+          <label class="block font-semibold text-on-surface-variant mb-1">Withdrawn Year (자퇴 연도) *</label>
+          <input id="withdrawYearInput" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num font-bold text-navy-deep" value="2026"/>
+        </div>
+        <div>
+          <label class="block font-semibold text-on-surface-variant mb-1">Reason / Notes (자퇴 사유)</label>
+          <input id="withdrawReasonInput" type="text" placeholder="e.g. Overseas transfer, personal relocation..." value="Transfer to overseas school" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs"/>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-border">
+        <button onclick="closeWithdrawModal()" class="px-4 py-2 rounded-lg bg-slate-surface text-navy-deep text-xs font-semibold">Cancel</button>
+        <button onclick="confirmWithdrawStudent()" class="px-4 py-2 rounded-lg bg-cost-alert-red hover:bg-rose-700 text-white text-xs font-semibold shadow-sm flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[15px]">archive</span>Confirm Withdrawal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: GRADUATE STUDENT (졸업 처리) -->
+  <div id="modalGraduateStudent" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-card rounded-2xl max-w-md w-full p-6 shadow-xl border border-emerald-200 flex flex-col gap-4">
+      <div class="flex items-center justify-between border-b border-slate-border pb-3">
+        <div class="flex items-center gap-2 text-aid-grant-green">
+          <span class="material-symbols-outlined text-[20px]">school</span>
+          <h3 class="font-headline-md text-base font-bold">Process Student Graduation (졸업 처리)</h3>
+        </div>
+        <button onclick="closeGraduateModal()" class="text-gray-400 hover:text-navy-deep">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        Record <strong id="graduateStudentTargetName" class="text-navy-deep">David Kim</strong> as graduated alumni and save to the <code class="px-1 py-0.5 rounded bg-emerald-50 text-emerald-800 font-mono-num text-[11px]">app/data/graduated/</code> repository.
+      </p>
+
+      <div class="flex flex-col gap-3 text-xs">
+        <div>
+          <label class="block font-semibold text-on-surface-variant mb-1">Graduation Year (졸업 연도) *</label>
+          <input id="graduateYearInput" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num font-bold text-navy-deep" value="2026"/>
+        </div>
+        <div>
+          <label class="block font-semibold text-on-surface-variant mb-1">Final Matriculation (최종 진학 대학)</label>
+          <input id="graduateMatriculationInput" type="text" placeholder="e.g. Harvard University" value="Harvard University" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs"/>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-border">
+        <button onclick="closeGraduateModal()" class="px-4 py-2 rounded-lg bg-slate-surface text-navy-deep text-xs font-semibold">Cancel</button>
+        <button onclick="confirmGraduateStudent()" class="px-4 py-2 rounded-lg bg-aid-grant-green hover:bg-emerald-700 text-white text-xs font-semibold shadow-sm flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[15px]">workspace_premium</span>Confirm Graduation
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2"></div>
+
+  <!-- APPLICATION JAVASCRIPT -->
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
