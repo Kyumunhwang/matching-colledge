@@ -1,7 +1,7 @@
 /**
  * Matching College - 5D Holistic Admissions & Financial Aid Web Service
  * Frontend Application Controller
- * Lead Counsellor: Mr. David Nah (Seoul Foreign School - SFS)
+ * Lead Counsellor: Mr. David Nah (Lighthouse International School - LIS)
  */
 
 // Global Application State
@@ -108,6 +108,90 @@ function updateAcademicYearDisplay() {
 // ==========================================
 // INITIALIZATION
 // ==========================================
+// LOCAL STORAGE & EXPORT/IMPORT BACKUP
+// ==========================================
+function saveToLocalStorage() {
+  try {
+    const backup = {
+      active: activeStudentsData,
+      alumni: alumniStudentsData,
+      withdrawn: withdrawnStudentsData,
+      timestamp: new Date().toISOString()
+    };
+    localStorage.setItem('lis_matching_college_roster', JSON.stringify(backup));
+  } catch (e) {
+    console.warn('LocalStorage save failed:', e);
+  }
+}
+
+function loadFromLocalStorage() {
+  try {
+    const raw = localStorage.getItem('lis_matching_college_roster');
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+function exportRosterJson() {
+  const exportData = {
+    school: "Lighthouse International School (LIS)",
+    exported_at: new Date().toISOString(),
+    active: activeStudentsData,
+    alumni: alumniStudentsData,
+    withdrawn: withdrawnStudentsData
+  };
+  const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `LIS_College_Matching_Roster_${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast("Roster backup exported successfully! Save this file to import on your home computer.", "success");
+}
+
+async function handleImportFile(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = async (e) => {
+    try {
+      const parsed = JSON.parse(e.target.result);
+      const activeList = parsed.active || (Array.isArray(parsed) ? parsed : []);
+      const alumniList = parsed.alumni || parsed.graduated || [];
+      const withList = parsed.withdrawn || [];
+
+      // Send to server import endpoint
+      try {
+        await fetch('/api/students/import', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ active: activeList, graduated: alumniList, withdrawn: withList })
+        });
+      } catch (_) {}
+
+      activeStudentsData = activeList;
+      alumniStudentsData = alumniList;
+      withdrawnStudentsData = withList;
+      saveToLocalStorage();
+
+      activeStudent = activeStudentsData.length > 0 ? activeStudentsData[0] : null;
+      renderStudentRoster();
+      renderActiveStudentForm();
+      updateRosterCountBadges();
+      showToast(`Successfully restored ${activeList.length} students into roster!`, "success");
+    } catch (err) {
+      showToast("Invalid JSON roster backup file.", "error");
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = "";
+}
+
+// ==========================================
+// INITIALIZATION
+// ==========================================
 document.addEventListener('DOMContentLoaded', async () => {
   updateAcademicYearDisplay();
   await fetchInitialData();
@@ -127,6 +211,27 @@ async function fetchInitialData() {
     collegesData = await resColleges.json();
     alumniStudentsData = await resGrad.json();
     withdrawnStudentsData = await resWith.json();
+
+    // Check localStorage cache to recover cross-session or serverless cold-start data
+    const localBackup = loadFromLocalStorage();
+    if (localBackup && localBackup.active && localBackup.active.length > activeStudentsData.length) {
+      console.log('Restoring roster from local browser storage...');
+      activeStudentsData = localBackup.active;
+      if (localBackup.alumni && localBackup.alumni.length > alumniStudentsData.length) {
+        alumniStudentsData = localBackup.alumni;
+      }
+      if (localBackup.withdrawn && localBackup.withdrawn.length > withdrawnStudentsData.length) {
+        withdrawnStudentsData = localBackup.withdrawn;
+      }
+      // Re-sync back to server
+      fetch('/api/students/import', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ active: activeStudentsData, graduated: alumniStudentsData, withdrawn: withdrawnStudentsData })
+      }).catch(() => {});
+    } else {
+      saveToLocalStorage();
+    }
 
     updateRosterCountBadges();
 
@@ -300,7 +405,7 @@ function renderActiveStudentForm() {
   document.getElementById('studentDisplayName').innerHTML = `${activeStudent.name} <span class="text-on-surface-variant font-medium text-sm" id="studentKoreanName">(${activeStudent.korean_name})</span>`;
   document.getElementById('studentIdBadge').textContent = `ID #${activeStudent.id}`;
   document.getElementById('studentCohortBadge').innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>${activeStudent.cohort || 'IBDP Cohort Alpha'}`;
-  document.getElementById('studentSchool').textContent = activeStudent.school || 'Seoul Foreign School (SFS)';
+  document.getElementById('studentSchool').textContent = activeStudent.school || 'Lighthouse International School (LIS)';
   document.getElementById('studentGrade').textContent = `Grade ${activeStudent.grade || 12} (Class of 2026)`;
   
   const isIntl = (activeStudent.citizenship_status || '').toLowerCase().includes('international');
@@ -342,14 +447,17 @@ function renderActiveStudentForm() {
 
   // Academic inputs
   document.getElementById('inpCurriculumType').value = acad.curriculum_type || 'IB DP';
-  document.getElementById('inpIbPredicted').value = acad.ib_predicted_score || 40;
-  document.getElementById('inpUnweightedGpa').value = acad.unweighted_gpa || 3.9;
-  document.getElementById('inpWeightedGpa').value = acad.weighted_gpa || 4.3;
-  document.getElementById('inpSatTotal').value = acad.standardized_tests?.SAT || 1500;
-  document.getElementById('inpSatRw').value = acad.standardized_tests?.SAT_RW || 730;
+  document.getElementById('inpIbPredicted').value = acad.ib_predicted_score !== undefined && acad.ib_predicted_score !== null ? acad.ib_predicted_score : '';
+  document.getElementById('inpUnweightedGpa').value = acad.unweighted_gpa !== undefined && acad.unweighted_gpa !== null ? acad.unweighted_gpa : '';
+  document.getElementById('inpWeightedGpa').value = acad.weighted_gpa !== undefined && acad.weighted_gpa !== null ? acad.weighted_gpa : '';
+  
+  const satScoreVal = acad.standardized_tests?.SAT;
+  document.getElementById('inpSatTotal').value = (satScoreVal !== undefined && satScoreVal !== null) ? satScoreVal : '';
+  const satRwVal = acad.standardized_tests?.SAT_RW;
+  document.getElementById('inpSatRw').value = (satRwVal !== undefined && satRwVal !== null) ? satRwVal : '';
   document.getElementById('inpEnglishYears').value = acad.years_in_english_school || 4;
   
-  const toeflOk = (acad.years_in_english_school >= 3) || (acad.standardized_tests?.SAT_RW >= 650);
+  const toeflOk = (acad.years_in_english_school >= 3) || (satRwVal && satRwVal >= 650);
   const englishWaiverBadge = document.getElementById('englishWaiverBadge');
   englishWaiverBadge.textContent = toeflOk ? "QUALIFIED (>= 3 Yrs / SAT RW >= 650)" : "REQUIRED (TOEFL / IELTS Needed)";
   englishWaiverBadge.className = toeflOk ? "font-bold text-aid-grant-green" : "font-bold text-amber-600";
@@ -450,17 +558,22 @@ async function submitNewStudent() {
     return;
   }
 
+  const satInputVal = document.getElementById('addStudentSat').value.trim();
+  const satScore = satInputVal ? parseInt(satInputVal) : null;
+  const gpaInputVal = document.getElementById('addStudentGpa').value.trim();
+  const ibInputVal = document.getElementById('addStudentIb').value.trim();
+
   const payload = {
     name: name,
     korean_name: koreanName,
-    school: document.getElementById('addStudentSchool').value.trim() || 'Seoul Foreign School (SFS)',
+    school: document.getElementById('addStudentSchool').value.trim() || 'Lighthouse International School (LIS)',
     grade: parseInt(document.getElementById('addStudentGrade').value) || 12,
     cohort: document.getElementById('addStudentCohort').value.trim() || 'IBDP Cohort Alpha',
     citizenship_status: document.getElementById('addStudentCitizenship').value,
     curriculum_type: document.getElementById('addStudentCurriculum').value,
-    ib_predicted_score: parseInt(document.getElementById('addStudentIb').value) || 40,
-    unweighted_gpa: parseFloat(document.getElementById('addStudentGpa').value) || 3.90,
-    sat_score: parseInt(document.getElementById('addStudentSat').value) || 1500,
+    ib_predicted_score: ibInputVal ? parseInt(ibInputVal) : null,
+    unweighted_gpa: gpaInputVal ? parseFloat(gpaInputVal) : 3.90,
+    sat_score: satScore,
     household_income_usd: parseFloat(document.getElementById('addStudentIncome').value) || 85000,
     max_annual_budget_usd: parseFloat(document.getElementById('addStudentBudget').value) || 25000,
     intended_major: document.getElementById('addStudentMajor').value.trim() || 'Computer Science'
@@ -476,11 +589,12 @@ async function submitNewStudent() {
     if (data.status === 'success') {
       activeStudentsData.push(data.student);
       activeStudent = data.student;
+      saveToLocalStorage();
       closeNewStudentModal();
       updateRosterCountBadges();
       switchRosterFilter('active');
       renderActiveStudentForm();
-      showToast(`Student ${name} successfully registered to SFS roster!`, 'success');
+      showToast(`Student ${name} successfully registered to LIS roster!`, 'success');
     }
   } catch (err) {
     showToast('Failed to register student.', 'error');
@@ -519,6 +633,7 @@ async function confirmWithdrawStudent() {
       activeStudentsData = activeStudentsData.filter(s => s.id !== activeStudent.id);
       withdrawnStudentsData.push(archivedStudent);
 
+      saveToLocalStorage();
       closeWithdrawModal();
       updateRosterCountBadges();
 
@@ -564,6 +679,7 @@ async function confirmGraduateStudent() {
       activeStudentsData = activeStudentsData.filter(s => s.id !== activeStudent.id);
       alumniStudentsData.push(archivedStudent);
 
+      saveToLocalStorage();
       closeGraduateModal();
       updateRosterCountBadges();
 
@@ -583,19 +699,29 @@ async function confirmGraduateStudent() {
 async function saveStudentProfile() {
   if (!activeStudent) return;
 
+  const satVal = document.getElementById('inpSatTotal').value.trim();
+  const satRwVal = document.getElementById('inpSatRw').value.trim();
+  const stdTests = { ...activeStudent.academic_profile?.standardized_tests };
+  if (satVal) {
+    stdTests.SAT = parseInt(satVal);
+  } else {
+    delete stdTests.SAT;
+  }
+  if (satRwVal) {
+    stdTests.SAT_RW = parseInt(satRwVal);
+  } else {
+    delete stdTests.SAT_RW;
+  }
+
   const updatedPayload = {
     citizenship_status: document.getElementById('inpCitizenship').value,
     academic_profile: {
       ...activeStudent.academic_profile,
       curriculum_type: document.getElementById('inpCurriculumType').value,
-      ib_predicted_score: parseInt(document.getElementById('inpIbPredicted').value) || 40,
+      ib_predicted_score: parseInt(document.getElementById('inpIbPredicted').value) || null,
       unweighted_gpa: parseFloat(document.getElementById('inpUnweightedGpa').value) || 3.9,
       weighted_gpa: parseFloat(document.getElementById('inpWeightedGpa').value) || 4.3,
-      standardized_tests: {
-        ...activeStudent.academic_profile?.standardized_tests,
-        SAT: parseInt(document.getElementById('inpSatTotal').value) || 1500,
-        SAT_RW: parseInt(document.getElementById('inpSatRw').value) || 720
-      },
+      standardized_tests: stdTests,
       years_in_english_school: parseInt(document.getElementById('inpEnglishYears').value) || 4,
       intended_major: document.getElementById('inpMajor').value
     },
@@ -620,6 +746,12 @@ async function saveStudentProfile() {
     const data = await res.json();
     if (data.status === 'success') {
       activeStudent = data.student;
+      // Update in activeStudentsData list as well
+      const idx = activeStudentsData.findIndex(s => s.id === activeStudent.id);
+      if (idx !== -1) {
+        activeStudentsData[idx] = activeStudent;
+      }
+      saveToLocalStorage();
       showToast('Student profile successfully saved.', 'success');
       renderStudentRoster();
     }
@@ -850,7 +982,7 @@ function renderPortalView() {
 
   // Text translations
   document.getElementById('portalStudentName').innerHTML = `${activeStudent.name} <span class="text-on-surface-variant font-normal text-lg" id="portalStudentKoreanName">(${activeStudent.korean_name} • Grade ${activeStudent.grade || 12})</span>`;
-  document.getElementById('portalSchoolName').textContent = activeStudent.school || 'Seoul Foreign School (SFS)';
+  document.getElementById('portalSchoolName').textContent = activeStudent.school || 'Lighthouse International School (LIS)';
   document.getElementById('txtCounselorSchedule').textContent = t.scheduleBtn;
   document.getElementById('kpiLabel1').textContent = t.kpi1;
   document.getElementById('kpiLabel2').textContent = t.kpi2;

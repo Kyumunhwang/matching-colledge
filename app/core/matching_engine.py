@@ -15,24 +15,39 @@ class MatchingEngine:
     def evaluate_academic_rigor(academic_profile: Dict[str, Any]) -> Dict[str, Any]:
         """
         Skill 1: Evaluates course rigor, standardized test standing, and grade momentum.
+        Supports Test-Optional policies when SAT score is not submitted.
         """
         curr_type = academic_profile.get("curriculum_type", "AP")
-        ib_pred = academic_profile.get("ib_predicted_score", 0)
-        unweighted_gpa = float(academic_profile.get("unweighted_gpa", 3.8))
-        weighted_gpa = float(academic_profile.get("weighted_gpa", 4.0))
+        ib_pred = int(academic_profile.get("ib_predicted_score", 0) or 0)
+        unweighted_gpa = float(academic_profile.get("unweighted_gpa", 3.8) or 3.8)
+        weighted_gpa = float(academic_profile.get("weighted_gpa", 4.0) or 4.0)
         tests = academic_profile.get("standardized_tests", {})
-        sat_score = tests.get("SAT", 1450) if isinstance(tests, dict) else 1450
+        
+        sat_val = tests.get("SAT") if isinstance(tests, dict) else None
+        sat_score = int(sat_val) if sat_val is not None and str(sat_val).isdigit() and int(sat_val) > 0 else None
 
-        # Tier classification
-        if (curr_type == "IB DP" and ib_pred >= 40) or (unweighted_gpa >= 3.9 and sat_score >= 1520):
-            tier = "Tier 1 (Elite / Upper 1%)"
-            rigor_score = 96
-        elif (curr_type == "IB DP" and ib_pred >= 36) or (unweighted_gpa >= 3.75 and sat_score >= 1440):
-            tier = "Tier 2 (High Rigor / Competitive)"
-            rigor_score = 88
+        # Tier classification (with Test-Optional support)
+        if sat_score is not None:
+            if (curr_type == "IB DP" and ib_pred >= 40) or (unweighted_gpa >= 3.9 and sat_score >= 1520):
+                tier = "Tier 1 (Elite / Upper 1%)"
+                rigor_score = 96
+            elif (curr_type == "IB DP" and ib_pred >= 36) or (unweighted_gpa >= 3.75 and sat_score >= 1440):
+                tier = "Tier 2 (High Rigor / Competitive)"
+                rigor_score = 88
+            else:
+                tier = "Tier 3 (Standard Rigor / Foundation)"
+                rigor_score = 78
         else:
-            tier = "Tier 3 (Standard Rigor / Foundation)"
-            rigor_score = 78
+            # Test-Optional Track
+            if (curr_type == "IB DP" and ib_pred >= 40) or (unweighted_gpa >= 3.92):
+                tier = "Tier 1 (Elite / Upper 1% - Test Optional)"
+                rigor_score = 95
+            elif (curr_type == "IB DP" and ib_pred >= 36) or (unweighted_gpa >= 3.75):
+                tier = "Tier 2 (High Rigor / Competitive - Test Optional)"
+                rigor_score = 87
+            else:
+                tier = "Tier 3 (Standard Rigor / Foundation - Test Optional)"
+                rigor_score = 78
 
         return {
             "tier": tier,
@@ -48,10 +63,11 @@ class MatchingEngine:
         """
         Skill 5: Determines whether student qualifies for standardized English proficiency waiver.
         """
-        years_in_eng = academic_profile.get("years_in_english_school", 0)
+        years_in_eng = academic_profile.get("years_in_english_school", 0) or 0
         tests = academic_profile.get("standardized_tests", {})
-        sat_rw = tests.get("SAT_RW", 0) if isinstance(tests, dict) else 0
-        return years_in_eng >= 3 or sat_rw >= 650
+        sat_rw = tests.get("SAT_RW") if isinstance(tests, dict) else 0
+        sat_rw_num = int(sat_rw) if sat_rw and str(sat_rw).isdigit() else 0
+        return years_in_eng >= 3 or sat_rw_num >= 650
 
     @staticmethod
     def classify_portfolio(extracurriculars: List[Dict[str, Any]]) -> str:
@@ -148,8 +164,15 @@ class MatchingEngine:
             budget_surplus_deficit = budget - net_price
 
             # Academic Matching Score (0 - 100)
-            sat_diff = sat_score - col_median_sat
-            acad_subscore = 80 + min(15, max(-20, sat_diff * 0.15)) + (gpa - 3.8) * 30
+            if sat_score is not None:
+                sat_diff = sat_score - col_median_sat
+                acad_subscore = 80 + min(15, max(-20, sat_diff * 0.15)) + (gpa - 3.8) * 30
+            else:
+                # Test-Optional Assessment
+                ib_pred = acad_eval.get("ib_pred", 0)
+                rigor_boost = 6 if ib_pred >= 39 else (3 if ib_pred >= 36 else 0)
+                acad_subscore = 80 + (gpa - 3.8) * 40 + rigor_boost
+
             match_score = int(min(98, max(55, acad_subscore)))
 
             # Category Allocation (Reach / Match / Safety)
@@ -158,13 +181,16 @@ class MatchingEngine:
             
             if acceptance_rate <= 10.0 or (need_aware_penalty and acceptance_rate <= 20.0):
                 category = "Reach"
-            elif acceptance_rate > 35.0 and sat_score >= col_median_sat:
+            elif acceptance_rate > 35.0 and (sat_score >= col_median_sat if sat_score is not None else gpa >= 3.80):
                 category = "Safety"
             else:
                 category = "Match"
 
             # Construct matching reason and AI notes
-            acad_fit = f"{academic.get('curriculum_type', 'IB/AP')} profile and SAT {sat_score} align with institution's academic threshold."
+            if sat_score is not None:
+                acad_fit = f"{academic.get('curriculum_type', 'IB/AP')} profile and SAT {sat_score} align with institution's academic threshold."
+            else:
+                acad_fit = f"{academic.get('curriculum_type', 'IB/AP')} rigor (GPA {gpa}) meets Test-Optional institutional requirements."
             if is_international and req_aid:
                 if aid_policy == "Need-Blind":
                     fin_fit = "Institution provides Need-Blind admissions for international students with 100% need met."

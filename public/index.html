@@ -150,10 +150,19 @@
         <div class="px-4 flex flex-col gap-3 overflow-y-auto custom-scroll flex-1">
           <div class="flex items-center justify-between">
             <span class="font-mono-num text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Student Roster</span>
-            <button onclick="openNewStudentModal()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-navy-deep hover:bg-navy-subtle text-white text-xs font-semibold shadow-sm transition-all active:scale-95">
-              <span class="material-symbols-outlined text-[14px]">person_add</span>
-              <span>+ Add Student</span>
-            </button>
+            <div class="flex items-center gap-1.5">
+              <button onclick="exportRosterJson()" title="Backup Roster (JSON Export)" class="p-1 rounded-lg border border-slate-border hover:bg-slate-surface text-navy-deep text-xs flex items-center justify-center transition-all">
+                <span class="material-symbols-outlined text-[15px]">file_download</span>
+              </button>
+              <button onclick="document.getElementById('importRosterInput').click()" title="Restore Roster (JSON Import)" class="p-1 rounded-lg border border-slate-border hover:bg-slate-surface text-navy-deep text-xs flex items-center justify-center transition-all">
+                <span class="material-symbols-outlined text-[15px]">file_upload</span>
+              </button>
+              <input type="file" id="importRosterInput" accept=".json" class="hidden" onchange="handleImportFile(event)"/>
+              <button onclick="openNewStudentModal()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-navy-deep hover:bg-navy-subtle text-white text-xs font-semibold shadow-sm transition-all active:scale-95">
+                <span class="material-symbols-outlined text-[14px]">person_add</span>
+                <span>+ Add</span>
+              </button>
+            </div>
           </div>
 
           <!-- STATUS TABS: ACTIVE / ALUMNI / WITHDRAWN -->
@@ -185,7 +194,7 @@
         <div class="px-4 pt-3 border-t border-slate-border flex flex-col gap-1.5 bg-slate-card">
           <div class="flex items-center justify-between text-xs text-on-surface-variant">
             <span class="font-medium">School:</span>
-            <span class="font-semibold text-navy-deep">Seoul Foreign School (SFS)</span>
+            <span class="font-semibold text-navy-deep">Lighthouse International School (LIS)</span>
           </div>
           <div class="flex items-center justify-between text-[11px] text-on-surface-variant">
             <span class="font-mono-num">Counsellor:</span>
@@ -218,7 +227,7 @@
                 </span>
               </div>
               <div class="flex items-center gap-3 text-xs text-on-surface-variant mt-1">
-                <span class="font-semibold text-navy-deep" id="studentSchool">Seoul Foreign School (SFS)</span>
+                <span class="font-semibold text-navy-deep" id="studentSchool">Lighthouse International School (LIS)</span>
                 <span>•</span>
                 <span id="studentGrade">Grade 12 (Class of 2026)</span>
                 <span>•</span>
@@ -300,16 +309,16 @@
                   <input id="inpWeightedGpa" type="number" step="0.01" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="4.38"/>
                 </div>
                 <div>
-                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">SAT Total</label>
-                  <input id="inpSatTotal" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="1520"/>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">SAT Total <span class="font-normal text-[10px] text-gray-500">(Optional)</span></label>
+                  <input id="inpSatTotal" type="number" placeholder="Optional" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value=""/>
                 </div>
               </div>
 
               <!-- Sub-scores & English Waiver -->
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">SAT Reading & Writing</label>
-                  <input id="inpSatRw" type="number" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value="740"/>
+                  <label class="block text-xs font-semibold text-on-surface-variant mb-1">SAT Reading & Writing <span class="font-normal text-[10px] text-gray-500">(Optional)</span></label>
+                  <input id="inpSatRw" type="number" placeholder="Optional" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-sm font-mono-num text-navy-deep" value=""/>
                 </div>
                 <div>
                   <label class="block text-xs font-semibold text-on-surface-variant mb-1">Years in English Medium</label>
@@ -538,7 +547,7 @@
               <h1 class="font-headline-lg text-2xl text-navy-deep font-bold tracking-tight" id="portalStudentName">
                 David Kim <span class="text-on-surface-variant font-normal text-lg" id="portalStudentKoreanName">(김태윤 • Grade 12)</span>
               </h1>
-              <span class="text-on-surface-variant text-sm" id="portalSchoolName">Seoul Foreign School (SFS)</span>
+              <span class="text-on-surface-variant text-sm" id="portalSchoolName">Lighthouse International School (LIS)</span>
             </div>
             <p class="text-xs text-on-surface-variant flex items-center gap-1.5">
               <span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
@@ -845,7 +854,7 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block font-semibold text-on-surface-variant mb-1">High School</label>
-            <input id="addStudentSchool" type="text" value="Seoul Foreign School (SFS)" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-semibold text-navy-deep"/>
+            <input id="addStudentSchool" type="text" value="Lighthouse International School (LIS)" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-semibold text-navy-deep"/>
           </div>
           <div>
             <label class="block font-semibold text-on-surface-variant mb-1">Grade</label>
@@ -883,18 +892,18 @@
           </div>
           <div>
             <label class="block font-semibold text-on-surface-variant mb-1">IB Pred / APs</label>
-            <input id="addStudentIb" type="number" value="40" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+            <input id="addStudentIb" type="number" placeholder="Optional" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
           </div>
           <div>
             <label class="block font-semibold text-on-surface-variant mb-1">Unweighted GPA</label>
-            <input id="addStudentGpa" type="number" step="0.01" value="3.90" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+            <input id="addStudentGpa" type="number" step="0.01" placeholder="e.g. 3.90" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
           </div>
         </div>
 
         <div class="grid grid-cols-3 gap-3">
           <div>
-            <label class="block font-semibold text-on-surface-variant mb-1">SAT Score</label>
-            <input id="addStudentSat" type="number" value="1510" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
+            <label class="block font-semibold text-on-surface-variant mb-1">SAT Score <span class="font-normal text-[10px] text-gray-500">(Optional)</span></label>
+            <input id="addStudentSat" type="number" placeholder="Optional" class="w-full px-3 py-1.5 rounded-lg border border-slate-border bg-slate-surface text-xs font-mono-num"/>
           </div>
           <div>
             <label class="block font-semibold text-on-surface-variant mb-1">Household Income</label>
